@@ -1,0 +1,141 @@
+﻿@model Bomberos.Models.ServicioVario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ServicioVario</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvEstacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvEstacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvTurno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvTurno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvFecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvFecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvDireccion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvDireccion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvServicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvServicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvHoraSalida)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvHoraSalida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvHoraEntrada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvHoraEntrada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvUnidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvUnidad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvObservacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvObservacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvKmEntrada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvKmEntrada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvKmSalida)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvKmSalida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvKmRecorrido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvKmRecorrido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvNoBombero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvNoBombero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvBomberoReportaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvBomberoReportaNavigation.IdUsuario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvFirmaBomberoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvFirmaBomberoNavigation.IdFirma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvJefeServicioNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvJefeServicioNavigation.IdPersonal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvPersonalAsistenteNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvPersonalAsistenteNavigation.IdPersonal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvPilotoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvPilotoNavigation.IdPersonal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvServicioAutPorNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvServicioAutPorNavigation.IdPersonal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SvTelefonistaTurnoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SvTelefonistaTurnoNavigation.IdPersonal)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdSv" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

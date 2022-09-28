@@ -1,0 +1,149 @@
+﻿@model IEnumerable<Bomberos.Models.ServicioVario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SvEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvTurno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvDireccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvServicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvHoraSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvHoraEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvUnidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvObservacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvKmEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvKmSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvKmRecorrido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvNoBombero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvBomberoReportaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvFirmaBomberoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvJefeServicioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvPersonalAsistenteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvPilotoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvServicioAutPorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SvTelefonistaTurnoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvTurno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvDireccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvServicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvHoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvHoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvUnidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvObservacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvKmEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvKmSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvKmRecorrido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvNoBombero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvBomberoReportaNavigation.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvFirmaBomberoNavigation.IdFirma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvJefeServicioNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvPersonalAsistenteNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvPilotoNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvServicioAutPorNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SvTelefonistaTurnoNavigation.IdPersonal)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdSv">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdSv">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdSv">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

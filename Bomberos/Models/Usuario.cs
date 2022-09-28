@@ -22,5 +22,8 @@ namespace Bomberos.Models
         [Required]
         [StringLength(8, ErrorMessage = "{0} Largo de contraseña entre {2} y {1}.", MinimumLength = 6)]
         public string? UsContraseña { get; set; }
+
+
+        public virtual ICollection<ServicioVario> ServicioVarios { get; set; }
     }
 }

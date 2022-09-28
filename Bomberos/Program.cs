@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<BomberoContext>(options =>
-           options.UseSqlServer(builder.Configuration.GetConnectionString("Conexion")));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("Conexion")));
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => options.LoginPath = "/login"); //creamos un esquema  de autentificacion por cookies con un esquema default 
 
 

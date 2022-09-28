@@ -1,0 +1,129 @@
+﻿@model Bomberos.Models.ServicioVario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ServicioVario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdSv" />
+            <div class="form-group">
+                <label asp-for="SvEstacion" class="control-label"></label>
+                <input asp-for="SvEstacion" class="form-control" />
+                <span asp-validation-for="SvEstacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvTurno" class="control-label"></label>
+                <input asp-for="SvTurno" class="form-control" />
+                <span asp-validation-for="SvTurno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvFecha" class="control-label"></label>
+                <input asp-for="SvFecha" class="form-control" />
+                <span asp-validation-for="SvFecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvDireccion" class="control-label"></label>
+                <input asp-for="SvDireccion" class="form-control" />
+                <span asp-validation-for="SvDireccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvServicio" class="control-label"></label>
+                <input asp-for="SvServicio" class="form-control" />
+                <span asp-validation-for="SvServicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvHoraSalida" class="control-label"></label>
+                <input asp-for="SvHoraSalida" class="form-control" />
+                <span asp-validation-for="SvHoraSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvHoraEntrada" class="control-label"></label>
+                <input asp-for="SvHoraEntrada" class="form-control" />
+                <span asp-validation-for="SvHoraEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvJefeServicio" class="control-label"></label>
+                <select asp-for="SvJefeServicio" class="form-control" asp-items="ViewBag.SvJefeServicio"></select>
+                <span asp-validation-for="SvJefeServicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvTelefonistaTurno" class="control-label"></label>
+                <select asp-for="SvTelefonistaTurno" class="form-control" asp-items="ViewBag.SvTelefonistaTurno"></select>
+                <span asp-validation-for="SvTelefonistaTurno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvBomberoReporta" class="control-label"></label>
+                <select asp-for="SvBomberoReporta" class="form-control" asp-items="ViewBag.SvBomberoReporta"></select>
+                <span asp-validation-for="SvBomberoReporta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvUnidad" class="control-label"></label>
+                <input asp-for="SvUnidad" class="form-control" />
+                <span asp-validation-for="SvUnidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvPiloto" class="control-label"></label>
+                <select asp-for="SvPiloto" class="form-control" asp-items="ViewBag.SvPiloto"></select>
+                <span asp-validation-for="SvPiloto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvServicioAutPor" class="control-label"></label>
+                <select asp-for="SvServicioAutPor" class="form-control" asp-items="ViewBag.SvServicioAutPor"></select>
+                <span asp-validation-for="SvServicioAutPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvPersonalAsistente" class="control-label"></label>
+                <select asp-for="SvPersonalAsistente" class="form-control" asp-items="ViewBag.SvPersonalAsistente"></select>
+                <span asp-validation-for="SvPersonalAsistente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvObservacion" class="control-label"></label>
+                <input asp-for="SvObservacion" class="form-control" />
+                <span asp-validation-for="SvObservacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvKmEntrada" class="control-label"></label>
+                <input asp-for="SvKmEntrada" class="form-control" />
+                <span asp-validation-for="SvKmEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvKmSalida" class="control-label"></label>
+                <input asp-for="SvKmSalida" class="form-control" />
+                <span asp-validation-for="SvKmSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvKmRecorrido" class="control-label"></label>
+                <input asp-for="SvKmRecorrido" class="form-control" />
+                <span asp-validation-for="SvKmRecorrido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvFirmaBombero" class="control-label"></label>
+                <select asp-for="SvFirmaBombero" class="form-control" asp-items="ViewBag.SvFirmaBombero"></select>
+                <span asp-validation-for="SvFirmaBombero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SvNoBombero" class="control-label"></label>
+                <input asp-for="SvNoBombero" class="form-control" />
+                <span asp-validation-for="SvNoBombero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

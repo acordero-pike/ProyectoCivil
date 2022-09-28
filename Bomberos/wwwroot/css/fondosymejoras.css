@@ -1,9 +1,11 @@
 ﻿.bg-white {
-    background-color: #5e91a9 !important;
+    background-color: black !important;
 }
-
+.text-White
+{
+    color:white !important;
+}
 /*create */
-
 .form {
     width: 450px;
     margin: auto;
