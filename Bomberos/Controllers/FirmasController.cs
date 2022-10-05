@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Bomberos.Controllers
 {
-    [Authorize]
     public class FirmasController : Controller
     {
         private readonly BomberoContext _context;
