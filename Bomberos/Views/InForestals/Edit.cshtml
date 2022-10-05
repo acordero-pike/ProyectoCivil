@@ -1,0 +1,174 @@
+﻿@model Bomberos.Models.InForestal
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>InForestal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdIf" />
+            <div class="form-group">
+                <label asp-for="IfEstacion" class="control-label"></label>
+                <select asp-for="IfEstacion" class="form-control" asp-items="ViewBag.IfEstacion"></select>
+                <span asp-validation-for="IfEstacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfTurno" class="control-label"></label>
+                <select asp-for="IfTurno" class="form-control" asp-items="ViewBag.IfTurno"></select>
+                <span asp-validation-for="IfTurno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfUbiSiniestro" class="control-label"></label>
+                <input asp-for="IfUbiSiniestro" class="form-control" />
+                <span asp-validation-for="IfUbiSiniestro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfAreaAfectada" class="control-label"></label>
+                <input asp-for="IfAreaAfectada" class="form-control" />
+                <span asp-validation-for="IfAreaAfectada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfTipoTerreno" class="control-label"></label>
+                <input asp-for="IfTipoTerreno" class="form-control" />
+                <span asp-validation-for="IfTipoTerreno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProp" class="control-label"></label>
+                <select asp-for="IdProp" class="form-control" asp-items="ViewBag.IdProp"></select>
+                <span asp-validation-for="IdProp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCf" class="control-label"></label>
+                <select asp-for="IdCf" class="form-control" asp-items="ViewBag.IdCf"></select>
+                <span asp-validation-for="IdCf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfHoraSalida" class="control-label"></label>
+                <input asp-for="IfHoraSalida" class="form-control" />
+                <span asp-validation-for="IfHoraSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfHoraServicio" class="control-label"></label>
+                <input asp-for="IfHoraServicio" class="form-control" />
+                <span asp-validation-for="IfHoraServicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfHoraEntrada" class="control-label"></label>
+                <input asp-for="IfHoraEntrada" class="form-control" />
+                <span asp-validation-for="IfHoraEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfJefeServicio" class="control-label"></label>
+                <select asp-for="IfJefeServicio" class="form-control" asp-items="ViewBag.IfJefeServicio"></select>
+                <span asp-validation-for="IfJefeServicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfTelefonistaTurno" class="control-label"></label>
+                <select asp-for="IfTelefonistaTurno" class="form-control" asp-items="ViewBag.IfTelefonistaTurno"></select>
+                <span asp-validation-for="IfTelefonistaTurno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfBomberoReporta" class="control-label"></label>
+                <select asp-for="IfBomberoReporta" class="form-control" asp-items="ViewBag.IfBomberoReporta"></select>
+                <span asp-validation-for="IfBomberoReporta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfPiloto" class="control-label"></label>
+                <select asp-for="IfPiloto" class="form-control" asp-items="ViewBag.IfPiloto"></select>
+                <span asp-validation-for="IfPiloto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfUnidad" class="control-label"></label>
+                <input asp-for="IfUnidad" class="form-control" />
+                <span asp-validation-for="IfUnidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfUniAsisEstacion" class="control-label"></label>
+                <input asp-for="IfUniAsisEstacion" class="form-control" />
+                <span asp-validation-for="IfUniAsisEstacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfUniAsisOtraEstacion" class="control-label"></label>
+                <input asp-for="IfUniAsisOtraEstacion" class="form-control" />
+                <span asp-validation-for="IfUniAsisOtraEstacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfUniPoliciacas" class="control-label"></label>
+                <input asp-for="IfUniPoliciacas" class="form-control" />
+                <span asp-validation-for="IfUniPoliciacas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfUniOtrasInstiBomberiles" class="control-label"></label>
+                <input asp-for="IfUniOtrasInstiBomberiles" class="form-control" />
+                <span asp-validation-for="IfUniOtrasInstiBomberiles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfPersonalAsisEstacion" class="control-label"></label>
+                <input asp-for="IfPersonalAsisEstacion" class="form-control" />
+                <span asp-validation-for="IfPersonalAsisEstacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfPersonalAsisOtraEstacion" class="control-label"></label>
+                <input asp-for="IfPersonalAsisOtraEstacion" class="form-control" />
+                <span asp-validation-for="IfPersonalAsisOtraEstacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfObservacion" class="control-label"></label>
+                <input asp-for="IfObservacion" class="form-control" />
+                <span asp-validation-for="IfObservacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfFecha" class="control-label"></label>
+                <input asp-for="IfFecha" class="form-control" />
+                <span asp-validation-for="IfFecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfKmEntrada" class="control-label"></label>
+                <input asp-for="IfKmEntrada" class="form-control" />
+                <span asp-validation-for="IfKmEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfKmSalida" class="control-label"></label>
+                <input asp-for="IfKmSalida" class="form-control" />
+                <span asp-validation-for="IfKmSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfKmRecorrido" class="control-label"></label>
+                <input asp-for="IfKmRecorrido" class="form-control" />
+                <span asp-validation-for="IfKmRecorrido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfFirmaBombero" class="control-label"></label>
+                <select asp-for="IfFirmaBombero" class="form-control" asp-items="ViewBag.IfFirmaBombero"></select>
+                <span asp-validation-for="IfFirmaBombero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfNoBombero" class="control-label"></label>
+                <input asp-for="IfNoBombero" class="form-control" />
+                <span asp-validation-for="IfNoBombero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IfVoBoJefeServicio" class="control-label"></label>
+                <select asp-for="IfVoBoJefeServicio" class="form-control" asp-items="ViewBag.IfVoBoJefeServicio"></select>
+                <span asp-validation-for="IfVoBoJefeServicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

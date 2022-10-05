@@ -1,0 +1,155 @@
+﻿@model IEnumerable<Bomberos.Models.ServicioPrevencion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SpDireccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpNombreRazonsocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpGeneralesServPrestado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpEstablecimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpHoraSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpHoraEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpUnidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpFormaAviso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpObservacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpKmSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpKmEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpKmTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpBomberoReportaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpCompañiaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpEstacionNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpOficialServicioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpPilotoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpTelefonistaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpTurnoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpVoBoJefeServicioNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpDireccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpNombreRazonsocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpGeneralesServPrestado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpEstablecimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpHoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpHoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpUnidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpFormaAviso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpObservacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpKmSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpKmEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpKmTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpBomberoReportaNavigation.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpCompañiaNavigation.IdCompañia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpEstacionNavigation.IdEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpOficialServicioNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpPilotoNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpTelefonistaNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpTurnoNavigation.IdTurno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpVoBoJefeServicioNavigation.IdFirma)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdSp">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdSp">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdSp">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

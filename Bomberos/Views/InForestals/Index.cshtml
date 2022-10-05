@@ -1,0 +1,203 @@
+﻿@model IEnumerable<Bomberos.Models.InForestal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IfUbiSiniestro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfAreaAfectada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfTipoTerreno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfHoraSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfHoraServicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfHoraEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfUnidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfUniAsisEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfUniAsisOtraEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfUniPoliciacas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfUniOtrasInstiBomberiles)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfPersonalAsisEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfPersonalAsisOtraEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfObservacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfKmEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfKmSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfKmRecorrido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfNoBombero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCfNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPropNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfBomberoReportaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfEstacionNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfFirmaBomberoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfJefeServicioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfPilotoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfTelefonistaTurnoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfTurnoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IfVoBoJefeServicioNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfUbiSiniestro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfAreaAfectada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfTipoTerreno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfHoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfHoraServicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfHoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfUnidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfUniAsisEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfUniAsisOtraEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfUniPoliciacas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfUniOtrasInstiBomberiles)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfPersonalAsisEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfPersonalAsisOtraEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfObservacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfKmEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfKmSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfKmRecorrido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfNoBombero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCfNavigation.IdCf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPropNavigation.IdProp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfBomberoReportaNavigation.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfEstacionNavigation.IdEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfFirmaBomberoNavigation.IdFirma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfJefeServicioNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfPilotoNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfTelefonistaTurnoNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfTurnoNavigation.IdTurno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IfVoBoJefeServicioNavigation.IdFirma)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdIf">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdIf">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdIf">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
