@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Bomberos.Models
 {
     public partial class Usuario
     {
-        
-        public string? IdUsuario { get; set; }
-        [Required]
-        public string? Nombres { get; set; }
-        [Required]
-        public string? Apellidos { get; set; }
-        [Required]
-        public string? Correo { get; set; }
-        public bool Activo { get; set; }
-        [Required]
-        [StringLength(8, ErrorMessage = "{0} Cree un usuario entre {2} y {1}.", MinimumLength = 6)]
-        public string? UsUsuario { get; set; }
+        public Usuario()
+        {
+            InEstructurals = new HashSet<InEstructural>();
+            InForestals = new HashSet<InForestal>();
+            InVehiculos = new HashSet<InVehiculo>();
+            ServicioPrevencions = new HashSet<ServicioPrevencion>();
+            ServicioRescates = new HashSet<ServicioRescate>();
+            ServicioVarios = new HashSet<ServicioVario>();
+        }
 
-        [Required]
-        [StringLength(8, ErrorMessage = "{0} Largo de contraseña entre {2} y {1}.", MinimumLength = 6)]
+        public string IdUsuario { get; set; } = null!;
+        public string? Nombres { get; set; }
+        public string? Apellidos { get; set; }
+        public string? Correo { get; set; }
+        public bool? Activo { get; set; }
+        public string? UsUsuario { get; set; }
         public string? UsContraseña { get; set; }
 
-
+        public virtual ICollection<InEstructural> InEstructurals { get; set; }
+        public virtual ICollection<InForestal> InForestals { get; set; }
+        public virtual ICollection<InVehiculo> InVehiculos { get; set; }
+        public virtual ICollection<ServicioPrevencion> ServicioPrevencions { get; set; }
+        public virtual ICollection<ServicioRescate> ServicioRescates { get; set; }
         public virtual ICollection<ServicioVario> ServicioVarios { get; set; }
     }
 }

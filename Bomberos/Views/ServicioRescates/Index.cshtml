@@ -1,0 +1,257 @@
+﻿@model IEnumerable<Bomberos.Models.ServicioRescate>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SrDireccionRescate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrLugarLocalizacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrEstado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrNombresPaciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrApellidosPaciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrCausa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrDireccionPaciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrEdad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrSexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrRopaColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrColorZapatos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrObjetosPortaba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrColorPelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrAproxEstatura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrPosicionEncontro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrTraslado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrUnidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrOtrasUniAsis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrNombreJuez)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrSeñalesPartRescatado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrFormaAviso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrNoTelLlamaron)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrSiglasRadioLlamaron)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrRadioOpTurnoCentral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrHoraSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrHoraEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrPatrullasCarSeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrPersonalAsistente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrObservacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrKmSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrKmEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrKmTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrBomberoReportaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrEstacionNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrOficialMandoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrTelefonistaTurnoEstacionNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrVoBoJefeServicioNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrDireccionRescate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrLugarLocalizacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrEstado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrNombresPaciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrApellidosPaciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrCausa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrDireccionPaciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrEdad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrSexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrRopaColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrColorZapatos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrObjetosPortaba)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrColorPelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrAproxEstatura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrPosicionEncontro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrTraslado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrUnidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrOtrasUniAsis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrNombreJuez)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrSeñalesPartRescatado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrFormaAviso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrNoTelLlamaron)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrSiglasRadioLlamaron)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrRadioOpTurnoCentral)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrHoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrHoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrPatrullasCarSeg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrPersonalAsistente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrObservacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrKmSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrKmEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrKmTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrBomberoReportaNavigation.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrEstacionNavigation.IdEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrOficialMandoNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrTelefonistaTurnoEstacionNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrVoBoJefeServicioNavigation.IdFirma)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdSr">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdSr">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdSr">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -27,7 +27,8 @@
             @Html.DisplayNameFor(model => model.Firma1)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Firma1)
+            <img height="100" width=" 100" src="@Url.Action("convert","Firmas",new { id = @Model.IdFirma })" />
+
         </dd>
     </dl>
     

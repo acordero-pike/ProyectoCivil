@@ -1,0 +1,227 @@
+﻿@model IEnumerable<Bomberos.Models.InVehiculo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IvUbiSiniestro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvTipoVehiculo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvPlaca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvMarca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvValor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvPerdida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvHoraSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvHoraServicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvHoraEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvUnidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvUniAsisEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvUniAsisOtraEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvUniPoliciacas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvUniOtrasInstiBomberiles)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvPersonalAsisEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvPersonalAsisOtraEstacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvObservacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvKmEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvKmSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvKmRecorrido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvNoBombero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCfNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPropNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvBomberoReportaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvEstacionNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvFirmaBomberoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvJefeServicioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvPilotoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvTelefonistaTurnoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvTurnoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IvVoBoJefeServicioNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvUbiSiniestro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvTipoVehiculo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvPlaca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvMarca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvValor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvPerdida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvHoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvHoraServicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvHoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvUnidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvUniAsisEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvUniAsisOtraEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvUniPoliciacas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvUniOtrasInstiBomberiles)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvPersonalAsisEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvPersonalAsisOtraEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvObservacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvKmEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvKmSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvKmRecorrido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvNoBombero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCfNavigation.IdCf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPropNavigation.IdProp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvBomberoReportaNavigation.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvEstacionNavigation.IdEstacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvFirmaBomberoNavigation.IdFirma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvJefeServicioNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvPilotoNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvTelefonistaTurnoNavigation.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvTurnoNavigation.IdTurno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IvVoBoJefeServicioNavigation.IdFirma)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdIv">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdIv">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdIv">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

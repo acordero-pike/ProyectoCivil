@@ -1,0 +1,224 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Bomberos.Models;
+using Microsoft.AspNetCore.Authorization;
+
+namespace Bomberos.Controllers
+{
+    [Authorize]
+
+    public class InEstructuralsController : Controller
+    {
+        private readonly BomberoContext _context;
+
+        public InEstructuralsController(BomberoContext context)
+        {
+            _context = context;
+        }
+
+        // GET: InEstructurals
+        public async Task<IActionResult> Index()
+        {
+            var bomberoContext = _context.InEstructurals.Include(i => i.IdPropNavigation).Include(i => i.IeBomberoReportaNavigation).Include(i => i.IeEstacionNavigation).Include(i => i.IeFirmaBomberoNavigation).Include(i => i.IeIdCfNavigation).Include(i => i.IeJefeServicioNavigation).Include(i => i.IePilotoNavigation).Include(i => i.IeTelefonistaTurnoNavigation).Include(i => i.IeTurnoNavigation).Include(i => i.IeVoBoJefeServicioNavigation);
+            return View(await bomberoContext.ToListAsync());
+        }
+
+        // GET: InEstructurals/Details/5
+        public async Task<IActionResult> Details(string id)
+        {
+            if (id == null || _context.InEstructurals == null)
+            {
+                return NotFound();
+            }
+
+            var inEstructural = await _context.InEstructurals
+                .Include(i => i.IdPropNavigation)
+                .Include(i => i.IeBomberoReportaNavigation)
+                .Include(i => i.IeEstacionNavigation)
+                .Include(i => i.IeFirmaBomberoNavigation)
+                .Include(i => i.IeIdCfNavigation)
+                .Include(i => i.IeJefeServicioNavigation)
+                .Include(i => i.IePilotoNavigation)
+                .Include(i => i.IeTelefonistaTurnoNavigation)
+                .Include(i => i.IeTurnoNavigation)
+                .Include(i => i.IeVoBoJefeServicioNavigation)
+                .FirstOrDefaultAsync(m => m.IdIe == id);
+            if (inEstructural == null)
+            {
+                return NotFound();
+            }
+
+            return View(inEstructural);
+        }
+
+        // GET: InEstructurals/Create
+        public IActionResult Create()
+        {
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp");
+            ViewData["IeBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario");
+            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion");
+            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
+            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf");
+            ViewData["IeJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
+            ViewData["IePiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
+            ViewData["IeTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
+            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno");
+            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
+            return View();
+        }
+
+        // POST: InEstructurals/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("IdIe,IeEstacion,IeTurno,IeUbiSiniestro,IeInmueble,IeValor,IePerdida,IdProp,IeIdCf,IeHoraSalida,IeHoraServicio,IeHoraEntrada,IeJefeServicio,IeTelefonistaTurno,IeBomberoReporta,IePiloto,IeUnidad,IeUniAsisEstacion,IeUniAsisOtraEstacion,IeUniPoliciacas,IeUniOtrasInstiBomberiles,IePersonalAsisEstacion,IePersonalAsisOtraEstacion,IeObservacion,IeFecha,IeKmEntrada,IeKmSalida,IeKmRecorrido,IeFirmaBombero,IeNoBombero,IeVoBoJefeServicio")] InEstructural inEstructural)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(inEstructural);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp", inEstructural.IdProp);
+            ViewData["IeBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", inEstructural.IeBomberoReporta);
+            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", inEstructural.IeEstacion);
+            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeFirmaBombero);
+            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf", inEstructural.IeIdCf);
+            ViewData["IeJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeJefeServicio);
+            ViewData["IePiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IePiloto);
+            ViewData["IeTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeTelefonistaTurno);
+            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", inEstructural.IeTurno);
+            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeVoBoJefeServicio);
+            return View(inEstructural);
+        }
+
+        // GET: InEstructurals/Edit/5
+        public async Task<IActionResult> Edit(string id)
+        {
+            if (id == null || _context.InEstructurals == null)
+            {
+                return NotFound();
+            }
+
+            var inEstructural = await _context.InEstructurals.FindAsync(id);
+            if (inEstructural == null)
+            {
+                return NotFound();
+            }
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp", inEstructural.IdProp);
+            ViewData["IeBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", inEstructural.IeBomberoReporta);
+            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", inEstructural.IeEstacion);
+            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeFirmaBombero);
+            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf", inEstructural.IeIdCf);
+            ViewData["IeJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeJefeServicio);
+            ViewData["IePiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IePiloto);
+            ViewData["IeTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeTelefonistaTurno);
+            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", inEstructural.IeTurno);
+            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeVoBoJefeServicio);
+            return View(inEstructural);
+        }
+
+        // POST: InEstructurals/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(string id, [Bind("IdIe,IeEstacion,IeTurno,IeUbiSiniestro,IeInmueble,IeValor,IePerdida,IdProp,IeIdCf,IeHoraSalida,IeHoraServicio,IeHoraEntrada,IeJefeServicio,IeTelefonistaTurno,IeBomberoReporta,IePiloto,IeUnidad,IeUniAsisEstacion,IeUniAsisOtraEstacion,IeUniPoliciacas,IeUniOtrasInstiBomberiles,IePersonalAsisEstacion,IePersonalAsisOtraEstacion,IeObservacion,IeFecha,IeKmEntrada,IeKmSalida,IeKmRecorrido,IeFirmaBombero,IeNoBombero,IeVoBoJefeServicio")] InEstructural inEstructural)
+        {
+            if (id != inEstructural.IdIe)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(inEstructural);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!InEstructuralExists(inEstructural.IdIe))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp", inEstructural.IdProp);
+            ViewData["IeBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", inEstructural.IeBomberoReporta);
+            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", inEstructural.IeEstacion);
+            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeFirmaBombero);
+            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf", inEstructural.IeIdCf);
+            ViewData["IeJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeJefeServicio);
+            ViewData["IePiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IePiloto);
+            ViewData["IeTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeTelefonistaTurno);
+            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", inEstructural.IeTurno);
+            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeVoBoJefeServicio);
+            return View(inEstructural);
+        }
+
+        // GET: InEstructurals/Delete/5
+        public async Task<IActionResult> Delete(string id)
+        {
+            if (id == null || _context.InEstructurals == null)
+            {
+                return NotFound();
+            }
+
+            var inEstructural = await _context.InEstructurals
+                .Include(i => i.IdPropNavigation)
+                .Include(i => i.IeBomberoReportaNavigation)
+                .Include(i => i.IeEstacionNavigation)
+                .Include(i => i.IeFirmaBomberoNavigation)
+                .Include(i => i.IeIdCfNavigation)
+                .Include(i => i.IeJefeServicioNavigation)
+                .Include(i => i.IePilotoNavigation)
+                .Include(i => i.IeTelefonistaTurnoNavigation)
+                .Include(i => i.IeTurnoNavigation)
+                .Include(i => i.IeVoBoJefeServicioNavigation)
+                .FirstOrDefaultAsync(m => m.IdIe == id);
+            if (inEstructural == null)
+            {
+                return NotFound();
+            }
+
+            return View(inEstructural);
+        }
+
+        // POST: InEstructurals/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(string id)
+        {
+            if (_context.InEstructurals == null)
+            {
+                return Problem("Entity set 'BomberoContext.InEstructurals'  is null.");
+            }
+            var inEstructural = await _context.InEstructurals.FindAsync(id);
+            if (inEstructural != null)
+            {
+                _context.InEstructurals.Remove(inEstructural);
+            }
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool InEstructuralExists(string id)
+        {
+          return _context.InEstructurals.Any(e => e.IdIe == id);
+        }
+    }
+}
