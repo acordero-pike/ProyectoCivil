@@ -261,3 +261,9 @@ C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCi
 C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\obj\Debug\net6.0\Bomberos.pdb
 C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\obj\Debug\net6.0\Bomberos.genruntimeconfig.cache
 C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\obj\Debug\net6.0\ref\Bomberos.dll
+C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll

@@ -34,7 +34,8 @@
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Firma1)
+              <img height="100" width=" 100" src="@Url.Action("convert","Firmas",new { id = item.IdFirma })" />
+
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdFirma">Edit</a> |

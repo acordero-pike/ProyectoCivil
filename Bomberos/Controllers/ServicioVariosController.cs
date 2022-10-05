@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Bomberos.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bomberos.Controllers
 {
+    [Authorize]
+
     public class ServicioVariosController : Controller
     {
         private readonly BomberoContext _context;

@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Bomberos.Models;
+using Microsoft.AspNetCore.Http;
+using System.Web.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bomberos.Controllers
 {
+    [Authorize]
     public class FirmasController : Controller
     {
         private readonly BomberoContext _context;
@@ -47,7 +51,11 @@ namespace Bomberos.Controllers
         {
             return View();
         }
-
+        public ActionResult convert(string id)
+        {
+            var imgs = _context.Firmas.Where(x => x.IdFirma == id).FirstOrDefault();
+            return File(imgs.Firma1, "image/jpeg");
+        }
         // POST: Firmas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -57,6 +65,12 @@ namespace Bomberos.Controllers
         {
             if (ModelState.IsValid)
             {
+                var files = Request.Form.Files.First();
+               
+
+                WebImage im = new WebImage(files.OpenReadStream());
+                firma.Firma1 = im.GetBytes();
+
                 _context.Add(firma);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
