@@ -29,12 +29,12 @@ namespace Bomberos.Controllers
         public async Task<IActionResult> validate(string usuario, string password)
         {
             string pass = GetSHA256(password).ToUpper();
-            var val = from a in _context.Usuarios where usuario == a.UsUsuario && pass == a.UsContraseña select a.Nombres;
-            if (val.Any())
+            var val = from a in _context.Usuarios where usuario == a.UsUsuario && pass == a.UsContraseña  select a;
+            if (val.Any() && val.First().Activo)
             {
                 // creamos un listado de peticion
-                claims.Add(new Claim("username", val.First())); // guardamos el nombre de quien se logea
-                claims.Add(new Claim(ClaimTypes.NameIdentifier, val.First())); //guardamos el tipo de peticion 
+                claims.Add(new Claim("username", val.First().Nombres)); // guardamos el nombre de quien se logea
+                claims.Add(new Claim(ClaimTypes.NameIdentifier, val.First().Nombres)); //guardamos el tipo de peticion 
                 var claimIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme); // asignamos esa peticicon a un esquema de cookies
                 var claimprincipal = new ClaimsPrincipal(claimIdentity); // la volvemos peticion principal
 
@@ -45,8 +45,18 @@ namespace Bomberos.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Error", new { data = "Error de Log in", data2 = "Usuario o Contraseña invalidos" });
-                // si el usuario no es valido envia un badrequest como respuesta
+                if (val.First().Activo)
+                {
+                    return RedirectToAction("Index", "Error", new { data = "Error de Log in", data2 = "Usuario o Contraseña invalidos" });
+                    // si el usuario no es valido envia un badrequest como respuesta
+
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Error", new { data = "Error de Log in", data2 = "Usuario Inactivo porfavor contacte a la institucion" });
+                    // si el usuario no es valido envia un badrequest como respuesta
+
+                }
             }
 
 
