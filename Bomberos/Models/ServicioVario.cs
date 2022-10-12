@@ -5,7 +5,7 @@ namespace Bomberos.Models
 {
     public partial class ServicioVario
     {
-        public string IdSv { get; set; } = null!;
+        public string? IdSv { get; set; } = null!;
         public string? SvEstacion { get; set; }
         public string? SvTurno { get; set; }
         public DateTime? SvFecha { get; set; }

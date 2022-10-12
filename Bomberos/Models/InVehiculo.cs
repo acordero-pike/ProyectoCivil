@@ -5,7 +5,7 @@ namespace Bomberos.Models
 {
     public partial class InVehiculo
     {
-        public string IdIv { get; set; } = null!;
+        public string? IdIv { get; set; } = null!;
         public string? IvEstacion { get; set; }
         public string? IvTurno { get; set; }
         public string? IvUbiSiniestro { get; set; }

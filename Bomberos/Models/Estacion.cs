@@ -14,7 +14,7 @@ namespace Bomberos.Models
             ServicioRescates = new HashSet<ServicioRescate>();
         }
 
-        public string IdEstacion { get; set; } = null!;
+        public string? IdEstacion { get; set; } = null!;
         public string? Nombre { get; set; }
         public string? Descripcion { get; set; }
 

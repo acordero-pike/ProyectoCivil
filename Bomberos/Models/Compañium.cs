@@ -10,7 +10,7 @@ namespace Bomberos.Models
             ServicioPrevencions = new HashSet<ServicioPrevencion>();
         }
 
-        public string IdCompañia { get; set; } = null!;
+        public string? IdCompañia { get; set; } = null!;
         public string? Nombre { get; set; }
         public string? Descripcion { get; set; }
 
