@@ -28,7 +28,7 @@ namespace Bomberos.Models
             ServicioVarioSvTelefonistaTurnoNavigations = new HashSet<ServicioVario>();
         }
 
-        public string IdPersonal { get; set; } = null!;
+        public string? IdPersonal { get; set; } = null!;
         public string? Nombres { get; set; }
         public string? Apellidos { get; set; }
         public string? Telefono { get; set; }

@@ -139,6 +139,7 @@ namespace Bomberos.Controllers
         // POST: ClaseFuegoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             if (_context.ClaseFuegos == null)

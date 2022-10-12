@@ -18,7 +18,7 @@ namespace Bomberos.Models
             ServicioVarios = new HashSet<ServicioVario>();
         }
 
-        public string IdFirma { get; set; } = null!;
+        public string? IdFirma { get; set; } = null!;
         public string? Tipo { get; set; }
         public string? Nombre { get; set; }
         public byte[]? Firma1 { get; set; }
