@@ -29,7 +29,7 @@ namespace Bomberos.Controllers
         public async Task<IActionResult> validate(string usuario, string password)
         {
             string pass = GetSHA256(password).ToUpper();
-            var val = from a in _context.Usuarios where usuario == a.UsUsuario && pass == a.UsContraseña  select a;
+            var val = _context.Usuarios.Where(a => a.UsUsuario== usuario && a.UsContraseña==pass);
             if (val.Any() && val.First().Activo)
             {
                 // creamos un listado de peticion

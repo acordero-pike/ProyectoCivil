@@ -12,7 +12,7 @@ namespace Bomberos.Models
             InVehiculos = new HashSet<InVehiculo>();
         }
 
-        public string IdCf { get; set; } = null!;
+        public string? IdCf { get; set; } = null!;
         public string? CfClasefuego { get; set; }
 
         public virtual ICollection<InEstructural> InEstructurals { get; set; }

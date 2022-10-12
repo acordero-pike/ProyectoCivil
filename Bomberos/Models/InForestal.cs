@@ -5,7 +5,7 @@ namespace Bomberos.Models
 {
     public partial class InForestal
     {
-        public string IdIf { get; set; } = null!;
+        public string? IdIf { get; set; } = null!;
         public string? IfEstacion { get; set; }
         public string? IfTurno { get; set; }
         public string? IfUbiSiniestro { get; set; }

@@ -5,7 +5,7 @@ namespace Bomberos.Models
 {
     public partial class InEstructural
     {
-        public string IdIe { get; set; } = null!;
+        public string? IdIe { get; set; } = null!;
         public string? IeEstacion { get; set; }
         public string? IeTurno { get; set; }
         public string? IeUbiSiniestro { get; set; }

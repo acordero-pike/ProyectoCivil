@@ -5,7 +5,7 @@ namespace Bomberos.Models
 {
     public partial class ServicioRescate
     {
-        public string IdSr { get; set; } = null!;
+        public string? IdSr { get; set; } = null!;
         public string? SrEstacion { get; set; }
         public string? SrDireccionRescate { get; set; }
         public string? SrLugarLocalizacion { get; set; }
