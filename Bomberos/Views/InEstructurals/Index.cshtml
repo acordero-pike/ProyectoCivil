@@ -1,110 +1,200 @@
 ﻿@model IEnumerable<Bomberos.Models.InEstructural>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Incendios Estructurales";
 }
 
-<h1>Index</h1>
+<h1>Incendios Estructurales</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear Nuevo Formulario</a>
 </p>
+<div style="overflow-x:auto;">
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IeUbiSiniestro)
+            <th><center>
+               @* @Html.DisplayNameFor(model => model.IeUbiSiniestro)*@
+               Ubicación del Siniestro
+               </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeInmueble)
+                <center>
+                @* @Html.DisplayNameFor(model => model.IeInmueble) *@
+                Inmueble
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeValor)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeValor)*@
+               Valor
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IePerdida)
+                <center>
+                @* @Html.DisplayNameFor(model => model.IePerdida)*@
+                Pérdida
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeHoraSalida)
+                <center>
+                @* @Html.DisplayNameFor(model => model.IeHoraSalida)*@
+                Hora de Salida
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeHoraServicio)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeHoraServicio)*@
+               Hora Efectiva del Servicio
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeHoraEntrada)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeHoraEntrada)*@
+               Hora de Entrada
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeUnidad)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeUnidad)*@
+               Unidad
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeUniAsisEstacion)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeUniAsisEstacion)*@
+               Otras Unidades Asistente de la Estación
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeUniAsisOtraEstacion)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeUniAsisOtraEstacion)*@
+               Unidades Asistentes de otras Estaciones
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeUniPoliciacas)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeUniPoliciacas)*@
+               Unidades Policiacas
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeUniOtrasInstiBomberiles)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeUniOtrasInstiBomberiles)*@
+               Unidades de Otras Instituciones Bomberiles
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IePersonalAsisEstacion)
+                <center>
+                @* @Html.DisplayNameFor(model => model.IePersonalAsisEstacion)*@
+                Personal Asistente de la Estación 
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IePersonalAsisOtraEstacion)
+                <center>
+                @* @Html.DisplayNameFor(model => model.IePersonalAsisOtraEstacion)*@
+                Personal Asistente de otra Estaciones
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeObservacion)
+                <center>
+                @* @Html.DisplayNameFor(model => model.IeObservacion)*@
+                Observaciones 
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeFecha)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeFecha)*@
+               Fecha
+               </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeKmEntrada)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeKmEntrada)*@
+               Kilometraje de Entrada
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeKmSalida)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeKmSalida)*@
+               Kilometraje de Salida
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeKmRecorrido)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeKmRecorrido)*@
+               Kilometros Recorridos
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeNoBombero)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeNoBombero)*@
+               No. Bombero
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdPropNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IdPropNavigation)*@
+               Proporción
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeBomberoReportaNavigation)
+               @* @Html.DisplayNameFor(model => model.IeBomberoReportaNavigation)*@
+               Bombero que Reporta
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeEstacionNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeEstacionNavigation)*@
+               Estación
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeFirmaBomberoNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeFirmaBomberoNavigation)*@
+               Firma de Bombero
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeIdCfNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeIdCfNavigation)*@
+               Clase de Fuego
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeJefeServicioNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeJefeServicioNavigation)*@
+               Jefe de Servicio
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IePilotoNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IePilotoNavigation)*@
+               Piloto
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeTelefonistaTurnoNavigation)
+                <center>
+                @* @Html.DisplayNameFor(model => model.IeTelefonistaTurnoNavigation)*@
+                Telefonista de Turno
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeTurnoNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeTurnoNavigation)*@
+               Turno
+                </center>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IeVoBoJefeServicioNavigation)
+                <center>
+               @* @Html.DisplayNameFor(model => model.IeVoBoJefeServicioNavigation)*@
+               Vo. Bo Jefe de Servicio
+                </center>
             </th>
             <th></th>
         </tr>
     </thead>
+    </div>
     <tbody>
 @foreach (var item in Model) {
         <tr>
@@ -199,9 +289,9 @@
                 @Html.DisplayFor(modelItem => item.IeVoBoJefeServicioNavigation.IdFirma)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdIe">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdIe">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdIe">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdIe">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdIe">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdIe">Eliminar</a>
             </td>
         </tr>
 }

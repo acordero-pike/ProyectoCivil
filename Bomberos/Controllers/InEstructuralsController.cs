@@ -59,13 +59,16 @@ namespace Bomberos.Controllers
         // GET: InEstructurals/Create
         public IActionResult Create()
         {
+            var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
+            var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });
+
             ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp");
-            ViewData["IeBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario");
+            ViewData["IeBomberoReporta"] = new SelectList(users, "IdUsuario", "Nombre");
             ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion");
             ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
-            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf");
+            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "CfClasefuego");
             ViewData["IeJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["IePiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
+            ViewData["IePiloto"] = new SelectList(empleado, "IdPersonal", "Nombre");
             ViewData["IeTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
             ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno");
             ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
