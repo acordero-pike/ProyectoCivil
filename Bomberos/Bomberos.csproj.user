@@ -11,9 +11,13 @@
     <WebStackScaffolding_DbContextTypeFullName>Bomberos.Models.BomberoContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+<<<<<<< HEAD
     <ActiveDebugProfile>Bomberos</ActiveDebugProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+=======
+    <NameOfLastUsedPublishProfile>C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
+>>>>>>> 19dfae8edbb95764bd3fcf35fe183667554da6f6
   </PropertyGroup>
 </Project>

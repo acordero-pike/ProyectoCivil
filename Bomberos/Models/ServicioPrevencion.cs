@@ -5,7 +5,7 @@ namespace Bomberos.Models
 {
     public partial class ServicioPrevencion
     {
-        public string IdSp { get; set; } = null!;
+        public string? IdSp { get; set; } = null!;
         public string? SpDireccion { get; set; }
         public string? SpNombreRazonsocial { get; set; }
         public string? SpGeneralesServPrestado { get; set; }
