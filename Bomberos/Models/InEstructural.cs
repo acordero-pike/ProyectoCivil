@@ -67,7 +67,10 @@ namespace Bomberos.Models
         public long? IeNoBombero { get; set; }
         [Display(Name = "Vo. Bo. Jefe en Servicio:")]
         public string? IeVoBoJefeServicio { get; set; }
-
+        [Display(Name = "Codigo:")]
+        public string? Codigo { get; set; }
+        [Display(Name = "Codigo:")]
+        public virtual Codigo? CodigoNavigation { get; set; }
         [Display(Name = "Proporción:")]
         public virtual Proporcion? IdPropNavigation { get; set; }
         [Display(Name = "Bombero que Reporta:")]

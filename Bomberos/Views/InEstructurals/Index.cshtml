@@ -17,6 +17,11 @@
                @Html.DisplayNameFor(model => model.IeUbiSiniestro)          
                </center>
             </th>
+                <th>
+                    <center>
+                        @Html.DisplayNameFor(model => model.Codigo)
+                    </center>
+                </th>
             @*<th>
                 <center>
                  @Html.DisplayNameFor(model => model.IeInmueble)              
@@ -175,6 +180,11 @@
                 <center>
                 @Html.DisplayFor(modelItem => item.IeUbiSiniestro)
                     </center>
+            </td>
+            <td>
+                <center>
+                    @Html.DisplayFor(modelItem => item.CodigoNavigation.Codigo1)
+                </center>
             </td>
            @* <td>
                 @Html.DisplayFor(modelItem => item.IeInmueble)

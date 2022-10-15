@@ -39,7 +39,9 @@ namespace Bomberos.Models
         public string? IvFirmaBombero { get; set; }
         public long? IvNoBombero { get; set; }
         public string? IvVoBoJefeServicio { get; set; }
+        public string? Codigo { get; set; }
 
+        public virtual Codigo? CodigoNavigation { get; set; }
         public virtual ClaseFuego? IdCfNavigation { get; set; }
         public virtual Proporcion? IdPropNavigation { get; set; }
         public virtual Usuario? IvBomberoReportaNavigation { get; set; }

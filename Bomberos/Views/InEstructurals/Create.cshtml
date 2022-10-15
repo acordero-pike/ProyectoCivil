@@ -157,6 +157,10 @@
                 <label asp-for="IeVoBoJefeServicio" class="control-label">Vo. Bo. Jefe de Servicio:</label>
                 <select asp-for="IeVoBoJefeServicio" class="form-control" asp-items="ViewBag.IeVoBoJefeServicio"></select>
             </div>
+            <div class="form-group col-md-3">
+                <label asp-for="Uuid" class="control-label">Codigo del Sinistro:</label>
+                <select asp-for="Uuid" class="form-control" asp-items="ViewBag.Uuid"></select>
+            </div>
             <div class="form-group col-md-6">
                 <input type="submit" value="Crear" class="btn btn-primary">|
                 <a asp-action="Index">Regresar al Listado</a>
