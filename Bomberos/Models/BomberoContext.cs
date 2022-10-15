@@ -17,6 +17,7 @@ namespace Bomberos.Models
         }
 
         public virtual DbSet<ClaseFuego> ClaseFuegos { get; set; } = null!;
+        public virtual DbSet<Codigo> Codigos { get; set; } = null!;
         public virtual DbSet<Compañium> Compañia { get; set; } = null!;
         public virtual DbSet<Estacion> Estacions { get; set; } = null!;
         public virtual DbSet<Firma> Firmas { get; set; } = null!;
@@ -59,6 +60,30 @@ namespace Bomberos.Models
                     .HasMaxLength(36)
                     .IsUnicode(false)
                     .HasColumnName("cf_Clasefuego");
+            });
+
+            modelBuilder.Entity<Codigo>(entity =>
+            {
+                entity.HasKey(e => e.Uuid)
+                    .HasName("PK__Codigo__65A475E7EE0173A6");
+
+                entity.ToTable("Codigo");
+
+                entity.Property(e => e.Uuid)
+                    .HasMaxLength(36)
+                    .IsUnicode(false)
+                    .HasColumnName("UUID")
+                    .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Codigo1)
+                    .HasMaxLength(4)
+                    .IsUnicode(false)
+                    .HasColumnName("CODIGO");
+
+                entity.Property(e => e.Descripcion)
+                    .HasMaxLength(70)
+                    .IsUnicode(false)
+                    .HasColumnName("DESCRIPCION");
             });
 
             modelBuilder.Entity<Compañium>(entity =>
@@ -147,6 +172,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("id_ie")
                     .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Codigo)
+                    .HasMaxLength(36)
+                    .IsUnicode(false)
+                    .HasColumnName("CODIGO");
 
                 entity.Property(e => e.IdProp)
                     .HasMaxLength(36)
@@ -270,6 +300,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("ie_VoBoJefeServicio");
 
+                entity.HasOne(d => d.CodigoNavigation)
+                    .WithMany(p => p.InEstructurals)
+                    .HasForeignKey(d => d.Codigo)
+                    .HasConstraintName("FK_InEstructural");
+
                 entity.HasOne(d => d.IdPropNavigation)
                     .WithMany(p => p.InEstructurals)
                     .HasForeignKey(d => d.IdProp)
@@ -333,6 +368,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("id_if")
                     .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Codigo)
+                    .HasMaxLength(36)
+                    .IsUnicode(false)
+                    .HasColumnName("CODIGO");
 
                 entity.Property(e => e.IdCf)
                     .HasMaxLength(36)
@@ -457,6 +497,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("if_VoBoJefeServicio");
 
+                entity.HasOne(d => d.CodigoNavigation)
+                    .WithMany(p => p.InForestals)
+                    .HasForeignKey(d => d.Codigo)
+                    .HasConstraintName("FK_InForestal");
+
                 entity.HasOne(d => d.IdCfNavigation)
                     .WithMany(p => p.InForestals)
                     .HasForeignKey(d => d.IdCf)
@@ -520,6 +565,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("id_iv")
                     .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Codigo)
+                    .HasMaxLength(36)
+                    .IsUnicode(false)
+                    .HasColumnName("CODIGO");
 
                 entity.Property(e => e.IdCf)
                     .HasMaxLength(36)
@@ -658,6 +708,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("iv_VoBoJefeServicio");
 
+                entity.HasOne(d => d.CodigoNavigation)
+                    .WithMany(p => p.InVehiculos)
+                    .HasForeignKey(d => d.Codigo)
+                    .HasConstraintName("FK_InVehiculo");
+
                 entity.HasOne(d => d.IdCfNavigation)
                     .WithMany(p => p.InVehiculos)
                     .HasForeignKey(d => d.IdCf)
@@ -727,7 +782,7 @@ namespace Bomberos.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Direccion)
-                    .HasMaxLength(15)
+                    .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Nombres)
@@ -773,6 +828,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("id_sp")
                     .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Codigo)
+                    .HasMaxLength(36)
+                    .IsUnicode(false)
+                    .HasColumnName("CODIGO");
 
                 entity.Property(e => e.SpBomberoReporta)
                     .HasMaxLength(46)
@@ -863,6 +923,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("sp_VoBoJefeServicio");
 
+                entity.HasOne(d => d.CodigoNavigation)
+                    .WithMany(p => p.ServicioPrevencions)
+                    .HasForeignKey(d => d.Codigo)
+                    .HasConstraintName("FK_ServicioPrevencion");
+
                 entity.HasOne(d => d.SpBomberoReportaNavigation)
                     .WithMany(p => p.ServicioPrevencions)
                     .HasForeignKey(d => d.SpBomberoReporta)
@@ -916,6 +981,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("id_sr")
                     .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Codigo)
+                    .HasMaxLength(36)
+                    .IsUnicode(false)
+                    .HasColumnName("CODIGO");
 
                 entity.Property(e => e.SrApellidosPaciente)
                     .HasMaxLength(100)
@@ -1085,6 +1155,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("sr_VoBoJefeServicio");
 
+                entity.HasOne(d => d.CodigoNavigation)
+                    .WithMany(p => p.ServicioRescates)
+                    .HasForeignKey(d => d.Codigo)
+                    .HasConstraintName("FK_ServicioRescate");
+
                 entity.HasOne(d => d.SrBomberoReportaNavigation)
                     .WithMany(p => p.ServicioRescates)
                     .HasForeignKey(d => d.SrBomberoReporta)
@@ -1123,6 +1198,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("id_sv")
                     .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Codigo)
+                    .HasMaxLength(36)
+                    .IsUnicode(false)
+                    .HasColumnName("CODIGO");
 
                 entity.Property(e => e.SvBomberoReporta)
                     .HasMaxLength(46)
@@ -1205,6 +1285,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("sv_Unidad");
 
+                entity.HasOne(d => d.CodigoNavigation)
+                    .WithMany(p => p.ServicioVarios)
+                    .HasForeignKey(d => d.Codigo)
+                    .HasConstraintName("FK_ServicioVario");
+
                 entity.HasOne(d => d.SvBomberoReportaNavigation)
                     .WithMany(p => p.ServicioVarios)
                     .HasForeignKey(d => d.SvBomberoReporta)
@@ -1280,7 +1365,8 @@ namespace Bomberos.Models
                 entity.Property(e => e.IdUsuario)
                     .HasMaxLength(46)
                     .IsUnicode(false)
-                    .HasColumnName("id_usuario");
+                    .HasColumnName("id_usuario")
+                    .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.Apellidos)
                     .HasMaxLength(50)
