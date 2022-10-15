@@ -201,10 +201,17 @@
                 <div class="form-group col-md-6">
                 <label>@Html.DisplayNameFor(model => model.IeVoBoJefeServicioNavigation)</label>
                           @Html.DisplayFor(model => model.IeVoBoJefeServicioNavigation.Nombre)
-        </div><br></br>
+                </div>
+
+                <div class="form-group col-md-3">
+                <label>@Html.DisplayNameFor(model => model.CodigoNavigation)</label>
+                          @Html.DisplayFor(model => model.CodigoNavigation.Codigo1)
+                </div>
         </div>
+        <br>
+ </div>
     
-</div>
+
 
 <div class="form-group col-md-12" >
     <a asp-action="Edit" asp-route-id="@Model?.IdIe">Editar</a> |
