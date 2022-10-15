@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Crear Formulario";
 }
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -16,6 +16,7 @@
         <form asp-action="Create">
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group col-md-3">
                 <label asp-for="IeEstacion" class="control-label">Estación:</label>
                 <select asp-for="IeEstacion" class="form-control" asp-items="ViewBag.IeEstacion"></select>
@@ -123,31 +124,31 @@
                 <textarea asp-for="IeObservacion" class="form-control" style="height:150px"></textarea>
                 <span asp-validation-for="IeObservacion" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label asp-for="IeFecha" class="control-label">Fecha:</label>
                 <input asp-for="IeFecha" class="form-control" />
                 <span asp-validation-for="IeFecha" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label asp-for="IeKmEntrada" class="control-label">Kilometraje de Entrada:</label>
                 <input asp-for="IeKmEntrada" class="form-control" />
                 <span asp-validation-for="IeKmEntrada" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label asp-for="IeKmSalida" class="control-label">Kilometraje de Salida:</label>
                 <input asp-for="IeKmSalida" class="form-control" />
                 <span asp-validation-for="IeKmSalida" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label asp-for="IeKmRecorrido" class="control-label">Kilometros Recorridos:</label>
                 <input asp-for="IeKmRecorrido" class="form-control" />
                 <span asp-validation-for="IeKmRecorrido" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label asp-for="IeFirmaBombero" class="control-label">Firma de Bombero</label>
                 <select asp-for="IeFirmaBombero" class="form-control" asp-items="ViewBag.IeFirmaBombero"></select>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label asp-for="IeNoBombero" class="control-label">No. Bombero:</label>
                 <input asp-for="IeNoBombero" class="form-control" />
                 <span asp-validation-for="IeNoBombero" class="text-danger"></span>
@@ -156,16 +157,14 @@
                 <label asp-for="IeVoBoJefeServicio" class="control-label">Vo. Bo. Jefe de Servicio:</label>
                 <select asp-for="IeVoBoJefeServicio" class="form-control" asp-items="ViewBag.IeVoBoJefeServicio"></select>
             </div>
-            <div class="form-group col-md">
-                <input type="submit" value="Crear" class="btn btn-primary" />
+            <div class="form-group col-md-6">
+                <input type="submit" value="Crear" class="btn btn-primary">|
+                <a asp-action="Index">Regresar al Listado</a>
             </div>
         </form>
     </div>
 </div>
 
-<div class="form-group col-md">
-    <a asp-action="Index">Regresar al Listado</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

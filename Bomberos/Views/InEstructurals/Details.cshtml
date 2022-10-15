@@ -1,198 +1,212 @@
 ﻿@model Bomberos.Models.InEstructural
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles de Incendio Estructural";
 }
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Details</h1>
+<h1><center>Detalles de Incendio Estructural</center></h1>
 
-<div>
-    <h4>InEstructural</h4>
+<div class="">
+    <h4><center>Incendio Estructural</center></h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeUbiSiniestro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeUbiSiniestro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeInmueble)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeInmueble)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeValor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeValor)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IePerdida)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IePerdida)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeHoraSalida)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeHoraSalida)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeHoraServicio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeHoraServicio)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeHoraEntrada)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeHoraEntrada)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeUnidad)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeUnidad)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeUniAsisEstacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeUniAsisEstacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeUniAsisOtraEstacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeUniAsisOtraEstacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeUniPoliciacas)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeUniPoliciacas)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeUniOtrasInstiBomberiles)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeUniOtrasInstiBomberiles)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IePersonalAsisEstacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IePersonalAsisEstacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IePersonalAsisOtraEstacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IePersonalAsisOtraEstacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeObservacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeObservacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeFecha)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeFecha)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeKmEntrada)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeKmEntrada)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeKmSalida)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeKmSalida)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeKmRecorrido)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeKmRecorrido)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeNoBombero)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeNoBombero)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdPropNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdPropNavigation.IdProp)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeBomberoReportaNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeBomberoReportaNavigation.IdUsuario)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeEstacionNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeEstacionNavigation.IdEstacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeFirmaBomberoNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeFirmaBomberoNavigation.IdFirma)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeIdCfNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeIdCfNavigation.IdCf)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeJefeServicioNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeJefeServicioNavigation.IdPersonal)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IePilotoNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IePilotoNavigation.IdPersonal)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeTelefonistaTurnoNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeTelefonistaTurnoNavigation.IdPersonal)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeTurnoNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeTurnoNavigation.IdTurno)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IeVoBoJefeServicioNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IeVoBoJefeServicioNavigation.IdFirma)
-        </dd>
-    </dl>
+    
+        <div class="">
+                
+                <div class="form-group col-md-6">
+                <label>@Html.DisplayNameFor(model => model.IeUbiSiniestro)</label>
+                       @Html.DisplayFor(model => model.IeUbiSiniestro)
+                </div>
+
+                
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeEstacionNavigation)</label>
+                          @Html.DisplayFor(model => model.IeEstacionNavigation.Nombre)
+                </div>
+
+               
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeTurnoNavigation)</label>
+                    @Html.DisplayFor(model => model.IeTurnoNavigation.Nombre)
+        </div> <br></br>
+
+           
+
+
+
+
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeInmueble)</label>
+                     @Html.DisplayFor(model => model.IeInmueble)
+                </div>
+                     
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeValor)</label>
+                     @Html.DisplayFor(model => model.IeValor)
+                </div>
+                                  
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IePerdida)</label>
+                     @Html.DisplayFor(model => model.IePerdida)
+                </div>
+                                         
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IdPropNavigation)</label>
+                     @Html.DisplayFor(model => model.IdPropNavigation.PTipoProp)
+                  </div><br></br>
+
+
+
+
+
+
+
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeIdCfNavigation)</label>
+                     @Html.DisplayFor(model => model.IeIdCfNavigation.CfClasefuego)
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeHoraSalida)</label>
+                     @Html.DisplayFor(model => model.IeHoraSalida)
+                </div>
+                                                                  
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeHoraServicio)</label>
+                     @Html.DisplayFor(model => model.IeHoraServicio)
+                </div>
+                                                   
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeHoraEntrada)</label>
+                     @Html.DisplayFor(model => model.IeHoraEntrada)
+        </div><br></br>
+                             
+                
+
+
+                <div class="form-group col-md-6">
+                    <label>@Html.DisplayNameFor(model => model.IeJefeServicioNavigation)</label>
+                    @Html.DisplayFor(model => model.IeJefeServicioNavigation.Nombres)
+                     @Html.DisplayFor(model => model.IeJefeServicioNavigation.Apellidos)
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeTelefonistaTurnoNavigation)</label>
+                     @Html.DisplayFor(model => model.IeTelefonistaTurnoNavigation.Nombres)
+                      @Html.DisplayFor(model => model.IeTelefonistaTurnoNavigation.Apellidos)
+                </div>
+
+                <div class="form-group col-md-3">
+                <label>@Html.DisplayNameFor(model => model.IeBomberoReportaNavigation)</label>
+                         @Html.DisplayFor(model => model.IeBomberoReportaNavigation.Nombres)
+                         @Html.DisplayFor(model => model.IeBomberoReportaNavigation.Apellidos)
+        </div><br></br>
+                       
+                
+
+
+
+
+
+                <div class="form-group col-md-3">
+                 <label>@Html.DisplayNameFor(model => model.IePilotoNavigation)</label>
+                         @Html.DisplayFor(model => model.IePilotoNavigation.Nombres)
+                         @Html.DisplayFor(model => model.IePilotoNavigation.Apellidos)
+                </div>
+ 
+                
+
+                <div class="form-group col-md-3">
+                <label>@Html.DisplayNameFor(model => model.IeUnidad)</label>
+                         @Html.DisplayFor(model => model.IeUnidad)
+                </div>
+                                      
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeUniAsisEstacion)</label>
+                             @Html.DisplayFor(model => model.IeUniAsisEstacion)
+                </div>
+             
+                <div class="form-group col-md-3">
+                   <label>@Html.DisplayNameFor(model => model.IeUniAsisOtraEstacion)</label>
+                             @Html.DisplayFor(model => model.IeUniAsisOtraEstacion)
+                </div>
+                                                                   
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeUniPoliciacas)</label>
+                             @Html.DisplayFor(model => model.IeUniPoliciacas)
+                </div>
+
+  
+                
+                <div class="form-group col-md-3">
+                <label>@Html.DisplayNameFor(model => model.IeUniOtrasInstiBomberiles)</label>
+                         @Html.DisplayFor(model => model.IeUniOtrasInstiBomberiles)
+                </div>
+                                                    
+                <div class="form-group col-md-3">
+                     <label>@Html.DisplayNameFor(model => model.IePersonalAsisEstacion)</label>
+                        @Html.DisplayFor(model => model.IePersonalAsisEstacion)
+                </div>
+                                                                                                                                                                 
+                <div class="form-group col-md-3">
+                <label>@Html.DisplayNameFor(model => model.IePersonalAsisOtraEstacion)</label>
+                         @Html.DisplayFor(model => model.IePersonalAsisOtraEstacion)
+                </div><br></br>
+
+
+
+                <div class="form-group col-md-12" >
+                      <label>@Html.DisplayNameFor(model => model.IeObservacion)</label>
+                      <div class="ddic">  @Model?.IeObservacion.ToString() </div>
+
+        </div><br></br>
+
+
+                                                                                            
+                <div class="form-group col-md-2">
+                    <label>@Html.DisplayNameFor(model => model.IeFecha) </label>
+                          @Html.DisplayFor(model => model.IeFecha)
+                </div>
+                                                                                                                                                                                     
+                <div class="form-group col-md-3">
+                     <label>@Html.DisplayNameFor(model => model.IeKmEntrada)</label>
+                             @Html.DisplayFor(model => model.IeKmEntrada)
+                </div>
+                                                                                                                                                                                                 
+                <div class="form-group col-md-3">
+                    <label>@Html.DisplayNameFor(model => model.IeKmSalida)</label>
+                            @Html.DisplayFor(model => model.IeKmSalida)
+                </div>
+                                                                                                     
+                <div class="form-group col-md-3">
+                    <label> @Html.DisplayNameFor(model => model.IeKmRecorrido)</label>
+                            @Html.DisplayFor(model => model.IeKmRecorrido)
+        </div><br></br>
+  
+        
+                <div class="form-group col-md-4">
+                    <label>@Html.DisplayNameFor(model => model.IeFirmaBomberoNavigation)</label>
+                             @Html.DisplayFor(model => model.IeFirmaBomberoNavigation.Nombre)
+                </div>
+                                                                                              
+                <div class="form-group col-md-2">
+                     <label> @Html.DisplayNameFor(model => model.IeNoBombero)</label>
+                             @Html.DisplayFor(model => model.IeNoBombero)
+                </div>
+
+               
+                
+                <div class="form-group col-md-6">
+                <label>@Html.DisplayNameFor(model => model.IeVoBoJefeServicioNavigation)</label>
+                          @Html.DisplayFor(model => model.IeVoBoJefeServicioNavigation.Nombre)
+        </div><br></br>
+        </div>
+    
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdIe">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="form-group col-md-12" >
+    <a asp-action="Edit" asp-route-id="@Model?.IdIe">Editar</a> |
+    <a asp-action="Index">Regresar al Listado</a>
 </div>

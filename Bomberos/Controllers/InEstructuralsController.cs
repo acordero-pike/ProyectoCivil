@@ -62,16 +62,16 @@ namespace Bomberos.Controllers
             var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
             var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });
 
-            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp");
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "PTipoProp");
             ViewData["IeBomberoReporta"] = new SelectList(users, "IdUsuario", "Nombre");
-            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion");
-            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
+            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre");
+            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "Nombre");
             ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "CfClasefuego");
-            ViewData["IeJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["IePiloto"] = new SelectList(empleado, "IdPersonal", "Nombre");
-            ViewData["IeTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno");
-            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
+            ViewData["IeJefeServicio"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["IePiloto"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["IeTelefonistaTurno"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre");
+            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "Nombre");
             return View();
         }
 
@@ -114,16 +114,21 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp", inEstructural.IdProp);
-            ViewData["IeBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", inEstructural.IeBomberoReporta);
-            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", inEstructural.IeEstacion);
-            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeFirmaBombero);
-            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf", inEstructural.IeIdCf);
-            ViewData["IeJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeJefeServicio);
-            ViewData["IePiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IePiloto);
-            ViewData["IeTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inEstructural.IeTelefonistaTurno);
-            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", inEstructural.IeTurno);
-            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inEstructural.IeVoBoJefeServicio);
+
+            var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
+            var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });
+            
+
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "PTipoProp", inEstructural.IdProp);
+            ViewData["IeBomberoReporta"] = new SelectList(users, "IdUsuario", "Nombre", inEstructural.IeBomberoReporta);
+            ViewData["IeEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre", inEstructural.IeEstacion);
+            ViewData["IeFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "Nombre", inEstructural.IeFirmaBombero);
+            ViewData["IeIdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "CfClasefuego", inEstructural.IeIdCf);
+            ViewData["IeJefeServicio"] = new SelectList(empleado, "Id_Personal", "Nombre", inEstructural.IeJefeServicio);
+            ViewData["IePiloto"] = new SelectList(empleado, "Id_Personal", "Nombre", inEstructural.IePiloto);
+            ViewData["IeTelefonistaTurno"] = new SelectList(empleado, "Id_Personal", "Nombre", inEstructural.IeTelefonistaTurno);
+            ViewData["IeTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre", inEstructural.IeTurno);
+            ViewData["IeVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "Nombre", inEstructural.IeVoBoJefeServicio);
             return View(inEstructural);
         }
 

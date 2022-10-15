@@ -142,18 +142,26 @@ public class EstacionsController : Controller
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Estacions == null)
+            try
             {
-                return Problem("Entity set 'BomberoContext.Estacions'  is null.");
+                if (_context.Estacions == null)
+                {
+                    return Problem("Entity set 'BomberoContext.Estacions'  is null.");
+                }
+                var estacion = await _context.Estacions.FindAsync(id);
+                if (estacion != null)
+                {
+                    _context.Estacions.Remove(estacion);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+
+
             }
-            var estacion = await _context.Estacions.FindAsync(id);
-            if (estacion != null)
-            {
-                _context.Estacions.Remove(estacion);
+            catch{
+                return RedirectToAction("Index", "Error", new { data = "Error al eliminar!!", data2 = "Este campo esta siendo utilizado" });
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool EstacionExists(string id)

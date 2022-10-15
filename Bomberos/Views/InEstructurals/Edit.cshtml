@@ -1,178 +1,173 @@
 ﻿@model Bomberos.Models.InEstructural
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Formulario";
 }
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Edit</h1>
+<h1>Editar Formulario</h1>
 
-<h4>InEstructural</h4>
+<h4>Incendios Estructurales</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="">
+    <div class="">
         <form asp-action="Edit">
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdIe" />
-            <div class="form-group">
-                <label asp-for="IeEstacion" class="control-label"></label>
+
+            <div class="form-group col-md-3">
+                <label asp-for="IeEstacion" class="control-label">Estación:</label>
                 <select asp-for="IeEstacion" class="form-control" asp-items="ViewBag.IeEstacion"></select>
-                <span asp-validation-for="IeEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeTurno" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeTurno" class="control-label">Turno:</label>
                 <select asp-for="IeTurno" class="form-control" asp-items="ViewBag.IeTurno"></select>
-                <span asp-validation-for="IeTurno" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeUbiSiniestro" class="control-label"></label>
+            <div class="form-group col-md-6">
+                <label asp-for="IeUbiSiniestro" class="control-label">Ubicación del Siniestro:</label>
                 <input asp-for="IeUbiSiniestro" class="form-control" />
                 <span asp-validation-for="IeUbiSiniestro" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeInmueble" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeInmueble" class="control-label">Inmueble:</label>
                 <input asp-for="IeInmueble" class="form-control" />
                 <span asp-validation-for="IeInmueble" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeValor" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeValor" class="control-label">Valor:</label>
                 <input asp-for="IeValor" class="form-control" />
                 <span asp-validation-for="IeValor" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IePerdida" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IePerdida" class="control-label">Pérdida:</label>
                 <input asp-for="IePerdida" class="form-control" />
                 <span asp-validation-for="IePerdida" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IdProp" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IdProp" class="control-label">Proporción:</label>
                 <select asp-for="IdProp" class="form-control" asp-items="ViewBag.IdProp"></select>
-                <span asp-validation-for="IdProp" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeIdCf" class="control-label"></label>
+            <div class="form-group col-md-6">
+                <label asp-for="IeIdCf" class="control-label">Clase de Fuego:</label>
                 <select asp-for="IeIdCf" class="form-control" asp-items="ViewBag.IeIdCf"></select>
-                <span asp-validation-for="IeIdCf" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeHoraSalida" class="control-label"></label>
+            <div class="form-group col-md-2">
+                <label asp-for="IeHoraSalida" class="control-label">Hora de Salida:</label>
                 <input asp-for="IeHoraSalida" class="form-control" />
                 <span asp-validation-for="IeHoraSalida" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeHoraServicio" class="control-label"></label>
+            <div class="form-group col-md-2">
+                <label asp-for="IeHoraServicio" class="control-label">Hora Efectiva de Servicio:</label>
                 <input asp-for="IeHoraServicio" class="form-control" />
                 <span asp-validation-for="IeHoraServicio" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeHoraEntrada" class="control-label"></label>
+            <div class="form-group col-md-2">
+                <label asp-for="IeHoraEntrada" class="control-label">Hora de Entrada:</label>
                 <input asp-for="IeHoraEntrada" class="form-control" />
                 <span asp-validation-for="IeHoraEntrada" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeJefeServicio" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeJefeServicio" class="control-label">Jefe de Servicio:</label>
                 <select asp-for="IeJefeServicio" class="form-control" asp-items="ViewBag.IeJefeServicio"></select>
-                <span asp-validation-for="IeJefeServicio" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeTelefonistaTurno" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeTelefonistaTurno" class="control-label">Telefonista de Turno:</label>
                 <select asp-for="IeTelefonistaTurno" class="form-control" asp-items="ViewBag.IeTelefonistaTurno"></select>
-                <span asp-validation-for="IeTelefonistaTurno" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeBomberoReporta" class="control-label"></label>
+            <div class="form-group col-md-6">
+                <label asp-for="IeBomberoReporta" class="control-label">Bombero que Reporta:</label>
                 <select asp-for="IeBomberoReporta" class="form-control" asp-items="ViewBag.IeBomberoReporta"></select>
-                <span asp-validation-for="IeBomberoReporta" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IePiloto" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IePiloto" class="control-label">Piloto:</label>
                 <select asp-for="IePiloto" class="form-control" asp-items="ViewBag.IePiloto"></select>
-                <span asp-validation-for="IePiloto" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeUnidad" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeUnidad" class="control-label">Unidad:</label>
                 <input asp-for="IeUnidad" class="form-control" />
                 <span asp-validation-for="IeUnidad" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeUniAsisEstacion" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeUniAsisEstacion" class="control-label">Otras Unidades Asistentes de la Estación:</label>
                 <input asp-for="IeUniAsisEstacion" class="form-control" />
                 <span asp-validation-for="IeUniAsisEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeUniAsisOtraEstacion" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeUniAsisOtraEstacion" class="control-label">Unidades Asistentes de Otras Estaciones:</label>
                 <input asp-for="IeUniAsisOtraEstacion" class="form-control" />
                 <span asp-validation-for="IeUniAsisOtraEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeUniPoliciacas" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeUniPoliciacas" class="control-label">Unidades Policiacas:</label>
                 <input asp-for="IeUniPoliciacas" class="form-control" />
                 <span asp-validation-for="IeUniPoliciacas" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeUniOtrasInstiBomberiles" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeUniOtrasInstiBomberiles" class="control-label">Unidades de Otras Instituciones Bomberiles:</label>
                 <input asp-for="IeUniOtrasInstiBomberiles" class="form-control" />
                 <span asp-validation-for="IeUniOtrasInstiBomberiles" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IePersonalAsisEstacion" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IePersonalAsisEstacion" class="control-label">Personal Asistente de la Estación:</label>
                 <input asp-for="IePersonalAsisEstacion" class="form-control" />
                 <span asp-validation-for="IePersonalAsisEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IePersonalAsisOtraEstacion" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IePersonalAsisOtraEstacion" class="control-label">Personal Asistente de Otras Estaciones:</label>
                 <input asp-for="IePersonalAsisOtraEstacion" class="form-control" />
                 <span asp-validation-for="IePersonalAsisOtraEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeObservacion" class="control-label"></label>
-                <input asp-for="IeObservacion" class="form-control" />
+            <div class="form-group col-md-12">
+                <label asp-for="IeObservacion" class="control-label">Observaciones:</label>
+                <textarea asp-for="IeObservacion" class="form-control" style="height:150px"></textarea>
                 <span asp-validation-for="IeObservacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeFecha" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeFecha" class="control-label">Fecha:</label>
                 <input asp-for="IeFecha" class="form-control" />
                 <span asp-validation-for="IeFecha" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeKmEntrada" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeKmEntrada" class="control-label">Kilometraje de Entrada:</label>
                 <input asp-for="IeKmEntrada" class="form-control" />
                 <span asp-validation-for="IeKmEntrada" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeKmSalida" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeKmSalida" class="control-label">Kilometraje de Salida:</label>
                 <input asp-for="IeKmSalida" class="form-control" />
                 <span asp-validation-for="IeKmSalida" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeKmRecorrido" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeKmRecorrido" class="control-label">Kilometros Recorridos:</label>
                 <input asp-for="IeKmRecorrido" class="form-control" />
                 <span asp-validation-for="IeKmRecorrido" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeFirmaBombero" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeFirmaBombero" class="control-label">Firma de Bombero</label>
                 <select asp-for="IeFirmaBombero" class="form-control" asp-items="ViewBag.IeFirmaBombero"></select>
-                <span asp-validation-for="IeFirmaBombero" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeNoBombero" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeNoBombero" class="control-label">No. Bombero:</label>
                 <input asp-for="IeNoBombero" class="form-control" />
                 <span asp-validation-for="IeNoBombero" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IeVoBoJefeServicio" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="IeVoBoJefeServicio" class="control-label">Vo. Bo. Jefe de Servicio:</label>
                 <select asp-for="IeVoBoJefeServicio" class="form-control" asp-items="ViewBag.IeVoBoJefeServicio"></select>
-                <span asp-validation-for="IeVoBoJefeServicio" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+
+            <div class="form-group col-md-6">
+                <input type="submit" value="Guardar" class="btn btn-primary" />|
+                    <a asp-action="Index">Regresar a la lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

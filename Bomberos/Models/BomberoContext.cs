@@ -727,7 +727,7 @@ namespace Bomberos.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Direccion)
-                    .HasMaxLength(15)
+                    .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Nombres)
