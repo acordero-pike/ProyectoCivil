@@ -6,92 +6,88 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Bomberos.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Bomberos.Controllers
 {
-
-[Authorize]
-
-public class EstacionsController : Controller
+    public class CodigoesController : Controller
     {
         private readonly BomberoContext _context;
 
-        public EstacionsController(BomberoContext context)
+        public CodigoesController(BomberoContext context)
         {
             _context = context;
         }
 
-        // GET: Estacions
+        // GET: Codigoes
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Estacions.ToListAsync());
+              return View(await _context.Codigos.ToListAsync());
         }
 
-        // GET: Estacions/Details/5
+        // GET: Codigoes/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.Estacions == null)
+            if (id == null || _context.Codigos == null)
             {
                 return NotFound();
             }
 
-            var estacion = await _context.Estacions
-                .FirstOrDefaultAsync(m => m.IdEstacion == id);
-            if (estacion == null)
+            var codigo = await _context.Codigos
+                .FirstOrDefaultAsync(m => m.Uuid == id);
+            if (codigo == null)
             {
                 return NotFound();
             }
 
-            return View(estacion);
+            return View(codigo);
         }
 
-        // GET: Estacions/Create
+        // GET: Codigoes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Estacions/Create
+        // POST: Codigoes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdEstacion,Nombre,Descripcion")] Estacion estacion)
+        public async Task<IActionResult> Create([Bind("Uuid,Codigo1,Descripcion")] Codigo codigo)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(estacion);
+                _context.Add(codigo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(estacion);
+            return View(codigo);
         }
 
-        // GET: Estacions/Edit/5
+        // GET: Codigoes/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Estacions == null)
+            if (id == null || _context.Codigos == null)
             {
                 return NotFound();
             }
 
-            var estacion = await _context.Estacions.FindAsync(id);
-            if (estacion == null)
+            var codigo = await _context.Codigos.FindAsync(id);
+            if (codigo == null)
             {
                 return NotFound();
             }
-            return View(estacion);
+            return View(codigo);
         }
 
-        // POST: Estacions/Edit/5
+        // POST: Codigoes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("IdEstacion,Nombre,Descripcion")] Estacion estacion)
+        public async Task<IActionResult> Edit(string id, [Bind("Uuid,Codigo1,Descripcion")] Codigo codigo)
         {
-            if (id != estacion.IdEstacion)
+            if (id != codigo.Uuid)
             {
                 return NotFound();
             }
@@ -100,12 +96,12 @@ public class EstacionsController : Controller
             {
                 try
                 {
-                    _context.Update(estacion);
+                    _context.Update(codigo);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EstacionExists(estacion.IdEstacion))
+                    if (!CodigoExists(codigo.Uuid))
                     {
                         return NotFound();
                     }
@@ -116,57 +112,49 @@ public class EstacionsController : Controller
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(estacion);
+            return View(codigo);
         }
 
-        // GET: Estacions/Delete/5
+        // GET: Codigoes/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.Estacions == null)
+            if (id == null || _context.Codigos == null)
             {
                 return NotFound();
             }
 
-            var estacion = await _context.Estacions
-                .FirstOrDefaultAsync(m => m.IdEstacion == id);
-            if (estacion == null)
+            var codigo = await _context.Codigos
+                .FirstOrDefaultAsync(m => m.Uuid == id);
+            if (codigo == null)
             {
                 return NotFound();
             }
 
-            return View(estacion);
+            return View(codigo);
         }
 
-        // POST: Estacions/Delete/5
+        // POST: Codigoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            try
+            if (_context.Codigos == null)
             {
-                if (_context.Estacions == null)
-                {
-                    return Problem("Entity set 'BomberoContext.Estacions'  is null.");
-                }
-                var estacion = await _context.Estacions.FindAsync(id);
-                if (estacion != null)
-                {
-                    _context.Estacions.Remove(estacion);
-                }
-
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-
-
+                return Problem("Entity set 'BomberoContext.Codigos'  is null.");
             }
-            catch{
-                return RedirectToAction("Index", "Error", new { data = "Error al eliminar!!", data2 = "Este campo esta siendo utilizado" });
+            var codigo = await _context.Codigos.FindAsync(id);
+            if (codigo != null)
+            {
+                _context.Codigos.Remove(codigo);
             }
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
-        private bool EstacionExists(string id)
+        private bool CodigoExists(string id)
         {
-          return _context.Estacions.Any(e => e.IdEstacion == id);
+          return _context.Codigos.Any(e => e.Uuid == id);
         }
     }
 }

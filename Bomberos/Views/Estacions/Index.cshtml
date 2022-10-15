@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Bomberos.Models.Estacion>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Estaciones";
 }
 
-<h1>Index</h1>
+<h1>Estaciones</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear Nueva Estación</a>
 </p>
 <table class="table">
     <thead>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdEstacion">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdEstacion">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdEstacion">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdEstacion">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdEstacion">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdEstacion">Eliminar</a>
             </td>
         </tr>
 }
