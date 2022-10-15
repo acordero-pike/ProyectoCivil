@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Bomberos.Models
 {
-    public partial class Usuario
+    public partial class Codigo
     {
-        public Usuario()
+        public Codigo()
         {
             InEstructurals = new HashSet<InEstructural>();
             InForestals = new HashSet<InForestal>();
@@ -15,13 +15,9 @@ namespace Bomberos.Models
             ServicioVarios = new HashSet<ServicioVario>();
         }
 
-        public string? IdUsuario { get; set; } = null!;
-        public string? Nombres { get; set; }
-        public string? Apellidos { get; set; }
-        public string? Correo { get; set; }
-        public bool? Activo { get; set; }
-        public string? UsUsuario { get; set; }
-        public string? UsContraseña { get; set; }
+        public string? Uuid { get; set; } = null!;
+        public string? Codigo1 { get; set; }
+        public string? Descripcion { get; set; }
 
         public virtual ICollection<InEstructural> InEstructurals { get; set; }
         public virtual ICollection<InForestal> InForestals { get; set; }

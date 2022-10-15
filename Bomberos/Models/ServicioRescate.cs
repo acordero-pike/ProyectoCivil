@@ -44,7 +44,9 @@ namespace Bomberos.Models
         public string? SrBomberoReporta { get; set; }
         public DateTime? SrFecha { get; set; }
         public string? SrVoBoJefeServicio { get; set; }
+        public string? Codigo { get; set; }
 
+        public virtual Codigo? CodigoNavigation { get; set; }
         public virtual Usuario? SrBomberoReportaNavigation { get; set; }
         public virtual Estacion? SrEstacionNavigation { get; set; }
         public virtual Personal? SrOficialMandoNavigation { get; set; }
