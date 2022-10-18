@@ -311,6 +311,7 @@ B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
