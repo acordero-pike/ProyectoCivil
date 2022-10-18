@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\appsettings.json
 C:\Users\acordero\Desktop\copia de archivos del cliente\s10\Seminario\ProyectoCivil\Bomberos\bin\Debug\net6.0\Bomberos.staticwebassets.runtime.json
@@ -538,3 +539,5 @@ B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\obj\Debug
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\obj\Debug\net6.0\Bomberos.pdb
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\obj\Debug\net6.0\Bomberos.genruntimeconfig.cache
 B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\obj\Debug\net6.0\ref\Bomberos.dll
+=======
+>>>>>>> bcf9b586de2c3244d1922f9170ca8e3f056f0e43

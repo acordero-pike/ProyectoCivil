@@ -26,7 +26,9 @@ namespace Bomberos.Models
         public double? SvKmRecorrido { get; set; }
         public string? SvFirmaBombero { get; set; }
         public long? SvNoBombero { get; set; }
+        public string? Codigo { get; set; }
 
+        public virtual Codigo? CodigoNavigation { get; set; }
         public virtual Usuario? SvBomberoReportaNavigation { get; set; }
         public virtual Firma? SvFirmaBomberoNavigation { get; set; }
         public virtual Personal? SvJefeServicioNavigation { get; set; }
