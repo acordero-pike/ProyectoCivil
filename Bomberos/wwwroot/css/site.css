@@ -290,3 +290,9 @@ body {
 .orden{
     display: flex;
 }
+
+.letra {
+    font-size: 85%;
+    font-weight: bold;
+    display: flex;
+}

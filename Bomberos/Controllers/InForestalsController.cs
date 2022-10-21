@@ -37,6 +37,7 @@ namespace Bomberos.Controllers
             }
 
             var inForestal = await _context.InForestals
+                .Include(i => i.CodigoNavigation)
                 .Include(i => i.IdCfNavigation)
                 .Include(i => i.IdPropNavigation)
                 .Include(i => i.IfBomberoReportaNavigation)
@@ -59,16 +60,20 @@ namespace Bomberos.Controllers
         // GET: InForestals/Create
         public IActionResult Create()
         {
-            ViewData["IdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf");
-            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp");
-            ViewData["IfBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario");
-            ViewData["IfEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion");
-            ViewData["IfFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
-            ViewData["IfJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["IfPiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["IfTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["IfTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno");
-            ViewData["IfVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
+            var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
+            var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });
+
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1");
+            ViewData["IdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "CfClasefuego");
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "PTipoProp");
+            ViewData["IfBomberoReporta"] = new SelectList(users, "IdUsuario", "Nombre");
+            ViewData["IfEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre");
+            ViewData["IfFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "Nombre");
+            ViewData["IfJefeServicio"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["IfPiloto"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["IfTelefonistaTurno"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["IfTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre");
+            ViewData["IfVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "Nombre");
             return View();
         }
 
@@ -77,7 +82,7 @@ namespace Bomberos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdIf,IfEstacion,IfTurno,IfUbiSiniestro,IfAreaAfectada,IfTipoTerreno,IdProp,IdCf,IfHoraSalida,IfHoraServicio,IfHoraEntrada,IfJefeServicio,IfTelefonistaTurno,IfBomberoReporta,IfPiloto,IfUnidad,IfUniAsisEstacion,IfUniAsisOtraEstacion,IfUniPoliciacas,IfUniOtrasInstiBomberiles,IfPersonalAsisEstacion,IfPersonalAsisOtraEstacion,IfObservacion,IfFecha,IfKmEntrada,IfKmSalida,IfKmRecorrido,IfFirmaBombero,IfNoBombero,IfVoBoJefeServicio")] InForestal inForestal)
+        public async Task<IActionResult> Create([Bind("IdIf,Codigo,IfEstacion,IfTurno,IfUbiSiniestro,IfAreaAfectada,IfTipoTerreno,IdProp,IdCf,IfHoraSalida,IfHoraServicio,IfHoraEntrada,IfJefeServicio,IfTelefonistaTurno,IfBomberoReporta,IfPiloto,IfUnidad,IfUniAsisEstacion,IfUniAsisOtraEstacion,IfUniPoliciacas,IfUniOtrasInstiBomberiles,IfPersonalAsisEstacion,IfPersonalAsisOtraEstacion,IfObservacion,IfFecha,IfKmEntrada,IfKmSalida,IfKmRecorrido,IfFirmaBombero,IfNoBombero,IfVoBoJefeServicio")] InForestal inForestal)
         {
             if (ModelState.IsValid)
             {
@@ -85,6 +90,7 @@ namespace Bomberos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1", inForestal.Codigo);
             ViewData["IdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf", inForestal.IdCf);
             ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp", inForestal.IdProp);
             ViewData["IfBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", inForestal.IfBomberoReporta);
@@ -111,16 +117,20 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf", inForestal.IdCf);
-            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp", inForestal.IdProp);
-            ViewData["IfBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", inForestal.IfBomberoReporta);
-            ViewData["IfEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", inForestal.IfEstacion);
-            ViewData["IfFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inForestal.IfFirmaBombero);
-            ViewData["IfJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inForestal.IfJefeServicio);
-            ViewData["IfPiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inForestal.IfPiloto);
-            ViewData["IfTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inForestal.IfTelefonistaTurno);
-            ViewData["IfTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", inForestal.IfTurno);
-            ViewData["IfVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inForestal.IfVoBoJefeServicio);
+            var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
+            var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });
+
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1", inForestal.Codigo);
+            ViewData["IdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "CfClasefuego", inForestal.IdCf);
+            ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "PTipoProp", inForestal.IdProp);
+            ViewData["IfBomberoReporta"] = new SelectList(users, "IdUsuario", "Nombre", inForestal.IfBomberoReporta);
+            ViewData["IfEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre", inForestal.IfEstacion);
+            ViewData["IfFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "Nombre", inForestal.IfFirmaBombero);
+            ViewData["IfJefeServicio"] = new SelectList(empleado, "Id_Personal", "Nombre", inForestal.IfJefeServicio);
+            ViewData["IfPiloto"] = new SelectList(empleado, "Id_Personal", "Nombre", inForestal.IfPiloto);
+            ViewData["IfTelefonistaTurno"] = new SelectList(empleado, "Id_Personal", "Nombre", inForestal.IfTelefonistaTurno);
+            ViewData["IfTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre", inForestal.IfTurno);
+            ViewData["IfVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "Nombre", inForestal.IfVoBoJefeServicio);
             return View(inForestal);
         }
 
@@ -129,7 +139,7 @@ namespace Bomberos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("IdIf,IfEstacion,IfTurno,IfUbiSiniestro,IfAreaAfectada,IfTipoTerreno,IdProp,IdCf,IfHoraSalida,IfHoraServicio,IfHoraEntrada,IfJefeServicio,IfTelefonistaTurno,IfBomberoReporta,IfPiloto,IfUnidad,IfUniAsisEstacion,IfUniAsisOtraEstacion,IfUniPoliciacas,IfUniOtrasInstiBomberiles,IfPersonalAsisEstacion,IfPersonalAsisOtraEstacion,IfObservacion,IfFecha,IfKmEntrada,IfKmSalida,IfKmRecorrido,IfFirmaBombero,IfNoBombero,IfVoBoJefeServicio")] InForestal inForestal)
+        public async Task<IActionResult> Edit(string id, [Bind("IdIf,Codigo,IfEstacion,IfTurno,IfUbiSiniestro,IfAreaAfectada,IfTipoTerreno,IdProp,IdCf,IfHoraSalida,IfHoraServicio,IfHoraEntrada,IfJefeServicio,IfTelefonistaTurno,IfBomberoReporta,IfPiloto,IfUnidad,IfUniAsisEstacion,IfUniAsisOtraEstacion,IfUniPoliciacas,IfUniOtrasInstiBomberiles,IfPersonalAsisEstacion,IfPersonalAsisOtraEstacion,IfObservacion,IfFecha,IfKmEntrada,IfKmSalida,IfKmRecorrido,IfFirmaBombero,IfNoBombero,IfVoBoJefeServicio")] InForestal inForestal)
         {
             if (id != inForestal.IdIf)
             {
@@ -156,14 +166,15 @@ namespace Bomberos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1", inForestal.Codigo);
             ViewData["IdCf"] = new SelectList(_context.ClaseFuegos, "IdCf", "IdCf", inForestal.IdCf);
             ViewData["IdProp"] = new SelectList(_context.Proporcions, "IdProp", "IdProp", inForestal.IdProp);
             ViewData["IfBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", inForestal.IfBomberoReporta);
             ViewData["IfEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", inForestal.IfEstacion);
             ViewData["IfFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inForestal.IfFirmaBombero);
-            ViewData["IfJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inForestal.IfJefeServicio);
-            ViewData["IfPiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inForestal.IfPiloto);
-            ViewData["IfTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", inForestal.IfTelefonistaTurno);
+            ViewData["IfJefeServicio"] = new SelectList(_context.Personals, "Id_Personal", "IdPersonal", inForestal.IfJefeServicio);
+            ViewData["IfPiloto"] = new SelectList(_context.Personals, "Id_Personal", "IdPersonal", inForestal.IfPiloto);
+            ViewData["IfTelefonistaTurno"] = new SelectList(_context.Personals, "Id_Personal", "IdPersonal", inForestal.IfTelefonistaTurno);
             ViewData["IfTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", inForestal.IfTurno);
             ViewData["IfVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", inForestal.IfVoBoJefeServicio);
             return View(inForestal);
@@ -178,6 +189,7 @@ namespace Bomberos.Controllers
             }
 
             var inForestal = await _context.InForestals
+                .Include(i => i.CodigoNavigation)
                 .Include(i => i.IdCfNavigation)
                 .Include(i => i.IdPropNavigation)
                 .Include(i => i.IfBomberoReportaNavigation)

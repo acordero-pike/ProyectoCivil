@@ -138,18 +138,26 @@ namespace Bomberos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Personals == null)
+            try
             {
-                return Problem("Entity set 'BomberoContext.Personals'  is null.");
+                if (_context.Personals == null)
+                {
+                    return Problem("Entity set 'BomberoContext.Personals'  is null.");
+                }
+                var personal = await _context.Personals.FindAsync(id);
+                if (personal != null)
+                {
+                    _context.Personals.Remove(personal);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            var personal = await _context.Personals.FindAsync(id);
-            if (personal != null)
+            catch
             {
-                _context.Personals.Remove(personal);
+                return RedirectToAction("Index", "Error", new { data = "Error al eliminar Miembro de Personal!!", data2 = "Este campo esta siendo utilizado" });
+
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool PersonalExists(string id)

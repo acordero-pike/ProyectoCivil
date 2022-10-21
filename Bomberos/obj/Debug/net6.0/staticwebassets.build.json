@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vOcNZsMFF1prTo2hlilGrxGYF3r6t8dau16QQC8pALk=",
+  "Hash": "gp8bSrun6GW10HhQCutF/3B9JMFd86EoZOiNH0A11No=",
   "Source": "Bomberos",
   "BasePath": "_content/Bomberos",
   "Mode": "Default",
@@ -170,6 +170,40 @@
       "OriginalItemSpec": "wwwroot\\img\\agregar-documento.png"
     },
     {
+      "Identity": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\img\\basura.png",
+      "SourceId": "Bomberos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\",
+      "BasePath": "_content/Bomberos",
+      "RelativePath": "img/basura.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\basura.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\img\\editar.png",
+      "SourceId": "Bomberos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\",
+      "BasePath": "_content/Bomberos",
+      "RelativePath": "img/editar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\editar.png"
+    },
+    {
       "Identity": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\img\\flecha-izquierda.png",
       "SourceId": "Bomberos",
       "SourceType": "Discovered",
@@ -185,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\flecha-izquierda.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\img\\votacion.png",
+      "SourceId": "Bomberos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\",
+      "BasePath": "_content/Bomberos",
+      "RelativePath": "img/votacion.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\votacion.png"
     },
     {
       "Identity": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\js\\site.js",

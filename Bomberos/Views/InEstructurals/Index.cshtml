@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Incendios Estructurales";
 }
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <h1><center>Incendios Estructurales</center></h1><br>
 
@@ -53,7 +56,7 @@
                 @Html.DisplayNameFor(model => model.IeHoraEntrada)
                 </center>
             </th>
-            <th>
+           @* <th>
                 <center>
                 @Html.DisplayNameFor(model => model.IeUnidad)
                 </center>
@@ -62,8 +65,8 @@
                 <center>
                @Html.DisplayNameFor(model => model.IeUniAsisEstacion)
                 </center>
-            </th>
-          @* <th>
+                </th>
+            <th>
                 <center>
               @Html.DisplayNameFor(model => model.IeUniAsisOtraEstacion)
                 </center>
@@ -123,7 +126,7 @@
                <center>
                 @Html.DisplayNameFor(model => model.IdPropNavigation)
                 </center>
-                    </th>*@
+              </th>*@
             <th>
                 <center>
                 @Html.DisplayNameFor(model => model.IeBomberoReportaNavigation)
@@ -150,21 +153,21 @@
                @Html.DisplayNameFor(model => model.IeJefeServicioNavigation)
                 </center>
             </th>
-            <th>
+          @* <th>
                 <center>
                 @Html.DisplayNameFor(model => model.IePilotoNavigation)
                 </center>
             </th>
-            @* <th>
+             <th>
                 <center>
                  @Html.DisplayNameFor(model => model.IeTelefonistaTurnoNavigation)
                 </center>
-            </th>*@
+            </th>
             <th>
                 <center>
                  @Html.DisplayNameFor(model => model.IeTurnoNavigation)
                 </center>
-            </th>
+            </th>*@
             <th>
                 <center>
                 @Html.DisplayNameFor(model => model.IeVoBoJefeServicioNavigation)
@@ -209,7 +212,7 @@
                 @Html.DisplayFor(modelItem => item.IeHoraEntrada)
                 </center>
             </td>
-            <td>
+           @*<td>
                 <center>
                 @Html.DisplayFor(modelItem => item.IeUnidad)
                     </center>
@@ -219,7 +222,7 @@
                 @Html.DisplayFor(modelItem => item.IeUniAsisEstacion)
                     </center>
             </td>
-           @*<td>
+           <td>
                 @Html.DisplayFor(modelItem => item.IeUniAsisOtraEstacion)
             </td>
             <td>
@@ -286,21 +289,21 @@
                  @Html.DisplayFor(modelItem => item.IeJefeServicioNavigation.Apellidos)
                     </center>
             </td>
-            <td>
+           @* <td>
                 <center>
                 @Html.DisplayFor(modelItem => item.IePilotoNavigation.Nombres)
                 @Html.DisplayFor(modelItem => item.IePilotoNavigation.Apellidos)
                     </center>
             </td>
-           @*<td>
+           <td>
                 @Html.DisplayFor(modelItem => item.IeTelefonistaTurnoNavigation.Nombres)
                 @Html.DisplayFor(modelItem => item.IeTelefonistaTurnoNavigation.Apellidos)
-            </td>*@
+            </td>
             <td>
                     <center>
                 @Html.DisplayFor(modelItem => item.IeTurnoNavigation.Nombre)
                     </center>
-            </td>
+            </td>*@
             <td>
                 <center>
                 @Html.DisplayFor(modelItem => item.IeVoBoJefeServicioNavigation.Nombre)
@@ -309,11 +312,10 @@
             
             <td >         
                 <a asp-action="Edit" asp-route-id="@item.IdIe"><img src="~/img/editar.png" width="40" height="40" /> </a>
-             <td >         
-                
-                <a asp-action="Details" asp-route-id="@item.IdIe"><img src="~/img/votacion.png" width="40" height="40" /> </a>
-               
-            </td>
+            </td >         
+            <td >
+                <a asp-action="Details" asp-route-id="@item.IdIe"><img src="~/img/votacion.png" width="40" height="40" /> </a>  
+            </td >
             <td>
                 <a asp-action="Delete" asp-route-id="@item.IdIe"><img src="~/img/basura.png" width="40" height="40" /> </a>
             </td>
