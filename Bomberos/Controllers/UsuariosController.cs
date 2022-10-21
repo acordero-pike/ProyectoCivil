@@ -147,18 +147,25 @@ namespace Bomberos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Usuarios == null)
+            try
             {
-                return Problem("Entity set 'BomberoContext.Usuarios'  is null.");
+                if (_context.Usuarios == null)
+                {
+                    return Problem("Entity set 'BomberoContext.Usuarios'  is null.");
+                }
+                var usuario = await _context.Usuarios.FindAsync(id);
+                if (usuario != null)
+                {
+                    _context.Usuarios.Remove(usuario);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario != null)
+            catch
             {
-                _context.Usuarios.Remove(usuario);
+                return RedirectToAction("Index", "Error", new { data = "Error al eliminar Usuario!!", data2 = "Este campo esta siendo utilizado" });
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
         private  string GetSHA256(string str)
         {

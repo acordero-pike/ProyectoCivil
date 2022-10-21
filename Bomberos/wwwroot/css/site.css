@@ -279,3 +279,20 @@ body {
 .overflow-visible {
     white-space: initial;
 }
+
+.logout{
+    display: flex;
+    flex-flow: column-reverse;
+    justify-items: flex-end;
+    align-items: flex-end;
+}
+
+.orden{
+    display: flex;
+}
+
+.letra {
+    font-size: 85%;
+    font-weight: bold;
+    display: flex;
+}

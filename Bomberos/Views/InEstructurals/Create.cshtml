@@ -7,9 +7,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Crear Formulario</h1>
+ <div class="orden">
+ <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
+ </div>
 
-<h4>Incendio Estructural</h4>
+<h1><center>Crear Formulario</center></h1>
+<h4><center>Incendio Estructural</center></h4>
 <hr />
 <div class="">
     <div class="">
@@ -161,9 +164,8 @@
                 <label asp-for="Codigo" class="control-label">Codigo del Sinistro:</label>
                 <select asp-for="Codigo" class="form-control" asp-items="ViewBag.Uuid"></select>
             </div>
-            <div class="form-group col-md-6">
-                <input type="submit" value="Crear" class="btn btn-primary">|
-                <a asp-action="Index">Regresar al Listado</a>
+            <div class="form-group col-md-6">                   
+                <input type="submit" value="Crear" class="btn btn-primary">
             </div>
         </form>
     </div>

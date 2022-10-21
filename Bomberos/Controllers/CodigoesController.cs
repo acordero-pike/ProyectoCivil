@@ -138,18 +138,26 @@ namespace Bomberos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Codigos == null)
+            try
             {
-                return Problem("Entity set 'BomberoContext.Codigos'  is null.");
+                if (_context.Codigos == null)
+                {
+                    return Problem("Entity set 'BomberoContext.Codigos'  is null.");
+                }
+                var codigo = await _context.Codigos.FindAsync(id);
+                if (codigo != null)
+                {
+                    _context.Codigos.Remove(codigo);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            var codigo = await _context.Codigos.FindAsync(id);
-            if (codigo != null)
+            catch
             {
-                _context.Codigos.Remove(codigo);
+                return RedirectToAction("Index", "Error", new { data = "Error al eliminar Codigo de Servicio!!", data2 = "Este campo esta siendo utilizado" });
+
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool CodigoExists(string id)

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Bomberos.Models
 {
@@ -19,8 +21,13 @@ namespace Bomberos.Models
         }
 
         public string? IdFirma { get; set; } = null!;
+        [Display(Name = "Cargo de Firmante:")]
+        [Required(ErrorMessage = "Porfavor Ingrese un Cargo.")]
         public string? Tipo { get; set; }
+        [Display(Name = "Nombre de Firmante:")]
+        [Required(ErrorMessage = "Porfavor Ingrese su Nombre.")]
         public string? Nombre { get; set; }
+        [Display(Name = "Firma:")]       
         public byte[]? Firma1 { get; set; }
 
         public virtual ICollection<InEstructural> InEstructuralIeFirmaBomberoNavigations { get; set; }

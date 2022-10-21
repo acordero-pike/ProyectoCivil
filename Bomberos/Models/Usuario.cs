@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Bomberos.Models
 {
@@ -16,12 +19,22 @@ namespace Bomberos.Models
         }
 
         public string? IdUsuario { get; set; } = null!;
+        [Required(ErrorMessage = "Porfavor Ingrese sus Nombres.")]
         public string? Nombres { get; set; }
+        [Required(ErrorMessage = "Porfavor Ingrese sus Apellidos.")]
         public string? Apellidos { get; set; }
+        [Required(ErrorMessage = "Porfavor Ingrese un Correo Electronico.")]
         public string? Correo { get; set; }
         public bool Activo { get; set; }
+        [Display(Name = "Usuario:")]
+        [Required(ErrorMessage = "Porfavor Ingrese un Usuario.")]
+       
         public string? UsUsuario { get; set; }
+        [Display(Name = "Contraseña:")]
+        [Required(ErrorMessage = "Porfavor Ingrese una Contraseña.")]
+       
         public string? UsContraseña { get; set; }
+        [Required]
 
         public virtual ICollection<InEstructural> InEstructurals { get; set; }
         public virtual ICollection<InForestal> InForestals { get; set; }

@@ -153,18 +153,26 @@ namespace Bomberos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Firmas == null)
+            try
             {
-                return Problem("Entity set 'BomberoContext.Firmas'  is null.");
+                if (_context.Firmas == null)
+                {
+                    return Problem("Entity set 'BomberoContext.Firmas'  is null.");
+                }
+                var firma = await _context.Firmas.FindAsync(id);
+                if (firma != null)
+                {
+                    _context.Firmas.Remove(firma);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            var firma = await _context.Firmas.FindAsync(id);
-            if (firma != null)
+            catch
             {
-                _context.Firmas.Remove(firma);
+                return RedirectToAction("Index", "Error", new { data = "Error al eliminar Firma!!", data2 = "Este campo esta siendo utilizado" });
+
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool FirmaExists(string id)

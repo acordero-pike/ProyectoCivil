@@ -1,14 +1,22 @@
 ﻿@model IEnumerable<Bomberos.Models.Codigo>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Codigos de Servicio";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Index</h1>
+<h1><center>Codigos de Servicio</center></h1>
+<br>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="orden">
+    <p>
+        <a asp-action="Create"><img src="~/img/agregar-documento.png" width="50" height="50" /></a>
+    </p>
+    <h3>Crear un Nuevo Codigo</h3>
+
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -18,7 +26,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
             </th>
-            <th></th>
+            <th><center></center></th>
+            <th><center></center></th>
+            <th><center></center></th> 
         </tr>
     </thead>
     <tbody>
@@ -31,9 +41,20 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Uuid">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Uuid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Uuid">Delete</a>
+                <td>
+                    <center>
+                        <a asp-action="Edit" asp-route-id="@item.Uuid"><img src="~/img/editar.png" width="40" height="40" /> </a>
+                    </center>
+                <td>
+                    <center>
+                        <a asp-action="Details" asp-route-id="@item.Uuid"><img src="~/img/votacion.png" width="40" height="40" /> </a>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <a asp-action="Delete" asp-route-id="@item.Uuid"><img src="~/img/basura.png" width="40" height="40" /> </a>
+                    </center>
+                </td>
             </td>
         </tr>
 }
