@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\Bomberos.csproj": {}
+    "B:\\UNIVERSIDAD\\10mo Semestre\\Seminario\\Proyecto\\ProyectoCivil\\Bomberos\\Bomberos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\Bomberos.csproj": {
+    "B:\\UNIVERSIDAD\\10mo Semestre\\Seminario\\Proyecto\\ProyectoCivil\\Bomberos\\Bomberos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\Bomberos.csproj",
+        "projectUniqueName": "B:\\UNIVERSIDAD\\10mo Semestre\\Seminario\\Proyecto\\ProyectoCivil\\Bomberos\\Bomberos.csproj",
         "projectName": "Bomberos",
-        "projectPath": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\Bomberos.csproj",
-        "packagesPath": "C:\\Users\\Kleyber\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kleyber\\Desktop\\Proyecto Seminario\\ProyectoCivil\\Bomberos\\obj\\",
+        "projectPath": "B:\\UNIVERSIDAD\\10mo Semestre\\Seminario\\Proyecto\\ProyectoCivil\\Bomberos\\Bomberos.csproj",
+        "packagesPath": "C:\\Users\\Alexi\\.nuget\\packages\\",
+        "outputPath": "B:\\UNIVERSIDAD\\10mo Semestre\\Seminario\\Proyecto\\ProyectoCivil\\Bomberos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Kleyber\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

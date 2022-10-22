@@ -1,0 +1,364 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Bomberos
+build_property.RootNamespace = Bomberos
+build_property.ProjectDir = B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = B:\UNIVERSIDAD\10mo Semestre\Seminario\Proyecto\ProyectoCivil\Bomberos
+build_property._RazorSourceGeneratorDebug = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ClaseFuegoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VGdWVnb2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ClaseFuegoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VGdWVnb2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ClaseFuegoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VGdWVnb2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ClaseFuegoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VGdWVnb2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ClaseFuegoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VGdWVnb2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Codigoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29kaWdvZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Codigoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29kaWdvZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Codigoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29kaWdvZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Codigoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29kaWdvZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Codigoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29kaWdvZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Compañium/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGHDsWl1bVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Compañium/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGHDsWl1bVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Compañium/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGHDsWl1bVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Compañium/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGHDsWl1bVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Compañium/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGHDsWl1bVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Error/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Estacions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWNpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Estacions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWNpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Estacions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWNpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Estacions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWNpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Estacions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWNpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Firmas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Firmas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Firmas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Firmas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Firmas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlybWFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Home/Contactenos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0ZW5vcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InEstructurals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Fc3RydWN0dXJhbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InEstructurals/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Fc3RydWN0dXJhbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InEstructurals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Fc3RydWN0dXJhbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InEstructurals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Fc3RydWN0dXJhbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InEstructurals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Fc3RydWN0dXJhbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InForestals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Gb3Jlc3RhbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InForestals/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Gb3Jlc3RhbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InForestals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Gb3Jlc3RhbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InForestals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Gb3Jlc3RhbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InForestals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5Gb3Jlc3RhbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InVehiculoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5WZWhpY3Vsb2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InVehiculoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5WZWhpY3Vsb2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InVehiculoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5WZWhpY3Vsb2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InVehiculoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5WZWhpY3Vsb2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/InVehiculoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5WZWhpY3Vsb2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Personals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Personals/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Personals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Personals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Personals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Proporcions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcG9yY2lvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Proporcions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcG9yY2lvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Proporcions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcG9yY2lvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Proporcions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcG9yY2lvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Proporcions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcG9yY2lvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioPrevencions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9QcmV2ZW5jaW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioPrevencions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9QcmV2ZW5jaW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioPrevencions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9QcmV2ZW5jaW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioPrevencions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9QcmV2ZW5jaW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioPrevencions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9QcmV2ZW5jaW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioRescates/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9SZXNjYXRlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioRescates/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9SZXNjYXRlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioRescates/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9SZXNjYXRlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioRescates/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9SZXNjYXRlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioRescates/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9SZXNjYXRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioVarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9WYXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioVarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9WYXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioVarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9WYXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioVarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9WYXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/ServicioVarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9WYXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Shared/_Layoutlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Shared/_Lerror.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Turnoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Turnoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Turnoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Turnoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Turnoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/UNIVERSIDAD/10mo Semestre/Seminario/Proyecto/ProyectoCivil/Bomberos/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-l1ch7cfeet

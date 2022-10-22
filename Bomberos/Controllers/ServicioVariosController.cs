@@ -56,11 +56,15 @@ namespace Bomberos.Controllers
         // GET: ServicioVarios/Create
         public IActionResult Create()
         {
+            var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
+
             ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombres");
+            ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre");
+            ViewData["SvTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre");
             ViewData["SvFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "Nombre");
-            ViewData["SvJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "Nombres" );
+            ViewData["SvJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "Nombres");
             ViewData["SvPersonalAsistente"] = new SelectList(_context.Personals, "IdPersonal", "Nombres");
-            ViewData["SvPiloto"] = new SelectList(_context.Personals, "IdPersonal", "Nombres" );
+            ViewData["SvPiloto"] = new SelectList(_context.Personals, "IdPersonal", "Nombres");
             ViewData["SvServicioAutPor"] = new SelectList(_context.Personals, "IdPersonal", "Nombres");
             ViewData["SvTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "Nombres");
             return View();
@@ -80,6 +84,8 @@ namespace Bomberos.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioVario.SvBomberoReporta);
+            ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", servicioVario.SvEstacion);
+            ViewData["SvTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", servicioVario.SvTurno);
             ViewData["SvFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", servicioVario.SvFirmaBombero);
             ViewData["SvJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvJefeServicio);
             ViewData["SvPersonalAsistente"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvPersonalAsistente);
@@ -103,6 +109,7 @@ namespace Bomberos.Controllers
                 return NotFound();
             }
             ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioVario.SvBomberoReporta);
+            ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre", servicioVario.SvEstacion);
             ViewData["SvFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", servicioVario.SvFirmaBombero);
             ViewData["SvJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvJefeServicio);
             ViewData["SvPersonalAsistente"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvPersonalAsistente);
@@ -145,6 +152,7 @@ namespace Bomberos.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioVario.SvBomberoReporta);
+            ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", servicioVario.SvEstacion);
             ViewData["SvFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", servicioVario.SvFirmaBombero);
             ViewData["SvJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvJefeServicio);
             ViewData["SvPersonalAsistente"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvPersonalAsistente);
@@ -193,14 +201,14 @@ namespace Bomberos.Controllers
             {
                 _context.ServicioVarios.Remove(servicioVario);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ServicioVarioExists(string id)
         {
-          return _context.ServicioVarios.Any(e => e.IdSv == id);
+            return _context.ServicioVarios.Any(e => e.IdSv == id);
         }
     }
 }
