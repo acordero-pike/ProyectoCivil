@@ -3,78 +3,104 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<h1>Servicio de Prevención</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear Nuevo Registro</a>
 </p>
+<div style="overflow-x:auto;">
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.SpDireccion)
+                @*@Html.DisplayNameFor(model => model.SpDireccion)*@
+                Dirección
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpNombreRazonsocial)
+                @*@Html.DisplayNameFor(model => model.SpNombreRazonsocial)*@
+                Nombre de Razon Social
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpGeneralesServPrestado)
+                @*@Html.DisplayNameFor(model => model.SpGeneralesServPrestado)*@
+                Servicios Generales Prestados
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpEstablecimiento)
+                @*@Html.DisplayNameFor(model => model.SpEstablecimiento)*@
+                Establecimiento
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpHoraSalida)
+                @*@Html.DisplayNameFor(model => model.SpHoraSalida)*@
+                Hora de Salida
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpHoraEntrada)
+                @*@Html.DisplayNameFor(model => model.SpHoraEntrada)*@
+                Hora de Entrada 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpUnidad)
+                @*@Html.DisplayNameFor(model => model.SpUnidad)*@
+                Unidad
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpFormaAviso)
+                @*@Html.DisplayNameFor(model => model.SpFormaAviso)*@
+                Forma de Aviso
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpObservacion)
+                @*@Html.DisplayNameFor(model => model.SpObservacion)*@
+                Observación
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpKmSalida)
+               @* @Html.DisplayNameFor(model => model.SpKmSalida)*@
+               Km de Salida
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpKmEntrada)
+               @* @Html.DisplayNameFor(model => model.SpKmEntrada)*@
+               Km de Entrada
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpKmTotal)
+                @*@Html.DisplayNameFor(model => model.SpKmTotal)*@
+                Km en Total
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpFecha)
+                @*@Html.DisplayNameFor(model => model.SpFecha)*@
+                Fecha
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpBomberoReportaNavigation)
+                @*@Html.DisplayNameFor(model => model.SpBomberoReportaNavigation)*@
+                Bombero que Reporta
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpCompañiaNavigation)
+                @*@Html.DisplayNameFor(model => model.SpCompañiaNavigation)*@
+                Compañia
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpEstacionNavigation)
+                @*@Html.DisplayNameFor(model => model.SpEstacionNavigation)*@
+                Estación
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpOficialServicioNavigation)
+                @*@Html.DisplayNameFor(model => model.SpOficialServicioNavigation)*@
+                Oficial de Servicio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpPilotoNavigation)
+                @*@Html.DisplayNameFor(model => model.SpPilotoNavigation)*@
+                Piloto
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpTelefonistaNavigation)
+                @*@Html.DisplayNameFor(model => model.SpTelefonistaNavigation)*@
+                Telefonista
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpTurnoNavigation)
+                @*@Html.DisplayNameFor(model => model.SpTurnoNavigation)*@
+                Turno
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpVoBoJefeServicioNavigation)
+                VoBo. Jefe de Servicio
             </th>
+                <th>
+                   Acciones
+                </th>
             <th></th>
         </tr>
     </thead>
@@ -121,7 +147,8 @@
                 @Html.DisplayFor(modelItem => item.SpFecha)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SpBomberoReportaNavigation.IdUsuario)
+                @Html.DisplayFor(modelItem => item.SpBomberoReportaNavigation.Nombres)
+                @Html.DisplayFor(modelItem => item.SpBomberoReportaNavigation.Apellidos)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SpCompañiaNavigation.IdCompañia)
@@ -145,11 +172,12 @@
                 @Html.DisplayFor(modelItem => item.SpVoBoJefeServicioNavigation.IdFirma)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdSp">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdSp">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdSp">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdSp">Editar</a> 
+                <a asp-action="Details" asp-route-id="@item.IdSp">Detalles</a> 
+                <a asp-action="Delete" asp-route-id="@item.IdSp">Eliminar</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>

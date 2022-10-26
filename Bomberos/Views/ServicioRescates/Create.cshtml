@@ -3,209 +3,214 @@
 @{
     ViewData["Title"] = "Create";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<h1>Crear</h1>
 
-<h1>Create</h1>
-
-<h4>ServicioRescate</h4>
+<h4>Servicios de Rescate</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="">
+    <div class="">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="SrEstacion" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrEstacion" class="control-label">Estacion: </label>
                 <select asp-for="SrEstacion" class ="form-control" asp-items="ViewBag.SrEstacion"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="SrDireccionRescate" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrDireccionRescate" class="control-label">Dirección de Rescate: </label>
                 <input asp-for="SrDireccionRescate" class="form-control" />
                 <span asp-validation-for="SrDireccionRescate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrLugarLocalizacion" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrLugarLocalizacion" class="control-label">Lugar: </label>
                 <input asp-for="SrLugarLocalizacion" class="form-control" />
                 <span asp-validation-for="SrLugarLocalizacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrEstado" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrEstado" class="control-label">Estado: </label>
                 <input asp-for="SrEstado" class="form-control" />
                 <span asp-validation-for="SrEstado" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrNombresPaciente" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrNombresPaciente" class="control-label">Nombres de Paciente: </label>
                 <input asp-for="SrNombresPaciente" class="form-control" />
                 <span asp-validation-for="SrNombresPaciente" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrApellidosPaciente" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrApellidosPaciente" class="control-label">Apellidos de Paciente</label>
                 <input asp-for="SrApellidosPaciente" class="form-control" />
                 <span asp-validation-for="SrApellidosPaciente" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrCausa" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrCausa" class="control-label">Causa: </label>
                 <input asp-for="SrCausa" class="form-control" />
                 <span asp-validation-for="SrCausa" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrDireccionPaciente" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrDireccionPaciente" class="control-label">Dirección de Paciente: </label>
                 <input asp-for="SrDireccionPaciente" class="form-control" />
                 <span asp-validation-for="SrDireccionPaciente" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrEdad" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrEdad" class="control-label">Edad: </label>
                 <input asp-for="SrEdad" class="form-control" />
                 <span asp-validation-for="SrEdad" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrSexo" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrSexo" class="control-label">Genero: </label>
                 <input asp-for="SrSexo" class="form-control" />
                 <span asp-validation-for="SrSexo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrRopaColor" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrRopaColor" class="control-label">Color de Ropa: </label>
                 <input asp-for="SrRopaColor" class="form-control" />
                 <span asp-validation-for="SrRopaColor" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrColorZapatos" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrColorZapatos" class="control-label">Color de Zapatos: </label>
                 <input asp-for="SrColorZapatos" class="form-control" />
                 <span asp-validation-for="SrColorZapatos" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrObjetosPortaba" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrObjetosPortaba" class="control-label">Objetos que portaba: </label>
                 <input asp-for="SrObjetosPortaba" class="form-control" />
                 <span asp-validation-for="SrObjetosPortaba" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrColorPelo" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrColorPelo" class="control-label">Color de Pelo: </label>
                 <input asp-for="SrColorPelo" class="form-control" />
                 <span asp-validation-for="SrColorPelo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrAproxEstatura" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrAproxEstatura" class="control-label">Estatura Aproximada: </label>
                 <input asp-for="SrAproxEstatura" class="form-control" />
                 <span asp-validation-for="SrAproxEstatura" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrPosicionEncontro" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrPosicionEncontro" class="control-label">Posición en que se encontro: </label>
                 <input asp-for="SrPosicionEncontro" class="form-control" />
                 <span asp-validation-for="SrPosicionEncontro" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrTraslado" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrTraslado" class="control-label">Traslado: </label>
                 <input asp-for="SrTraslado" class="form-control" />
                 <span asp-validation-for="SrTraslado" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrUnidad" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrUnidad" class="control-label">Unidad: </label>
                 <input asp-for="SrUnidad" class="form-control" />
                 <span asp-validation-for="SrUnidad" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrOtrasUniAsis" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrOtrasUniAsis" class="control-label">Otras Unidades de Asistencia: </label>
                 <input asp-for="SrOtrasUniAsis" class="form-control" />
                 <span asp-validation-for="SrOtrasUniAsis" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrNombreJuez" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrNombreJuez" class="control-label">Nombre de Juez: </label>
                 <input asp-for="SrNombreJuez" class="form-control" />
                 <span asp-validation-for="SrNombreJuez" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrSeñalesPartRescatado" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrSeñalesPartRescatado" class="control-label">Señales: </label>
                 <input asp-for="SrSeñalesPartRescatado" class="form-control" />
                 <span asp-validation-for="SrSeñalesPartRescatado" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrFormaAviso" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrFormaAviso" class="control-label">Forma de Aviso: </label>
                 <input asp-for="SrFormaAviso" class="form-control" />
                 <span asp-validation-for="SrFormaAviso" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrNoTelLlamaron" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrNoTelLlamaron" class="control-label">No. de Telefono: </label>
                 <input asp-for="SrNoTelLlamaron" class="form-control" />
                 <span asp-validation-for="SrNoTelLlamaron" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrSiglasRadioLlamaron" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrSiglasRadioLlamaron" class="control-label">Radio: </label>
                 <input asp-for="SrSiglasRadioLlamaron" class="form-control" />
                 <span asp-validation-for="SrSiglasRadioLlamaron" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrRadioOpTurnoCentral" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrRadioOpTurnoCentral" class="control-label">Radio de turno: </label>
                 <input asp-for="SrRadioOpTurnoCentral" class="form-control" />
                 <span asp-validation-for="SrRadioOpTurnoCentral" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrTelefonistaTurnoEstacion" class="control-label"></label>
-                <select asp-for="SrTelefonistaTurnoEstacion" class ="form-control" asp-items="ViewBag.SrTelefonistaTurnoEstacion"></select>
+            <div class="form-group col-md-3">
+                <label asp-for="SrTelefonistaTurnoEstacion" class="control-label">Telefonista de Turno: </label>
+                <select asp-for="SrTelefonistaTurnoEstacion" class="form-control" asp-items="ViewBag.srTelefonistaTurno"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="SrOficialMando" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrOficialMando" class="control-label">Oficial al Mando: </label>
                 <select asp-for="SrOficialMando" class ="form-control" asp-items="ViewBag.SrOficialMando"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="SrHoraSalida" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrHoraSalida" class="control-label">Hora de Salida: </label>
                 <input asp-for="SrHoraSalida" class="form-control" />
                 <span asp-validation-for="SrHoraSalida" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrHoraEntrada" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrHoraEntrada" class="control-label">Hora de Entrada: </label>
                 <input asp-for="SrHoraEntrada" class="form-control" />
                 <span asp-validation-for="SrHoraEntrada" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrPatrullasCarSeg" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrPatrullasCarSeg" class="control-label">Patrullas a Cargo: </label>
                 <input asp-for="SrPatrullasCarSeg" class="form-control" />
                 <span asp-validation-for="SrPatrullasCarSeg" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrPersonalAsistente" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrPersonalAsistente" class="control-label">Personal Asistente: </label>
                 <input asp-for="SrPersonalAsistente" class="form-control" />
                 <span asp-validation-for="SrPersonalAsistente" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrObservacion" class="control-label"></label>
-                <input asp-for="SrObservacion" class="form-control" />
-                <span asp-validation-for="SrObservacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SrKmSalida" class="control-label"></label>
+            
+            <div class="form-group col-md-3">
+                <label asp-for="SrKmSalida" class="control-label">Km de Salida</label>
                 <input asp-for="SrKmSalida" class="form-control" />
                 <span asp-validation-for="SrKmSalida" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrKmEntrada" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrKmEntrada" class="control-label">Km de Entrada: </label>
                 <input asp-for="SrKmEntrada" class="form-control" />
                 <span asp-validation-for="SrKmEntrada" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrKmTotal" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrKmTotal" class="control-label">Km en Total: </label>
                 <input asp-for="SrKmTotal" class="form-control" />
                 <span asp-validation-for="SrKmTotal" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrBomberoReporta" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrBomberoReporta" class="control-label">Bombero que Reporta: </label>
                 <select asp-for="SrBomberoReporta" class ="form-control" asp-items="ViewBag.SrBomberoReporta"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="SrFecha" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrFecha" class="control-label">Fecha: </label>
                 <input asp-for="SrFecha" class="form-control" />
                 <span asp-validation-for="SrFecha" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SrVoBoJefeServicio" class="control-label"></label>
+            <div class="form-group col-md-3">
+                <label asp-for="SrVoBoJefeServicio" class="control-label">VoBo. Jefe de Servicio: </label>
                 <select asp-for="SrVoBoJefeServicio" class ="form-control" asp-items="ViewBag.SrVoBoJefeServicio"></select>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group col-md-12">
+                <label asp-for="SrObservacion" class="control-label">Obervacion: </label>
+                <textarea asp-for="SrObservacion" class="form-control" style="height:150px"></textarea>
+                <span asp-validation-for="SrObservacion" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <br />
+                <input type="submit" value="Crear" class="btn btn-primary" />
+                <a asp-action="Index">Regresar al Listado</a>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    
 </div>
 
 @section Scripts {
