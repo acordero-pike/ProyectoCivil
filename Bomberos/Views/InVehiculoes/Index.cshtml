@@ -1,27 +1,43 @@
 ﻿@model IEnumerable<Bomberos.Models.InVehiculo>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Incendio de Vehiculo";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Index</h1>
+<h1><center>Incendios de Vehiculos</center></h1>
+<br>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="orden">
+    <p>
+        <a asp-action="Create"><img src="~/img/agregar-documento.png" width="50" height="50" /></a>
+    </p>
+    <h3>Crear un Nuevo Documento   </h3>
+
+</div>
+
+<div style="overflow-x:auto;">
 <table class="table">
     <thead>
         <tr>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvUbiSiniestro)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvTipoVehiculo)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvPlaca)
+                </center>
             </th>
-            <th>
+           @*<th>
                 @Html.DisplayNameFor(model => model.IvColor)
             </th>
             <th>
@@ -32,17 +48,23 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IvPerdida)
-            </th>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvHoraSalida)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvHoraServicio)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvHoraEntrada)
+                </center>
             </th>
-            <th>
+          @*<th>
                 @Html.DisplayNameFor(model => model.IvUnidad)
             </th>
             <th>
@@ -56,20 +78,24 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IvUniOtrasInstiBomberiles)
-            </th>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvPersonalAsisEstacion)
+                </center>
             </th>
-            <th>
+           @* <th>
                 @Html.DisplayNameFor(model => model.IvPersonalAsisOtraEstacion)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IvObservacion)
-            </th>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvFecha)
+                </center>
             </th>
-            <th>
+           @*<th>
                 @Html.DisplayNameFor(model => model.IvKmEntrada)
             </th>
             <th>
@@ -77,29 +103,40 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IvKmRecorrido)
-            </th>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvNoBombero)
+                </center>
             </th>
-            <th>
+        @*<th>
                 @Html.DisplayNameFor(model => model.IdCfNavigation)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IdPropNavigation)
-            </th>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvBomberoReportaNavigation)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvEstacionNavigation)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvFirmaBomberoNavigation)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvJefeServicioNavigation)
+                </center>
+
             </th>
-            <th>
+           @*<th>
                 @Html.DisplayNameFor(model => model.IvPilotoNavigation)
             </th>
             <th>
@@ -107,26 +144,37 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IvTurnoNavigation)
-            </th>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IvVoBoJefeServicioNavigation)
+                </center>
             </th>
-            <th></th>
+                <th><center></center></th>
+                <th><center></center></th>
+                <th><center></center></th>
         </tr>
     </thead>
+    </div>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td>   
+                <center>      
                 @Html.DisplayFor(modelItem => item.IvUbiSiniestro)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvTipoVehiculo)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvPlaca)
+                </center>
             </td>
-            <td>
+           @*<td>
                 @Html.DisplayFor(modelItem => item.IvColor)
             </td>
             <td>
@@ -137,17 +185,23 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IvPerdida)
-            </td>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvHoraSalida)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvHoraServicio)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvHoraEntrada)
+                </center>
             </td>
-            <td>
+          @*<td>
                 @Html.DisplayFor(modelItem => item.IvUnidad)
             </td>
             <td>
@@ -161,20 +215,24 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IvUniOtrasInstiBomberiles)
-            </td>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvPersonalAsisEstacion)
+                </center>
             </td>
-            <td>
+           @*<td>
                 @Html.DisplayFor(modelItem => item.IvPersonalAsisOtraEstacion)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IvObservacion)
-            </td>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvFecha)
+                </center>
             </td>
-            <td>
+           @*<td>
                 @Html.DisplayFor(modelItem => item.IvKmEntrada)
             </td>
             <td>
@@ -182,29 +240,43 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IvKmRecorrido)
-            </td>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IvNoBombero)
+                </center>
             </td>
-            <td>
+           @*<td>
                 @Html.DisplayFor(modelItem => item.IdCfNavigation.IdCf)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdPropNavigation.IdProp)
+            </td>*@
+            <td>
+                <center>
+                @Html.DisplayFor(modelItem => item.IvBomberoReportaNavigation.Nombres)
+                @Html.DisplayFor(modelItem => item.IvBomberoReportaNavigation.Apellidos)
+                </center>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IvBomberoReportaNavigation.IdUsuario)
+                <center>
+                @Html.DisplayFor(modelItem => item.IvEstacionNavigation.Nombre)
+                </center>
+
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IvEstacionNavigation.IdEstacion)
+                <center>
+                @Html.DisplayFor(modelItem => item.IvFirmaBomberoNavigation.Nombre)
+                </center>
+
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IvFirmaBomberoNavigation.IdFirma)
+                <center>
+                @Html.DisplayFor(modelItem => item.IvJefeServicioNavigation.Nombres)
+                @Html.DisplayFor(modelItem => item.IvJefeServicioNavigation.Apellidos)
+                </center>
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IvJefeServicioNavigation.IdPersonal)
-            </td>
-            <td>
+           @*<td>
                 @Html.DisplayFor(modelItem => item.IvPilotoNavigation.IdPersonal)
             </td>
             <td>
@@ -212,14 +284,25 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IvTurnoNavigation.IdTurno)
+            </td>*@
+            <td>
+                <center>
+                @Html.DisplayFor(modelItem => item.IvVoBoJefeServicioNavigation.Nombre)
+                </center>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IvVoBoJefeServicioNavigation.IdFirma)
+                <center>
+                    <a asp-action="Edit" asp-route-id="@item.IdIv"><img src="~/img/editar.png" width="40" height="40" /> </a>
+                </center>
+            <td>
+                <center>
+                    <a asp-action="Details" asp-route-id="@item.IdIv"><img src="~/img/votacion.png" width="40" height="40" /> </a>
+                </center>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdIv">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdIv">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdIv">Delete</a>
+                <center>
+                    <a asp-action="Delete" asp-route-id="@item.IdIv"><img src="~/img/basura.png" width="40" height="40" /> </a>
+                </center>
             </td>
         </tr>
 }

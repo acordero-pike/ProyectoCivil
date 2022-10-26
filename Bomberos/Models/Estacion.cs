@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Bomberos.Models
 {
@@ -15,7 +18,11 @@ namespace Bomberos.Models
         }
 
         public string? IdEstacion { get; set; } = null!;
+        [Display(Name = "Nombre de Estacion:")]
+        [Required(ErrorMessage = "Porfavor Ingrese el Nombre de la Estacion.")]
         public string? Nombre { get; set; }
+        [Display(Name = "Ubicación:")]
+        [Required(ErrorMessage = "Porfavor Ingrese la Ubicacion de la Estacion.")]
         public string? Descripcion { get; set; }
 
         public virtual ICollection<InEstructural> InEstructurals { get; set; }

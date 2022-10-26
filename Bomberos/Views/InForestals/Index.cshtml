@@ -1,202 +1,343 @@
 ﻿@model IEnumerable<Bomberos.Models.InForestal>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Incendios Forestales";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Index</h1>
+<h1><center>Incendios Forestales</center></h1>
+<br>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="orden">
+    <p>
+        <a asp-action="Create"><img src="~/img/agregar-documento.png" width="50" height="50" /></a>
+    </p>
+    <h3>Crear un Nuevo Documento   </h3>
+
+</div>
+
+<div style="overflow-x:auto;">
 <table class="table">
     <thead>
         <tr>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfUbiSiniestro)
+                </center>
             </th>
-            <th>
+           @*<th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfAreaAfectada)
-            </th>
-            <th>
+                    </center>
+            </th>*@
+            @*<th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfTipoTerreno)
-            </th>
+                    </center>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfHoraSalida)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfHoraServicio)
+                    </center>
             </th>
             <th>
+                    <center>
                 @Html.DisplayNameFor(model => model.IfHoraEntrada)
+                    </center>
             </th>
-            <th>
+           @* <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfUnidad)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfUniAsisEstacion)
+                    </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfUniAsisOtraEstacion)
+                    </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfUniPoliciacas)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfUniOtrasInstiBomberiles)
-            </th>
+                    </center>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfPersonalAsisEstacion)
+                </center>
             </th>
-            <th>
+           @* <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfPersonalAsisOtraEstacion)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfObservacion)
-            </th>
+                </center>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfFecha)
+                </center>
             </th>
-            <th>
+           @*<th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfKmEntrada)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfKmSalida)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfKmRecorrido)
-            </th>
-            <th>
+                </center>
+            </th>*@
+            <th><center>
                 @Html.DisplayNameFor(model => model.IfNoBombero)
+                    </center>
             </th>
-            <th>
+           @*<th>
+                <center>
                 @Html.DisplayNameFor(model => model.IdCfNavigation)
+                    </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IdPropNavigation)
-            </th>
+                </center>
+            </th>*@
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfBomberoReportaNavigation)
+                </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfEstacionNavigation)
+                    </center>
             </th>
             <th>
+                    <center>
                 @Html.DisplayNameFor(model => model.IfFirmaBomberoNavigation)
+                    </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfJefeServicioNavigation)
+                    </center>
             </th>
-            <th>
+           @*<th>
+                    <center>
                 @Html.DisplayNameFor(model => model.IfPilotoNavigation)
+                    </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfTelefonistaTurnoNavigation)
+                    </center>
             </th>
             <th>
+                <center>
                 @Html.DisplayNameFor(model => model.IfTurnoNavigation)
-            </th>
+                    </center>
+            </th>*@
             <th>
+                    <center>
                 @Html.DisplayNameFor(model => model.IfVoBoJefeServicioNavigation)
+                    </center>
             </th>
-            <th></th>
+                <th><center></center></th>
+            <th><center></center></th>
+                <th><center></center></th>
         </tr>
     </thead>
+    </div>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td><center>
                 @Html.DisplayFor(modelItem => item.IfUbiSiniestro)
+                </center>
             </td>
-            <td>
+            @*<td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfAreaAfectada)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfTipoTerreno)
-            </td>
+                </center>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfHoraSalida)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfHoraServicio)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfHoraEntrada)
+                </center>
             </td>
-            <td>
+            
+           @* <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfUnidad)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfUniAsisEstacion)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfUniAsisOtraEstacion)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfUniPoliciacas)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfUniOtrasInstiBomberiles)
-            </td>
+                </center>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfPersonalAsisEstacion)
+                </center>
             </td>
-            <td>
+           @* <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfPersonalAsisOtraEstacion)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfObservacion)
-            </td>
+                </center>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfFecha)
+                </center>
             </td>
-            <td>
+           @*<td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfKmEntrada)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfKmSalida)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfKmRecorrido)
-            </td>
+                </center>
+            </td>*@
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfNoBombero)
+                </center>
             </td>
-            <td>
+            @*<td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IdCfNavigation.IdCf)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IdPropNavigation.IdProp)
+                </center>
+            </td>*@
+            <td>
+                <center>
+                @Html.DisplayFor(modelItem => item.IfBomberoReportaNavigation.Nombres) 
+                @Html.DisplayFor(modelItem => item.IfBomberoReportaNavigation.Apellidos)
+                </center>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IfBomberoReportaNavigation.IdUsuario)
+                <center>
+                @Html.DisplayFor(modelItem => item.IfEstacionNavigation.Nombre)
+                </center>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IfEstacionNavigation.IdEstacion)
+                <center>
+                @Html.DisplayFor(modelItem => item.IfFirmaBomberoNavigation.Nombre)
+                </center>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IfFirmaBomberoNavigation.IdFirma)
+                <center>
+                @Html.DisplayFor(modelItem => item.IfJefeServicioNavigation.Nombres)
+                @Html.DisplayFor(modelItem => item.IfJefeServicioNavigation.Apellidos)
+                </center>
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IfJefeServicioNavigation.IdPersonal)
-            </td>
-            <td>
+            
+           @* <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfPilotoNavigation.IdPersonal)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfTelefonistaTurnoNavigation.IdPersonal)
+                </center>
             </td>
             <td>
+                <center>
                 @Html.DisplayFor(modelItem => item.IfTurnoNavigation.IdTurno)
-            </td>
+                </center>
+            </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.IfVoBoJefeServicioNavigation.IdFirma)
+                <center>
+                @Html.DisplayFor(modelItem => item.IfVoBoJefeServicioNavigation.Nombre)
+                </center>
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdIf">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdIf">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdIf">Delete</a>
-            </td>
+                <td>
+                <center>
+                    <a asp-action="Edit" asp-route-id="@item.IdIf"><img src="~/img/editar.png" width="40" height="40" /> </a>
+                    </center>
+                <td>
+                    <center>
+                    <a asp-action="Details" asp-route-id="@item.IdIf"><img src="~/img/votacion.png" width="40" height="40" /> </a>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                <a asp-action="Delete" asp-route-id="@item.IdIf"><img src="~/img/basura.png" width="40" height="40" /> </a>
+                    </center>
+                </td>
+                
         </tr>
 }
     </tbody>

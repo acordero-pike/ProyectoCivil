@@ -1,193 +1,195 @@
 ﻿@model Bomberos.Models.InVehiculo
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Formulario";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Edit</h1>
+<div class="orden">
+    <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
+</div>
 
-<h4>InVehiculo</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<h1><center>Editar Formulario</center></h1>
+<h4><center>Incendio de Vehiculos</center></h4>
+<hr>
+<div class="letra">
+    <div class="">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdIv" />
-            <div class="form-group">
+
+            <div class="form-group col-md-3">
                 <label asp-for="IvEstacion" class="control-label"></label>
                 <select asp-for="IvEstacion" class="form-control" asp-items="ViewBag.IvEstacion"></select>
-                <span asp-validation-for="IvEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvTurno" class="control-label"></label>
                 <select asp-for="IvTurno" class="form-control" asp-items="ViewBag.IvTurno"></select>
-                <span asp-validation-for="IvTurno" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-6">
                 <label asp-for="IvUbiSiniestro" class="control-label"></label>
                 <input asp-for="IvUbiSiniestro" class="form-control" />
                 <span asp-validation-for="IvUbiSiniestro" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvTipoVehiculo" class="control-label"></label>
                 <input asp-for="IvTipoVehiculo" class="form-control" />
                 <span asp-validation-for="IvTipoVehiculo" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvPlaca" class="control-label"></label>
                 <input asp-for="IvPlaca" class="form-control" />
                 <span asp-validation-for="IvPlaca" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvColor" class="control-label"></label>
                 <input asp-for="IvColor" class="form-control" />
                 <span asp-validation-for="IvColor" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvMarca" class="control-label"></label>
                 <input asp-for="IvMarca" class="form-control" />
                 <span asp-validation-for="IvMarca" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvValor" class="control-label"></label>
                 <input asp-for="IvValor" class="form-control" />
                 <span asp-validation-for="IvValor" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvPerdida" class="control-label"></label>
                 <input asp-for="IvPerdida" class="form-control" />
                 <span asp-validation-for="IvPerdida" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IdProp" class="control-label"></label>
                 <select asp-for="IdProp" class="form-control" asp-items="ViewBag.IdProp"></select>
-                <span asp-validation-for="IdProp" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IdCf" class="control-label"></label>
                 <select asp-for="IdCf" class="form-control" asp-items="ViewBag.IdCf"></select>
-                <span asp-validation-for="IdCf" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvHoraSalida" class="control-label"></label>
                 <input asp-for="IvHoraSalida" class="form-control" />
                 <span asp-validation-for="IvHoraSalida" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvHoraServicio" class="control-label"></label>
                 <input asp-for="IvHoraServicio" class="form-control" />
                 <span asp-validation-for="IvHoraServicio" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-2">
                 <label asp-for="IvHoraEntrada" class="control-label"></label>
                 <input asp-for="IvHoraEntrada" class="form-control" />
                 <span asp-validation-for="IvHoraEntrada" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvJefeServicio" class="control-label"></label>
                 <select asp-for="IvJefeServicio" class="form-control" asp-items="ViewBag.IvJefeServicio"></select>
-                <span asp-validation-for="IvJefeServicio" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvTelefonistaTurno" class="control-label"></label>
                 <select asp-for="IvTelefonistaTurno" class="form-control" asp-items="ViewBag.IvTelefonistaTurno"></select>
-                <span asp-validation-for="IvTelefonistaTurno" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvBomberoReporta" class="control-label"></label>
                 <select asp-for="IvBomberoReporta" class="form-control" asp-items="ViewBag.IvBomberoReporta"></select>
-                <span asp-validation-for="IvBomberoReporta" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvPiloto" class="control-label"></label>
                 <select asp-for="IvPiloto" class="form-control" asp-items="ViewBag.IvPiloto"></select>
-                <span asp-validation-for="IvPiloto" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvUnidad" class="control-label"></label>
                 <input asp-for="IvUnidad" class="form-control" />
                 <span asp-validation-for="IvUnidad" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvUniAsisEstacion" class="control-label"></label>
                 <input asp-for="IvUniAsisEstacion" class="form-control" />
                 <span asp-validation-for="IvUniAsisEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvUniAsisOtraEstacion" class="control-label"></label>
                 <input asp-for="IvUniAsisOtraEstacion" class="form-control" />
                 <span asp-validation-for="IvUniAsisOtraEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvUniPoliciacas" class="control-label"></label>
                 <input asp-for="IvUniPoliciacas" class="form-control" />
                 <span asp-validation-for="IvUniPoliciacas" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvUniOtrasInstiBomberiles" class="control-label"></label>
                 <input asp-for="IvUniOtrasInstiBomberiles" class="form-control" />
                 <span asp-validation-for="IvUniOtrasInstiBomberiles" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvPersonalAsisEstacion" class="control-label"></label>
                 <input asp-for="IvPersonalAsisEstacion" class="form-control" />
                 <span asp-validation-for="IvPersonalAsisEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvPersonalAsisOtraEstacion" class="control-label"></label>
                 <input asp-for="IvPersonalAsisOtraEstacion" class="form-control" />
                 <span asp-validation-for="IvPersonalAsisOtraEstacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IvObservacion" class="control-label"></label>
-                <input asp-for="IvObservacion" class="form-control" />
-                <span asp-validation-for="IvObservacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvFecha" class="control-label"></label>
                 <input asp-for="IvFecha" class="form-control" />
                 <span asp-validation-for="IvFecha" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group col-md-12">
+                <label asp-for="IvObservacion" class="control-label"></label>
+                <textarea asp-for="IvObservacion" class="form-control" style="height:150px"></textarea>
+                <span asp-validation-for="IvObservacion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-3">
                 <label asp-for="IvKmEntrada" class="control-label"></label>
                 <input asp-for="IvKmEntrada" class="form-control" />
                 <span asp-validation-for="IvKmEntrada" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvKmSalida" class="control-label"></label>
                 <input asp-for="IvKmSalida" class="form-control" />
                 <span asp-validation-for="IvKmSalida" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvKmRecorrido" class="control-label"></label>
                 <input asp-for="IvKmRecorrido" class="form-control" />
                 <span asp-validation-for="IvKmRecorrido" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvFirmaBombero" class="control-label"></label>
                 <select asp-for="IvFirmaBombero" class="form-control" asp-items="ViewBag.IvFirmaBombero"></select>
-                <span asp-validation-for="IvFirmaBombero" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvNoBombero" class="control-label"></label>
                 <input asp-for="IvNoBombero" class="form-control" />
                 <span asp-validation-for="IvNoBombero" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <label asp-for="IvVoBoJefeServicio" class="control-label"></label>
                 <select asp-for="IvVoBoJefeServicio" class="form-control" asp-items="ViewBag.IvVoBoJefeServicio"></select>
-                <span asp-validation-for="IvVoBoJefeServicio" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group col-md-3">
+                <label asp-for="Codigo" class="control-label">Codigo del Sinistro:</label>
+                <select asp-for="Codigo" class="form-control" asp-items="ViewBag.Uuid"></select>
+            </div>
+
+            <div class="form-group col-md-12">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

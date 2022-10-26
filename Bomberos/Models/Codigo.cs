@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Bomberos.Models
 {
@@ -16,7 +18,12 @@ namespace Bomberos.Models
         }
 
         public string? Uuid { get; set; } = null!;
+        [Display(Name = "No. de Codigo:")]
+        [Required(ErrorMessage = "Porfavor Ingrese un Numero de Codigo.")]
+       
         public string? Codigo1 { get; set; }
+        [Display(Name = "Descripción:")]
+        [Required(ErrorMessage = "Porfavor Ingrese el Nombre del Codigo.")]
         public string? Descripcion { get; set; }
 
         public virtual ICollection<InEstructural> InEstructurals { get; set; }
