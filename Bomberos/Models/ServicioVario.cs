@@ -58,5 +58,8 @@ namespace Bomberos.Models
         public virtual Personal? SvPilotoNavigation { get; set; }
         public virtual Personal? SvServicioAutPorNavigation { get; set; }
         public virtual Personal? SvTelefonistaTurnoNavigation { get; set; }
+        public virtual Estacion? SvEstacionNavigation { get; set; }
+        public virtual Turno? SvTurnoNavigation { get; set; }
+
     }
 }

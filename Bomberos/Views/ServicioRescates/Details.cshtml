@@ -3,11 +3,17 @@
 @{
     ViewData["Title"] = "Details";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Detalles</h1>
+<div class="orden">
+    <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
+</div>
+<h1><center>Detalles de Servicios de Rescate</center></h1>
 
-<div>
-    <h4>Servicios de Rescate</h4>
+<div class="">
+    <h4><center>Servicios de Rescate</center></h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -246,28 +252,31 @@
             Bombero que reporta: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrBomberoReportaNavigation.IdUsuario)
+            @Html.DisplayFor(model => model.SrBomberoReportaNavigation.Nombres)
+            @Html.DisplayFor(model => model.SrBomberoReportaNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @*@Html.DisplayNameFor(model => model.SrEstacionNavigation)*@
             Estación: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrEstacionNavigation.IdEstacion)
+            @Html.DisplayFor(model => model.SrEstacionNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @*@Html.DisplayNameFor(model => model.SrOficialMandoNavigation)*@
             Oficial al Mando: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrOficialMandoNavigation.IdPersonal)
+            @Html.DisplayFor(model => model.SrOficialMandoNavigation.Nombres)
+            @Html.DisplayFor(model => model.SrOficialMandoNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @*@Html.DisplayNameFor(model => model.SrTelefonistaTurnoEstacionNavigation)*@
             Telefonista de Turno: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrTelefonistaTurnoEstacionNavigation.IdPersonal)
+            @Html.DisplayFor(model => model.SrTelefonistaTurnoEstacionNavigation.Nombres)
+            @Html.DisplayFor(model => model.SrTelefonistaTurnoEstacionNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @*@Html.DisplayNameFor(model => model.SrVoBoJefeServicioNavigation)*@
@@ -279,6 +288,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdSr">Editar</a> |
-    <a asp-action="Index">Regresar al Listado</a>
+    <a asp-action="Edit" asp-route-id="@Model?.IdSr">Editar</a>
 </div>

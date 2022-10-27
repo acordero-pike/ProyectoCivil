@@ -24,7 +24,7 @@ namespace Bomberos.Controllers
         // GET: ServicioVarios
         public async Task<IActionResult> Index()
         {
-            var bomberoContext = _context.ServicioVarios.Include(s => s.SvBomberoReportaNavigation).Include(s => s.SvFirmaBomberoNavigation).Include(s => s.SvJefeServicioNavigation).Include(s => s.SvPersonalAsistenteNavigation).Include(s => s.SvPilotoNavigation).Include(s => s.SvServicioAutPorNavigation).Include(s => s.SvTelefonistaTurnoNavigation);
+            var bomberoContext = _context.ServicioVarios.Include(s => s.SvBomberoReportaNavigation).Include(s => s.SvFirmaBomberoNavigation).Include(s => s.SvJefeServicioNavigation).Include(s => s.SvPersonalAsistenteNavigation).Include(s => s.SvPilotoNavigation).Include(s => s.SvServicioAutPorNavigation).Include(s => s.SvTelefonistaTurnoNavigation).Include(s => s.SvTurnoNavigation).Include(s => s.SvEstacionNavigation);
             return View(await bomberoContext.ToListAsync());
         }
 
@@ -37,11 +37,14 @@ namespace Bomberos.Controllers
             }
 
             var servicioVario = await _context.ServicioVarios
+                .Include(s => s.CodigoNavigation)
                 .Include(s => s.SvBomberoReportaNavigation)
+                .Include(s => s.SvEstacionNavigation)
                 .Include(s => s.SvFirmaBomberoNavigation)
                 .Include(s => s.SvJefeServicioNavigation)
                 .Include(s => s.SvPersonalAsistenteNavigation)
                 .Include(s => s.SvPilotoNavigation)
+                .Include(s => s.SvTurnoNavigation)
                 .Include(s => s.SvServicioAutPorNavigation)
                 .Include(s => s.SvTelefonistaTurnoNavigation)
                 .FirstOrDefaultAsync(m => m.IdSv == id);
@@ -58,6 +61,7 @@ namespace Bomberos.Controllers
         {
             var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
 
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1");
             ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombres");
             ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre");
             ViewData["SvTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre");
@@ -75,7 +79,7 @@ namespace Bomberos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdSv,SvEstacion,SvTurno,SvFecha,SvDireccion,SvServicio,SvHoraSalida,SvHoraEntrada,SvJefeServicio,SvTelefonistaTurno,SvBomberoReporta,SvUnidad,SvPiloto,SvServicioAutPor,SvPersonalAsistente,SvObservacion,SvKmEntrada,SvKmSalida,SvKmRecorrido,SvFirmaBombero,SvNoBombero")] ServicioVario servicioVario)
+        public async Task<IActionResult> Create([Bind("IdSv,Codigo,SvEstacion,SvTurno,SvFecha,SvDireccion,SvServicio,SvHoraSalida,SvHoraEntrada,SvJefeServicio,SvTelefonistaTurno,SvBomberoReporta,SvUnidad,SvPiloto,SvServicioAutPor,SvPersonalAsistente,SvObservacion,SvKmEntrada,SvKmSalida,SvKmRecorrido,SvFirmaBombero,SvNoBombero")] ServicioVario servicioVario)
         {
             if (ModelState.IsValid)
             {
@@ -83,6 +87,7 @@ namespace Bomberos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1", servicioVario.Codigo);
             ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioVario.SvBomberoReporta);
             ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", servicioVario.SvEstacion);
             ViewData["SvTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", servicioVario.SvTurno);
@@ -108,14 +113,19 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioVario.SvBomberoReporta);
+            var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
+            var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });
+            
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1", servicioVario.Codigo);
+            ViewData["SvBomberoReporta"] = new SelectList(users, "IdUsuario", "Nombre", servicioVario.SvBomberoReporta);
             ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre", servicioVario.SvEstacion);
             ViewData["SvFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", servicioVario.SvFirmaBombero);
-            ViewData["SvJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvJefeServicio);
-            ViewData["SvPersonalAsistente"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvPersonalAsistente);
-            ViewData["SvPiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvPiloto);
-            ViewData["SvServicioAutPor"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvServicioAutPor);
-            ViewData["SvTelefonistaTurno"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvTelefonistaTurno);
+            ViewData["SvJefeServicio"] = new SelectList(empleado, "Id_Personal", "Nombre", servicioVario.SvJefeServicio);
+            ViewData["SvPersonalAsistente"] = new SelectList(empleado, "Id_Personal", "Nombre", servicioVario.SvPersonalAsistente);
+            ViewData["SvPiloto"] = new SelectList(empleado, "Id_Personal", "Nombre", servicioVario.SvPiloto);
+            ViewData["SvServicioAutPor"] = new SelectList(empleado, "Id_Personal", "Nombre", servicioVario.SvServicioAutPor);
+            ViewData["SvTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre", servicioVario.SvTurno);
+            ViewData["SvTelefonistaTurno"] = new SelectList(empleado, "Id_Personal", "Nombre", servicioVario.SvTelefonistaTurno);
             return View(servicioVario);
         }
 
@@ -124,8 +134,9 @@ namespace Bomberos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("IdSv,SvEstacion,SvTurno,SvFecha,SvDireccion,SvServicio,SvHoraSalida,SvHoraEntrada,SvJefeServicio,SvTelefonistaTurno,SvBomberoReporta,SvUnidad,SvPiloto,SvServicioAutPor,SvPersonalAsistente,SvObservacion,SvKmEntrada,SvKmSalida,SvKmRecorrido,SvFirmaBombero,SvNoBombero")] ServicioVario servicioVario)
+        public async Task<IActionResult> Edit(string id, [Bind("IdSv,Codigo,SvEstacion,SvTurno,SvFecha,SvDireccion,SvServicio,SvHoraSalida,SvHoraEntrada,SvJefeServicio,SvTelefonistaTurno,SvBomberoReporta,SvUnidad,SvPiloto,SvServicioAutPor,SvPersonalAsistente,SvObservacion,SvKmEntrada,SvKmSalida,SvKmRecorrido,SvFirmaBombero,SvNoBombero")] ServicioVario servicioVario)
         {
+            
             if (id != servicioVario.IdSv)
             {
                 return NotFound();
@@ -151,8 +162,9 @@ namespace Bomberos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Uuid"] = new SelectList(_context.Codigos, "Uuid", "Codigo1", servicioVario.Codigo);
             ViewData["SvBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioVario.SvBomberoReporta);
-            ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", servicioVario.SvEstacion);
+            ViewData["SvEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre", servicioVario.SvEstacion);
             ViewData["SvFirmaBombero"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", servicioVario.SvFirmaBombero);
             ViewData["SvJefeServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvJefeServicio);
             ViewData["SvPersonalAsistente"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioVario.SvPersonalAsistente);
@@ -171,11 +183,14 @@ namespace Bomberos.Controllers
             }
 
             var servicioVario = await _context.ServicioVarios
+                .Include(s => s.CodigoNavigation)
                 .Include(s => s.SvBomberoReportaNavigation)
                 .Include(s => s.SvFirmaBomberoNavigation)
+                .Include(s => s.SvEstacionNavigation)
                 .Include(s => s.SvJefeServicioNavigation)
                 .Include(s => s.SvPersonalAsistenteNavigation)
                 .Include(s => s.SvPilotoNavigation)
+                .Include(s => s.SvTurnoNavigation)
                 .Include(s => s.SvServicioAutPorNavigation)
                 .Include(s => s.SvTelefonistaTurnoNavigation)
                 .FirstOrDefaultAsync(m => m.IdSv == id);
@@ -192,18 +207,25 @@ namespace Bomberos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.ServicioVarios == null)
+           try
             {
-                return Problem("Entity set 'BomberoContext.ServicioVarios'  is null.");
-            }
-            var servicioVario = await _context.ServicioVarios.FindAsync(id);
-            if (servicioVario != null)
-            {
-                _context.ServicioVarios.Remove(servicioVario);
-            }
+                if (_context.ServicioVarios == null)
+                {
+                    return Problem("Entity set 'BomberoContext.ServicioVarios'  is null.");
+                }
+                var servicioVario = await _context.ServicioVarios.FindAsync(id);
+                if (servicioVario != null)
+                {
+                    _context.ServicioVarios.Remove(servicioVario);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return RedirectToAction("Index", "Error", new { data = "Error al eliminar!!", data2 = "Este campo esta siendo utilizado" });
+            }
         }
 
         private bool ServicioVarioExists(string id)
