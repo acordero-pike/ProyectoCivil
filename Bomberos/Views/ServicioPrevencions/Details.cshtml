@@ -3,11 +3,17 @@
 @{
     ViewData["Title"] = "Details";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <div class="orden">
+ <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
+ </div>
+<h1><center>Detalles de Servicios de Prevención</center></h1>
 
-<h1>Details</h1>
-
-<div>
-    <h4>ServicioPrevencion</h4>
+<div class="">
+    <h4><center>Servicios de Prevención</center></h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -92,43 +98,47 @@
             @Html.DisplayNameFor(model => model.SpBomberoReportaNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpBomberoReportaNavigation.IdUsuario)
+            @Html.DisplayFor(model => model.SpBomberoReportaNavigation.Nombres)
+            @Html.DisplayFor(model => model.SpBomberoReportaNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpCompañiaNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpCompañiaNavigation.IdCompañia)
+            @Html.DisplayFor(model => model.SpCompañiaNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpEstacionNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpEstacionNavigation.IdEstacion)
+            @Html.DisplayFor(model => model.SpEstacionNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpOficialServicioNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpOficialServicioNavigation.IdPersonal)
+            @Html.DisplayFor(model => model.SpOficialServicioNavigation.Nombres)
+            @Html.DisplayFor(model => model.SpOficialServicioNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpPilotoNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpPilotoNavigation.IdPersonal)
+            @Html.DisplayFor(model => model.SpPilotoNavigation.Nombres)
+            @Html.DisplayFor(model => model.SpPilotoNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpTelefonistaNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpTelefonistaNavigation.IdPersonal)
+            @Html.DisplayFor(model => model.SpTelefonistaNavigation.Nombres)
+            @Html.DisplayFor(model => model.SpTelefonistaNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpTurnoNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpTurnoNavigation.IdTurno)
+            @Html.DisplayFor(model => model.SpTurnoNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpVoBoJefeServicioNavigation)
@@ -139,6 +149,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdSp">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <br />
+    <a asp-action="Edit" asp-route-id="@Model?.IdSp">Edit</a>
 </div>

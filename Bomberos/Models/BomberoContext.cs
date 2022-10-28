@@ -1276,7 +1276,7 @@ namespace Bomberos.Models
                     .HasColumnName("sv_TelefonistaTurno");
 
                 entity.Property(e => e.SvTurno)
-                    .HasMaxLength(20)
+                    .HasMaxLength(36)
                     .IsUnicode(false)
                     .HasColumnName("sv_Turno");
 

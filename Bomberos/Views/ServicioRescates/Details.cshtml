@@ -3,237 +3,284 @@
 @{
     ViewData["Title"] = "Details";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Details</h1>
+<div class="orden">
+    <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
+</div>
+<h1><center>Detalles de Servicios de Rescate</center></h1>
 
-<div>
-    <h4>ServicioRescate</h4>
+<div class="">
+    <h4><center>Servicios de Rescate</center></h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrDireccionRescate)
+            @*@Html.DisplayNameFor(model => model.SrDireccionRescate)*@
+            Dirección: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrDireccionRescate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrLugarLocalizacion)
+           @* @Html.DisplayNameFor(model => model.SrLugarLocalizacion)*@
+           Lugar: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrLugarLocalizacion)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrEstado)
+           @* @Html.DisplayNameFor(model => model.SrEstado)*@
+           Estado: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrEstado)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrNombresPaciente)
+           @* @Html.DisplayNameFor(model => model.SrNombresPaciente)*@
+           Nombre de Paciente: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrNombresPaciente)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrApellidosPaciente)
+            @*@Html.DisplayNameFor(model => model.SrApellidosPaciente)*@
+            Apellido de Paciente: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrApellidosPaciente)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrCausa)
+            @*@Html.DisplayNameFor(model => model.SrCausa)*@
+            Causa: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrCausa)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrDireccionPaciente)
+           @* @Html.DisplayNameFor(model => model.SrDireccionPaciente)*@
+           Dirección de Paciente: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrDireccionPaciente)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrEdad)
+            @*@Html.DisplayNameFor(model => model.SrEdad)*@
+            Edad: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrEdad)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrSexo)
+            @*@Html.DisplayNameFor(model => model.SrSexo)*@
+            Sexo: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrSexo)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrRopaColor)
+            @*@Html.DisplayNameFor(model => model.SrRopaColor)*@
+            Color de Ropa: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrRopaColor)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrColorZapatos)
+            @*@Html.DisplayNameFor(model => model.SrColorZapatos)*@
+            Color de Zapatos: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrColorZapatos)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrObjetosPortaba)
+            @*@Html.DisplayNameFor(model => model.SrObjetosPortaba)*@
+            Objetos que portaba: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrObjetosPortaba)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrColorPelo)
+            @*@Html.DisplayNameFor(model => model.SrColorPelo)*@
+            Color de Cabello: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrColorPelo)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrAproxEstatura)
+            @*@Html.DisplayNameFor(model => model.SrAproxEstatura)*@
+            Estatura Aproximada: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrAproxEstatura)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrPosicionEncontro)
+           @* @Html.DisplayNameFor(model => model.SrPosicionEncontro)*@
+           Posición en que se encontro: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrPosicionEncontro)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrTraslado)
+            @*@Html.DisplayNameFor(model => model.SrTraslado)*@
+            Traslado: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrTraslado)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrUnidad)
+            @*@Html.DisplayNameFor(model => model.SrUnidad)*@
+            Unidad: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrUnidad)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrOtrasUniAsis)
+           @* @Html.DisplayNameFor(model => model.SrOtrasUniAsis)*@
+           Otras Unidades: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrOtrasUniAsis)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrNombreJuez)
+            @*@Html.DisplayNameFor(model => model.SrNombreJuez)*@
+            Nombre de Juez: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrNombreJuez)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrSeñalesPartRescatado)
+            @*@Html.DisplayNameFor(model => model.SrSeñalesPartRescatado)*@
+            Señales: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrSeñalesPartRescatado)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrFormaAviso)
+           @* @Html.DisplayNameFor(model => model.SrFormaAviso)*@
+           Forma de Aviso: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrFormaAviso)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrNoTelLlamaron)
+           @* @Html.DisplayNameFor(model => model.SrNoTelLlamaron)*@
+           No. de Telefono al que llamaron: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrNoTelLlamaron)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrSiglasRadioLlamaron)
+           @* @Html.DisplayNameFor(model => model.SrSiglasRadioLlamaron)*@
+           Siglas Radio que llamaron: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrSiglasRadioLlamaron)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrRadioOpTurnoCentral)
+           @* @Html.DisplayNameFor(model => model.SrRadioOpTurnoCentral)*@
+           Radio de Turno: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrRadioOpTurnoCentral)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrHoraSalida)
+           @* @Html.DisplayNameFor(model => model.SrHoraSalida)*@
+           Hora de Salida: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrHoraSalida)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrHoraEntrada)
+          @*  @Html.DisplayNameFor(model => model.SrHoraEntrada)*@
+          Hora de Entrada: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrHoraEntrada)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrPatrullasCarSeg)
+           @* @Html.DisplayNameFor(model => model.SrPatrullasCarSeg)*@
+           Patrullas a Cargo: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrPatrullasCarSeg)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrPersonalAsistente)
+           @* @Html.DisplayNameFor(model => model.SrPersonalAsistente)*@
+           Personal Asistente: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrPersonalAsistente)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrObservacion)
+           @* @Html.DisplayNameFor(model => model.SrObservacion)*@
+           Observación: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrObservacion)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrKmSalida)
+           @* @Html.DisplayNameFor(model => model.SrKmSalida)*@
+           Km de Salida: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrKmSalida)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrKmEntrada)
+            @*@Html.DisplayNameFor(model => model.SrKmEntrada)*@
+            Km de Entrada: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrKmEntrada)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrKmTotal)
+            @*@Html.DisplayNameFor(model => model.SrKmTotal)*@
+            Km en Total: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrKmTotal)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrFecha)
+            @*@Html.DisplayNameFor(model => model.SrFecha)*@
+            Fecha: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrFecha)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrBomberoReportaNavigation)
+            @*@Html.DisplayNameFor(model => model.SrBomberoReportaNavigation)*@
+            Bombero que reporta: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrBomberoReportaNavigation.IdUsuario)
+            @Html.DisplayFor(model => model.SrBomberoReportaNavigation.Nombres)
+            @Html.DisplayFor(model => model.SrBomberoReportaNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrEstacionNavigation)
+            @*@Html.DisplayNameFor(model => model.SrEstacionNavigation)*@
+            Estación: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrEstacionNavigation.IdEstacion)
+            @Html.DisplayFor(model => model.SrEstacionNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrOficialMandoNavigation)
+            @*@Html.DisplayNameFor(model => model.SrOficialMandoNavigation)*@
+            Oficial al Mando: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrOficialMandoNavigation.IdPersonal)
+            @Html.DisplayFor(model => model.SrOficialMandoNavigation.Nombres)
+            @Html.DisplayFor(model => model.SrOficialMandoNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrTelefonistaTurnoEstacionNavigation)
+            @*@Html.DisplayNameFor(model => model.SrTelefonistaTurnoEstacionNavigation)*@
+            Telefonista de Turno: 
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SrTelefonistaTurnoEstacionNavigation.IdPersonal)
+            @Html.DisplayFor(model => model.SrTelefonistaTurnoEstacionNavigation.Nombres)
+            @Html.DisplayFor(model => model.SrTelefonistaTurnoEstacionNavigation.Apellidos)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SrVoBoJefeServicioNavigation)
+            @*@Html.DisplayNameFor(model => model.SrVoBoJefeServicioNavigation)*@
+            VoBo. Jefe de Servicio: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SrVoBoJefeServicioNavigation.IdFirma)
@@ -241,6 +288,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdSr">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.IdSr">Editar</a>
 </div>
