@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
 
 namespace Bomberos.Models
 {
@@ -42,7 +41,7 @@ namespace Bomberos.Models
         public string? SvPersonalAsistente { get; set; }
         [Display(Name = "Observacion:")]
         public string? SvObservacion { get; set; }
-        
+
         public double? SvKmEntrada { get; set; }
         public double? SvKmSalida { get; set; }
         public double? SvKmRecorrido { get; set; }
@@ -59,7 +58,7 @@ namespace Bomberos.Models
         public virtual Personal? SvServicioAutPorNavigation { get; set; }
         public virtual Personal? SvTelefonistaTurnoNavigation { get; set; }
         public virtual Estacion? SvEstacionNavigation { get; set; }
-        public virtual Turno? SvTurnoNavigation { get; set; }
 
+        public virtual Turno? SvTurnoNavigation { get; set; }
     }
 }

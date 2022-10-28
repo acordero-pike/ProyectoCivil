@@ -24,8 +24,9 @@ namespace Bomberos.Controllers
         // GET: ServicioVarios
         public async Task<IActionResult> Index()
         {
-            var bomberoContext = _context.ServicioVarios.Include(s => s.SvBomberoReportaNavigation).Include(s => s.SvFirmaBomberoNavigation).Include(s => s.SvJefeServicioNavigation).Include(s => s.SvPersonalAsistenteNavigation).Include(s => s.SvPilotoNavigation).Include(s => s.SvServicioAutPorNavigation).Include(s => s.SvTelefonistaTurnoNavigation).Include(s => s.SvTurnoNavigation).Include(s => s.SvEstacionNavigation);
-            return View(await bomberoContext.ToListAsync());
+            //var bomberoContext = _context.ServicioVarios.Include(s => s.CodigoNavigation).Include(s => s.SvBomberoReportaNavigation).Include(s => s.SvFirmaBomberoNavigation).Include(s => s.SvJefeServicioNavigation).Include(s => s.SvPersonalAsistenteNavigation).Include(s => s.SvPilotoNavigation).Include(s => s.SvServicioAutPorNavigation).Include(s => s.SvTelefonistaTurnoNavigation).Include(s => s.SvTurnoNavigation).Include(s => s.SvEstacionNavigation);
+            var bomberoContext = _context.ServicioVarios.ToList();
+            return View( bomberoContext);
         }
 
         // GET: ServicioVarios/Details/5
