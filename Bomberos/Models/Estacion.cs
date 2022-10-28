@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bomberos.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -15,6 +16,7 @@ namespace Bomberos.Models
             InVehiculos = new HashSet<InVehiculo>();
             ServicioPrevencions = new HashSet<ServicioPrevencion>();
             ServicioRescates = new HashSet<ServicioRescate>();
+            ServicioVarios = new HashSet<ServicioVario>();
         }
 
         public string? IdEstacion { get; set; } = null!;
@@ -25,10 +27,12 @@ namespace Bomberos.Models
         [Required(ErrorMessage = "Porfavor Ingrese la Ubicacion de la Estacion.")]
         public string? Descripcion { get; set; }
 
+
         public virtual ICollection<InEstructural> InEstructurals { get; set; }
         public virtual ICollection<InForestal> InForestals { get; set; }
         public virtual ICollection<InVehiculo> InVehiculos { get; set; }
         public virtual ICollection<ServicioPrevencion> ServicioPrevencions { get; set; }
         public virtual ICollection<ServicioRescate> ServicioRescates { get; set; }
+        public virtual ICollection<ServicioVario> ServicioVarios { get; set; }
     }
 }

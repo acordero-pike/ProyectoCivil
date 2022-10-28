@@ -46,7 +46,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<ClaseFuego>(entity =>
             {
                 entity.HasKey(e => e.IdCf)
-                    .HasName("PK__ClaseFue__00B7DEF5A2113E5D");
+                    .HasName("PK__ClaseFue__00B7DEF50BF028D5");
 
                 entity.ToTable("ClaseFuego");
 
@@ -65,7 +65,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<Codigo>(entity =>
             {
                 entity.HasKey(e => e.Uuid)
-                    .HasName("PK__Codigo__65A475E7EE0173A6");
+                    .HasName("PK__Codigo__65A475E70317E016");
 
                 entity.ToTable("Codigo");
 
@@ -76,12 +76,12 @@ namespace Bomberos.Models
                     .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.Codigo1)
-                    .HasMaxLength(4)
+                    .HasMaxLength(6)
                     .IsUnicode(false)
                     .HasColumnName("CODIGO");
 
                 entity.Property(e => e.Descripcion)
-                    .HasMaxLength(70)
+                    .HasMaxLength(130)
                     .IsUnicode(false)
                     .HasColumnName("DESCRIPCION");
             });
@@ -89,9 +89,9 @@ namespace Bomberos.Models
             modelBuilder.Entity<Compañium>(entity =>
             {
                 entity.HasKey(e => e.IdCompañia)
-                    .HasName("PK__Compañia__44D8D83F3B6C7FE4");
+                    .HasName("PK__Compañia__44D8D83FC72D48DF");
 
-                entity.HasIndex(e => e.Nombre, "UQ__Compañia__75E3EFCFF8A8A011")
+                entity.HasIndex(e => e.Nombre, "UQ__Compañia__75E3EFCF14B906D9")
                     .IsUnique();
 
                 entity.Property(e => e.IdCompañia)
@@ -112,11 +112,11 @@ namespace Bomberos.Models
             modelBuilder.Entity<Estacion>(entity =>
             {
                 entity.HasKey(e => e.IdEstacion)
-                    .HasName("PK__estacion__39C0B7D0EB2C06CB");
+                    .HasName("PK__estacion__39C0B7D00B574CAA");
 
                 entity.ToTable("estacion");
 
-                entity.HasIndex(e => e.Nombre, "UQ__estacion__75E3EFCF6EB5AF37")
+                entity.HasIndex(e => e.Nombre, "UQ__estacion__75E3EFCFCB4560FB")
                     .IsUnique();
 
                 entity.Property(e => e.IdEstacion)
@@ -137,7 +137,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<Firma>(entity =>
             {
                 entity.HasKey(e => e.IdFirma)
-                    .HasName("PK__Firma__765CD30FD1908526");
+                    .HasName("PK__Firma__765CD30F16CC16E7");
 
                 entity.ToTable("Firma");
 
@@ -163,7 +163,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<InEstructural>(entity =>
             {
                 entity.HasKey(e => e.IdIe)
-                    .HasName("PK__InEstruc__00B7EE387C10D205");
+                    .HasName("PK__InEstruc__00B7EE381BE41585");
 
                 entity.ToTable("InEstructural");
 
@@ -359,7 +359,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<InForestal>(entity =>
             {
                 entity.HasKey(e => e.IdIf)
-                    .HasName("PK__InForest__00B7EE39D3F149B9");
+                    .HasName("PK__InForest__00B7EE3990FFB149");
 
                 entity.ToTable("InForestal");
 
@@ -556,7 +556,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<InVehiculo>(entity =>
             {
                 entity.HasKey(e => e.IdIv)
-                    .HasName("PK__InVehicu__00B7EE29082B890C");
+                    .HasName("PK__InVehicu__00B7EE29CC5E059C");
 
                 entity.ToTable("InVehiculo");
 
@@ -767,7 +767,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<Personal>(entity =>
             {
                 entity.HasKey(e => e.IdPersonal)
-                    .HasName("PK__Personal__11995ADD24231123");
+                    .HasName("PK__Personal__11995ADD076F8FB8");
 
                 entity.ToTable("Personal");
 
@@ -801,7 +801,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<Proporcion>(entity =>
             {
                 entity.HasKey(e => e.IdProp)
-                    .HasName("PK__Proporci__0DA348472B37F4F0");
+                    .HasName("PK__Proporci__0DA3484754FED7F0");
 
                 entity.ToTable("Proporcion");
 
@@ -972,7 +972,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<ServicioRescate>(entity =>
             {
                 entity.HasKey(e => e.IdSr)
-                    .HasName("PK__Servicio__014858ED969003B9");
+                    .HasName("PK__Servicio__014858ED1D959F4A");
 
                 entity.ToTable("ServicioRescate");
 
@@ -1155,11 +1155,6 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("sr_VoBoJefeServicio");
 
-                entity.HasOne(d => d.CodigoNavigation)
-                    .WithMany(p => p.ServicioRescates)
-                    .HasForeignKey(d => d.Codigo)
-                    .HasConstraintName("FK_ServicioRescate");
-
                 entity.HasOne(d => d.SrBomberoReportaNavigation)
                     .WithMany(p => p.ServicioRescates)
                     .HasForeignKey(d => d.SrBomberoReporta)
@@ -1189,7 +1184,7 @@ namespace Bomberos.Models
             modelBuilder.Entity<ServicioVario>(entity =>
             {
                 entity.HasKey(e => e.IdSv)
-                    .HasName("PK__Servicio__014858E99B8D4914");
+                    .HasName("PK__Servicio__014858E91BDA1C48");
 
                 entity.ToTable("ServicioVario");
 
@@ -1215,7 +1210,7 @@ namespace Bomberos.Models
                     .HasColumnName("sv_Direccion");
 
                 entity.Property(e => e.SvEstacion)
-                    .HasMaxLength(20)
+                    .HasMaxLength(36)
                     .IsUnicode(false)
                     .HasColumnName("sv_Estacion");
 
@@ -1276,7 +1271,7 @@ namespace Bomberos.Models
                     .HasColumnName("sv_TelefonistaTurno");
 
                 entity.Property(e => e.SvTurno)
-                    .HasMaxLength(20)
+                    .HasMaxLength(36)
                     .IsUnicode(false)
                     .HasColumnName("sv_Turno");
 
@@ -1288,12 +1283,17 @@ namespace Bomberos.Models
                 entity.HasOne(d => d.CodigoNavigation)
                     .WithMany(p => p.ServicioVarios)
                     .HasForeignKey(d => d.Codigo)
-                    .HasConstraintName("FK_ServicioVario");
+                    .HasConstraintName("FK_ServicioVario_C");
 
                 entity.HasOne(d => d.SvBomberoReportaNavigation)
                     .WithMany(p => p.ServicioVarios)
                     .HasForeignKey(d => d.SvBomberoReporta)
                     .HasConstraintName("FK_ServicioVario.sv_BomberoReporta");
+
+                entity.HasOne(d => d.SvEstacionNavigation)
+                    .WithMany(p => p.ServicioVarios)
+                    .HasForeignKey(d => d.SvEstacion)
+                    .HasConstraintName("FK_ServicioVario2");
 
                 entity.HasOne(d => d.SvFirmaBomberoNavigation)
                     .WithMany(p => p.ServicioVarios)
@@ -1324,16 +1324,21 @@ namespace Bomberos.Models
                     .WithMany(p => p.ServicioVarioSvTelefonistaTurnoNavigations)
                     .HasForeignKey(d => d.SvTelefonistaTurno)
                     .HasConstraintName("FK_ServicioVario.sv_TelefonistaTurno");
+
+                entity.HasOne(d => d.SvTurnoNavigation)
+                    .WithMany(p => p.ServicioVarios)
+                    .HasForeignKey(d => d.SvTurno)
+                    .HasConstraintName("FK_ServicioVario");
             });
 
             modelBuilder.Entity<Turno>(entity =>
             {
                 entity.HasKey(e => e.IdTurno)
-                    .HasName("PK__Turno__9FCE7EC71269871A");
+                    .HasName("PK__Turno__9FCE7EC7F6158D1C");
 
                 entity.ToTable("Turno");
 
-                entity.HasIndex(e => e.Nombre, "UQ__Turno__75E3EFCFE6BA91A4")
+                entity.HasIndex(e => e.Nombre, "UQ__Turno__75E3EFCFD5803AC7")
                     .IsUnique();
 
                 entity.Property(e => e.IdTurno)
@@ -1358,15 +1363,14 @@ namespace Bomberos.Models
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__4E3E04ADC4470727");
+                    .HasName("PK__usuario__4E3E04ADB345EF82");
 
                 entity.ToTable("usuario");
 
                 entity.Property(e => e.IdUsuario)
                     .HasMaxLength(46)
                     .IsUnicode(false)
-                    .HasColumnName("id_usuario")
-                    .HasDefaultValueSql("(newid())");
+                    .HasColumnName("id_usuario");
 
                 entity.Property(e => e.Apellidos)
                     .HasMaxLength(50)

@@ -4,12 +4,21 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h3>Are you sure you want to delete this?</h3>
+<div class="orden">
+    <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
+</div>
+
+<h1><center>Eliminar Compañia</center></h1>
+
+<h3>Esta seguro de realizar esta acción?</h3>
+<h5>Tenga en cuenta que si se ha generado algun formulario con este dato</h5>
+<h5>no podra ser eliminado el campo.</h5>
 <div>
-    <h4>Compañium</h4>
-    <hr />
+    <hr></hr>
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
@@ -27,7 +36,6 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdCompañia" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
     </form>
 </div>

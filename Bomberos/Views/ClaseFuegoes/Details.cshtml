@@ -3,15 +3,20 @@
 @{
     ViewData["Title"] = "Details";
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>Details</h1>
+<div class="orden">
+    <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
+</div>
+<h1><center>Detalles de Clase De Fuego</center></h1>
 
-<div>
-    <h4>ClaseFuego</h4>
-    <hr />
+<hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CfClasefuego)
+           @* @Html.DisplayNameFor(model => model.CfClasefuego)*@
+           Codigo de la Clase de Fuego
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CfClasefuego)
@@ -19,6 +24,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdCf">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.IdCf">Editar</a>
 </div>

@@ -57,13 +57,16 @@ namespace Bomberos.Controllers
         // GET: ServicioPrevencions/Create
         public IActionResult Create()
         {
-            ViewData["SpBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario");
-            ViewData["SpCompañia"] = new SelectList(_context.Compañia, "IdCompañia", "IdCompañia");
-            ViewData["SpEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion");
-            ViewData["SpOficialServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["SpPiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["SpTelefonista"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal");
-            ViewData["SpTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno");
+            var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
+            var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });
+
+            ViewData["SpBomberoReporta"] = new SelectList(users, "IdUsuario", "Nombre");
+            ViewData["SpCompañia"] = new SelectList(_context.Compañia, "IdCompañia", "Nombre");
+            ViewData["SpEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre");
+            ViewData["SpOficialServicio"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["SpPiloto"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["SpTelefonista"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["SpTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre");
             ViewData["SpVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");
             return View();
         }
@@ -105,13 +108,13 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            ViewData["SpBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioPrevencion.SpBomberoReporta);
-            ViewData["SpCompañia"] = new SelectList(_context.Compañia, "IdCompañia", "IdCompañia", servicioPrevencion.SpCompañia);
-            ViewData["SpEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", servicioPrevencion.SpEstacion);
-            ViewData["SpOficialServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioPrevencion.SpOficialServicio);
-            ViewData["SpPiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioPrevencion.SpPiloto);
-            ViewData["SpTelefonista"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioPrevencion.SpTelefonista);
-            ViewData["SpTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", servicioPrevencion.SpTurno);
+            ViewData["SpBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombres", servicioPrevencion.SpBomberoReporta);
+            ViewData["SpCompañia"] = new SelectList(_context.Compañia, "IdCompañia", "Nombre", servicioPrevencion.SpCompañia);
+            ViewData["SpEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre", servicioPrevencion.SpEstacion);
+            ViewData["SpOficialServicio"] = new SelectList(_context.Personals, "IdPersonal", "Nombres", servicioPrevencion.SpOficialServicio);
+            ViewData["SpPiloto"] = new SelectList(_context.Personals, "IdPersonal", "Nombres", servicioPrevencion.SpPiloto);
+            ViewData["SpTelefonista"] = new SelectList(_context.Personals, "IdPersonal", "Nombres", servicioPrevencion.SpTelefonista);
+            ViewData["SpTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre", servicioPrevencion.SpTurno);
             ViewData["SpVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", servicioPrevencion.SpVoBoJefeServicio);
             return View(servicioPrevencion);
         }
@@ -148,13 +151,13 @@ namespace Bomberos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SpBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicioPrevencion.SpBomberoReporta);
-            ViewData["SpCompañia"] = new SelectList(_context.Compañia, "IdCompañia", "IdCompañia", servicioPrevencion.SpCompañia);
-            ViewData["SpEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "IdEstacion", servicioPrevencion.SpEstacion);
-            ViewData["SpOficialServicio"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioPrevencion.SpOficialServicio);
-            ViewData["SpPiloto"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioPrevencion.SpPiloto);
-            ViewData["SpTelefonista"] = new SelectList(_context.Personals, "IdPersonal", "IdPersonal", servicioPrevencion.SpTelefonista);
-            ViewData["SpTurno"] = new SelectList(_context.Turnos, "IdTurno", "IdTurno", servicioPrevencion.SpTurno);
+            ViewData["SpBomberoReporta"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombres", servicioPrevencion.SpBomberoReporta);
+            ViewData["SpCompañia"] = new SelectList(_context.Compañia, "IdCompañia", "Nombre", servicioPrevencion.SpCompañia);
+            ViewData["SpEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre", servicioPrevencion.SpEstacion);
+            ViewData["SpOficialServicio"] = new SelectList(_context.Personals, "IdPersonal", "Nombres", servicioPrevencion.SpOficialServicio);
+            ViewData["SpPiloto"] = new SelectList(_context.Personals, "IdPersonal", "Nombres", servicioPrevencion.SpPiloto);
+            ViewData["SpTelefonista"] = new SelectList(_context.Personals, "IdPersonal", "Nombres", servicioPrevencion.SpTelefonista);
+            ViewData["SpTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre", servicioPrevencion.SpTurno);
             ViewData["SpVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma", servicioPrevencion.SpVoBoJefeServicio);
             return View(servicioPrevencion);
         }
