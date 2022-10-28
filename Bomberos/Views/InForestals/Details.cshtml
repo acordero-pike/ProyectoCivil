@@ -1,7 +1,7 @@
 ﻿@model Bomberos.Models.InForestal
 
 @{
-    ViewData["Title"] = "Detalles de Formulario";
+    ViewData["Title"] = "Reporte de Incendios Forestales";
 }
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -10,168 +10,165 @@
 <div class="orden">
     <a asp-action="Index"><img src="~/img/flecha-izquierda.png" width="50" height="50" /></a>
 </div>
-<h1><center>Detalles de Incendio Forestal</center></h1>
+
 
 <div class="">
-    <h4><center>Incendio Forestal</center></h4>
+    <h4><center>ASOCIACIÓN NACIONAL DE BOMBEROS</center></h4>
+    <h4><center>MUNICIPALES DEPARTAMENTALES</center></h4>
+    <h4><center>(ASONBOMD)</center></h4>
+    <h4><center>CONTROL DE INCENDIOS FORESTALES</center></h4>
     <hr />
 
 <div class="">
-
-        <div class ="form-group col-md-6">
-    <label>@Html.DisplayNameFor(model => model.IfUbiSiniestro)</label>
-             @Html.DisplayFor(model => model.IfUbiSiniestro)
-    </div>
-
-        <div class="form-group col-md-6">
-    <label>@Html.DisplayNameFor(model => model.IfAreaAfectada)</label>
-            @Html.DisplayFor(model => model.IfAreaAfectada)
-    </div>
-
-        <div class="form-group col-md-6">
-    <label>@Html.DisplayNameFor(model => model.IfTipoTerreno)</label>
-            @Html.DisplayFor(model => model.IfTipoTerreno)
+        <div class="form-group col-md-3">
+            <label asp-for="IfEstacion" class="control-label"></label>
+            <input asp-for="IfEstacionNavigation.Nombre" class="form-control"  readonly  />
+            @*<select asp-for="IfEstacionNavigation" class="form-control" asp-items="ViewBag.IfEstacion"></select>*@
         </div>
 
-    <div class ="form-group col-md-2">
-    <label>@Html.DisplayNameFor(model => model.IfHoraSalida)</label>
-            @Html.DisplayFor(model => model.IfHoraSalida)
-    </div>
-
-    <div class ="form-group col-md-2">
-    <label>@Html.DisplayNameFor(model => model.IfHoraServicio)</label>
-            @Html.DisplayFor(model => model.IfHoraServicio)
-    </div>
-
+        <div class="form-group col-md-3">
+            <label asp-for="IfTurno" class="control-label"></label>
+            <input asp-for="IfTurnoNavigation.Nombre" class="form-control"  readonly  />
+            @*<select asp-for="IfTurno" class="form-control" asp-items="ViewBag.IfTurno"></select>*@
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="IfUbiSiniestro" class="control-label"></label>
+            <input asp-for="IfUbiSiniestro" class="form-control" />
+            @*<span asp-validation-for="IfUbiSiniestro" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfAreaAfectada" class="control-label"></label>
+            <input asp-for="IfAreaAfectada" class="form-control"  readonly  />
+            @*<span asp-validation-for="IfAreaAfectada" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfTipoTerreno" class="control-label"></label>
+            <input asp-for="IfTipoTerreno" class="form-control"  readonly  />
+            @*<span asp-validation-for="IfTipoTerreno" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IdProp" class="control-label"></label>
+            <input asp-for="IdPropNavigation.PTipoProp" class="form-control"  readonly  />
+            @*<select asp-for="IdProp" class="form-control" asp-items="ViewBag.IdProp"></select>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IdCf" class="control-label"></label>
+            <input asp-for="IdCfNavigation.CfClasefuego" class="form-control"  readonly  />
+            @*<select asp-for="IdCf" class="form-control" asp-items="ViewBag.IdCf"></select>*@
+        </div>
         <div class="form-group col-md-2">
-    <label>@Html.DisplayNameFor(model => model.IfHoraEntrada)</label>
-            @Html.DisplayFor(model => model.IfHoraEntrada)
-    </div><br></br>
-
-        <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfUnidad)</label>
-            @Html.DisplayFor(model => model.IfUnidad)
-    </div>
-
-        <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfUniAsisEstacion)</label>
-            @Html.DisplayFor(model => model.IfUniAsisEstacion)
-    </div>
-
-        <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfUniAsisOtraEstacion)</label>
-            @Html.DisplayFor(model => model.IfUniAsisOtraEstacion)
-    </div>
-
-        <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfUniPoliciacas)</label>
-            @Html.DisplayFor(model => model.IfUniPoliciacas)
-    </div><br></br>
-
-        <div class="form-group col-md-6">
-    <label>@Html.DisplayNameFor(model => model.IfUniOtrasInstiBomberiles)</label>
-            @Html.DisplayFor(model => model.IfUniOtrasInstiBomberiles)
-    </div>
-
-    <div class ="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfPersonalAsisEstacion)</label>
-            @Html.DisplayFor(model => model.IfPersonalAsisEstacion)
-    </div>
-
-        <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfPersonalAsisOtraEstacion)</label>
-            @Html.DisplayFor(model => model.IfPersonalAsisOtraEstacion)
-    </div>
-
-    <div class="form-group col-md-12">
-    <label>@Html.DisplayNameFor(model => model.IfObservacion)</label>
-    <div class="ddic">  @Model?.IfObservacion.ToString() </div> <br></br>
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfFecha)</label>
-            @Html.DisplayFor(model => model.IfFecha)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfKmEntrada)</label>
-            @Html.DisplayFor(model => model.IfKmEntrada)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfKmSalida)</label>
-            @Html.DisplayFor(model => model.IfKmSalida)
-    </div>
-
-    <div class ="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfKmRecorrido)</label>
-            @Html.DisplayFor(model => model.IfKmRecorrido)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfNoBombero)</label>}
-            @Html.DisplayFor(model => model.IfNoBombero)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IdCfNavigation)</label>
-            @Html.DisplayFor(model => model.IdCfNavigation.CfClasefuego)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IdPropNavigation)</label>
-            @Html.DisplayFor(model => model.IdPropNavigation.PTipoProp)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfBomberoReportaNavigation)</label>
-            @Html.DisplayFor(model => model.IfBomberoReportaNavigation.Nombres)
-            @Html.DisplayFor(model => model.IfBomberoReportaNavigation.Apellidos)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfEstacionNavigation)</label>
-            @Html.DisplayFor(model => model.IfEstacionNavigation.Nombre)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label> @Html.DisplayNameFor(model => model.IfFirmaBomberoNavigation)</label>
-            @Html.DisplayFor(model => model.IfFirmaBomberoNavigation.Nombre)
-    </div>
-
-    <div class ="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfJefeServicioNavigation)</label>
-            @Html.DisplayFor(model => model.IfJefeServicioNavigation.Nombres)
-            @Html.DisplayFor(model => model.IfJefeServicioNavigation.Apellidos)
-    </div >
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfPilotoNavigation)</label>
-            @Html.DisplayFor(model => model.IfPilotoNavigation.Nombres)
-            @Html.DisplayFor(model => model.IfPilotoNavigation.Apellidos)
-    </div>
-
-     <div class ="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfTelefonistaTurnoNavigation)</label>
-            @Html.DisplayFor(model => model.IfTelefonistaTurnoNavigation.Nombres)
-            @Html.DisplayFor(model => model.IfTelefonistaTurnoNavigation.Apellidos)
-    </div>
-
-            <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfTurnoNavigation)</label>
-            @Html.DisplayFor(model => model.IfTurnoNavigation.Nombre)
-    </div>
-
-    <div class="form-group col-md-3">
-    <label>@Html.DisplayNameFor(model => model.IfVoBoJefeServicioNavigation)</label>
-            @Html.DisplayFor(model => model.IfVoBoJefeServicioNavigation.Nombre)
-    </div>
-        <div class="form-group col-md-6">
-            <label>@Html.DisplayNameFor(model => model.CodigoNavigation)</label>
-            @Html.DisplayFor(model => model.CodigoNavigation.Codigo1)
+            <label asp-for="IfHoraSalida" class="control-label"></label>
+            <input asp-for="IfHoraSalida" class="form-control" />
+            @*<span asp-validation-for="IfHoraSalida" class="text-danger"></span>*@
         </div>
-
-</div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfHoraServicio" class="control-label"></label>
+            <input asp-for="IfHoraServicio" class="form-control" />
+            @*<span asp-validation-for="IfHoraServicio" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfHoraEntrada" class="control-label"></label>
+            <input asp-for="IfHoraEntrada" class="form-control" />
+           @* <span asp-validation-for="IfHoraEntrada" class="text-danger"></span>*@
+        </div>
         <div class="form-group col-md-3">
-    <a asp-action="Edit" asp-route-id="@Model?.IdIf">Editar</a> 
-</div>
+            <label asp-for="IfJefeServicio" class="control-label"></label>
+            <input asp-for="IfJefeServicioNavigation.Nombres" class="form-control"  readonly  />
+           @* <select asp-for="IfJefeServicio" class="form-control" asp-items="ViewBag.IfJefeServicio"></select>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfTelefonistaTurno" class="control-label"></label>
+            <input asp-for="IfTelefonistaTurnoNavigation.Nombres" class="form-control"  readonly  />
+            @*<select asp-for="IfTelefonistaTurno" class="form-control" asp-items="ViewBag.IfTelefonistaTurno"></select>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfBomberoReporta" class="control-label"></label>
+            <input asp-for="IfBomberoReportaNavigation.Nombres" class="form-control"  readonly  />
+            @*<select asp-for="IfBomberoReporta" class="form-control" asp-items="ViewBag.IfBomberoReporta"></select>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfPiloto" class="control-label"></label>
+            <input asp-for="IfPilotoNavigation.Nombres" class="form-control"  readonly  />
+            @*<select asp-for="IfPiloto" class="form-control" asp-items="ViewBag.IfPiloto"></select>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfUnidad" class="control-label"></label>
+            <input asp-for="IfUnidad" class="form-control" />
+            @*<span asp-validation-for="IfUnidad" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfUniAsisEstacion" class="control-label"></label>
+            <input asp-for="IfUniAsisEstacion" class="form-control" />
+            @*<span asp-validation-for="IfUniAsisEstacion" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfUniAsisOtraEstacion" class="control-label"></label>
+            <input asp-for="IfUniAsisOtraEstacion" class="form-control" />
+            @*<span asp-validation-for="IfUniAsisOtraEstacion" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfUniPoliciacas" class="control-label"></label>
+            <input asp-for="IfUniPoliciacas" class="form-control" />
+           @* <span asp-validation-for="IfUniPoliciacas" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfUniOtrasInstiBomberiles" class="control-label"></label>
+            <input asp-for="IfUniOtrasInstiBomberiles" class="form-control" />
+            @*<span asp-validation-for="IfUniOtrasInstiBomberiles" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfPersonalAsisEstacion" class="control-label"></label>
+            <input asp-for="IfPersonalAsisEstacion" class="form-control" />
+           @* <span asp-validation-for="IfPersonalAsisEstacion" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="IfPersonalAsisOtraEstacion" class="control-label"></label>
+            <input asp-for="IfPersonalAsisOtraEstacion" class="form-control" />
+            @*<span asp-validation-for="IfPersonalAsisOtraEstacion" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="IfObservacion" class="control-label"></label>
+            <textarea asp-for="IfObservacion" class="form-control" style="height:150px"></textarea>
+           @* <span asp-validation-for="IfObservacion" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfFecha" class="control-label"></label>
+            <input asp-for="IfFecha" class="form-control" />
+            @*<span asp-validation-for="IfFecha" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfKmEntrada" class="control-label"></label>
+            <input asp-for="IfKmEntrada" class="form-control" />
+            @*<span asp-validation-for="IfKmEntrada" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfKmSalida" class="control-label"></label>
+            <input asp-for="IfKmSalida" class="form-control" />
+            @*<span asp-validation-for="IfKmSalida" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfKmRecorrido" class="control-label"></label>
+            <input asp-for="IfKmRecorrido" class="form-control" />
+            @*<span asp-validation-for="IfKmRecorrido" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IfNoBombero" class="control-label"></label>
+            <input asp-for="IfNoBombero" class="form-control" />
+            @*<span asp-validation-for="IfNoBombero" class="text-danger"></span>*@
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Codigo" class="control-label">Codigo del Sinistro:</label>
+            <input asp-for="CodigoNavigation.Codigo1" class="form-control"  readonly  />
+            @*<select asp-for="Codigo" class="form-control" asp-items="ViewBag.Uuid"></select>*@
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="IfVoBoJefeServicio" class="control-label"></label>
+            <img height="100" width=" 100" src="@Url.Action("convert","Firmas",new { id = @Model.IfVoBoJefeServicioNavigation.IdFirma })"   />
+            @* <select asp-for="IfVoBoJefeServicio" class="form-control" asp-items="ViewBag.IfVoBoJefeServicio"></select> *@
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="IfFirmaBombero" class="control-label"></label>
+            <img height="100" width=" 100" src="@Url.Action("convert","Firmas",new { id = @Model.IfFirmaBomberoNavigation.IdFirma })"   />
+            @*<select asp-for="IfFirmaBombero" class="form-control" asp-items="ViewBag.IfFirmaBombero"></select>*@
+        </div>
+        
