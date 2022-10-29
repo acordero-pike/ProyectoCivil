@@ -16,156 +16,128 @@
     <h4><center>Servicios Varios</center></h4>
     <hr />
 
-    <dl class="row">
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvEstacion)*@
-            Estación:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvEstacion)
-        </dd>
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvTurno)*@
-            Turno:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvTurno)
-        </dd>
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvFecha)*@
-            Fecha:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvFecha)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvDireccion)*@
-            Dirección:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvDireccion)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvServicio)*@
-            Servicio:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvServicio)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvHoraSalida)*@
-            Hora de Salida:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvHoraSalida)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvHoraEntrada)*@
-            Hora de Entrada:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvHoraEntrada)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvUnidad)*@
-            Unidad de Servicio:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvUnidad)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvObservacion)*@
-            Observaciones:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvObservacion)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvKmEntrada)*@
-            Km de Entrada:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvKmEntrada)
-        </dd>
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvKmSalida)*@
-            Km de Salida:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvKmSalida)
-        </dd>
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvKmRecorrido)*@
-            Km Recorridos:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvKmRecorrido)
-        </dd>
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvNoBombero)*@
-            No. de Bombero
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvNoBombero)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvBomberoReportaNavigation)*@
-            Bombero que reporta:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvBomberoReportaNavigation.Nombres)
-            @Html.DisplayFor(model => model.SvBomberoReportaNavigation.Apellidos)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvFirmaBomberoNavigation)*@
-            Firma de Bombero:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvFirmaBomberoNavigation.IdFirma)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvJefeServicioNavigation)*@
-            Jefe de Servicio:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvJefeServicioNavigation.Nombres)
-            @Html.DisplayFor(model => model.SvJefeServicioNavigation.Apellidos)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvPersonalAsistenteNavigation)*@
-            Personal Asistente:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvPersonalAsistenteNavigation.Nombres)
-            @Html.DisplayFor(model => model.SvPersonalAsistenteNavigation.Apellidos)
-        </dd>
-        <dt class="col-sm-2">
-            @*@Html.DisplayNameFor(model => model.SvPilotoNavigation)*@
-            Piloto de Navegación:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvPilotoNavigation.Nombres)
-            @Html.DisplayFor(model => model.SvPilotoNavigation.Apellidos)
-        </dd>
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvServicioAutPorNavigation)*@
-            Servicio de Auto:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvServicioAutPorNavigation.Nombres)
-            @Html.DisplayFor(model => model.SvServicioAutPorNavigation.Apellidos)
-        </dd>
-        <dt class="col-sm-2">
-            @* @Html.DisplayNameFor(model => model.SvTelefonistaTurnoNavigation)*@
-            Telefonista de Turno:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SvTelefonistaTurnoNavigation.Nombres)
-            @Html.DisplayFor(model => model.SvTelefonistaTurnoNavigation.Apellidos)
-        </dd>
-    </dl>
-</div>
-<div class="form-group col-md-12">
-    <br />
-    <a asp-action="Edit" asp-route-id="@Model?.IdSv">Editar</a>
-</div>
+    <div class="letra">
+        <div class="">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdSv" />
+                <div class="form-group col-md-3">
+                    <label asp-for="SvEstacion" class="control-label">Estacion</label>
+                    <input asp-for="SvEstacionNavigation.Nombre" class="form-control"  readonly  />
+                    @*<select asp-for="SvEstacion" class="form-control" asp-items="ViewBag.SvEstacion"></select>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvTurno" class="control-label">Turno</label>
+                    <input asp-for="SvTurnoNavigation.Nombre" class="form-control"  readonly  />
+                    @*<select asp-for="SvTurno" class="form-control" asp-items="ViewBag.SvTurno"></select>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvFecha" class="control-label">Fecha</label>
+                    <input asp-for="SvFecha" class="form-control"   readonly  />
+                    @*<span asp-validation-for="SvFecha" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvDireccion" class="control-label">Dirección</label>
+                    <input asp-for="SvDireccion" class="form-control"   readonly  />
+                    @*<span asp-validation-for="SvDireccion" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvServicio" class="control-label">Servicio</label>
+                    <input asp-for="SvServicio" class="form-control"   readonly  />
+                    @*<span asp-validation-for="SvServicio" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvHoraSalida" class="control-label">Hora de Salida</label>
+                    <input asp-for="SvHoraSalida" class="form-control"   readonly  />
+                    @*<span asp-validation-for="SvHoraSalida" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvHoraEntrada" class="control-label">Hora de Entrada</label>
+                    <input asp-for="SvHoraEntrada" class="form-control"   readonly  />
+                    @*<span asp-validation-for="SvHoraEntrada" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvJefeServicio" class="control-label">Jefe de Servicio: </label>
+                    <input asp-for="SvJefeServicioNavigation.Nombres" class="form-control"  readonly  />
+                    @*<select asp-for="SvJefeServicio" class="form-control" asp-items="ViewBag.SvJefeServicio"></select>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvTelefonistaTurno" class="control-label">Telefonista de Turno</label>
+                    <input asp-for="SvTelefonistaTurnoNavigation.Nombres" class="form-control"  readonly  />
+                    @*<select asp-for="SvTelefonistaTurno" class="form-control" asp-items="ViewBag.SvTelefonistaTurno"></select>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvBomberoReporta" class="control-label">Bombero que Reporta</label>
+                    <input asp-for="SvBomberoReportaNavigation.Nombres" class="form-control"  readonly  />
+                   @* <select asp-for="SvBomberoReporta" class="form-control" asp-items="ViewBag.SvBomberoReporta"></select>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvUnidad" class="control-label">Unidad</label>
+                    <input asp-for="SvUnidad" class="form-control" readonly/>
+                    @*<span asp-validation-for="SvUnidad" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvPiloto" class="control-label">Piloto</label>
+                    <input asp-for="SvPilotoNavigation.Nombres" class="form-control"  readonly  />
+                    @*<select asp-for="SvPiloto" class="form-control" asp-items="ViewBag.SvPiloto"></select>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvServicioAutPor" class="control-label">Servicio de Auto</label>
+                    <input asp-for="SvServicioAutPorNavigation.Nombres" class="form-control"  readonly  />
+                    @*<select asp-for="SvServicioAutPor" class="form-control" asp-items="ViewBag.SvServicioAutPor"></select>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvPersonalAsistente" class="control-label">Personal Asistente</label>
+                    <input asp-for="SvPersonalAsistenteNavigation.Nombres" class="form-control"  readonly  />
+                    @*<select asp-for="SvPersonalAsistente" class="form-control" asp-items="ViewBag.SvPersonalAsistente"></select>
+                    <span asp-validation-for="SvPersonalAsistente" class="text-danger"></span>*@
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label asp-for="SvKmEntrada" class="control-label">Entrada</label>
+                    <input asp-for="SvKmEntrada" class="form-control" readonly/>
+                    @*<span asp-validation-for="SvKmEntrada" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvKmSalida" class="control-label">Salida</label>
+                    <input asp-for="SvKmSalida" class="form-control" readonly/>
+                    @*<span asp-validation-for="SvKmSalida" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvKmRecorrido" class="control-label">Recorrido</label>
+                    <input asp-for="SvKmRecorrido" class="form-control" readonly/>
+                    @*<span asp-validation-for="SvKmRecorrido" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvNoBombero" class="control-label">No. de Bombero</label>
+                    <input asp-for="SvNoBombero" class="form-control" readonly/>
+                    @*<span asp-validation-for="SvNoBombero" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="Codigo" class="control-label">Codigo del Sinistro:</label>
+                    <input asp-for="CodigoNavigation.Codigo1" class="form-control"  readonly  />
+                    @*<select asp-for="Codigo" class="form-control" asp-items="ViewBag.Uuid"></select>*@
+                </div>
+                <div class="form-group col-md-12">
+                    <label asp-for="SvObservacion" class="control-label">Observación</label>
+                    <textarea asp-for="SvObservacion" class="form-control" style="height:150px" readonly></textarea>
+                    @*<span asp-validation-for="SvObservacion" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="SvFirmaBombero" class="control-label">Firma de Bombero</label>
+                    <img height="100" width=" 100" src="@Url.Action("convert","Firmas",new { id = @Model.SvFirmaBomberoNavigation.IdFirma })"   />
+@*
+                    <select asp-for="SvFirmaBombero" class="form-control" asp-items="ViewBag.SvFirmaBombero"></select>
+                    <span asp-validation-for="SvFirmaBombero" class="text-danger"></span>*@
+                </div>
+                <div class="form-group col-md-6">
+                    <br />
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <br />
+        <a asp-action="Edit" asp-route-id="@Model?.IdSv">Editar</a>
+    </div>

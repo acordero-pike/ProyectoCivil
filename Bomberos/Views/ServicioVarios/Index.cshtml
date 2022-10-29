@@ -21,15 +21,15 @@
     <table class="table">
         <thead>
             <tr>
-                <th>
-                    @*@Html.DisplayNameFor(model => model.SvEstacion*@
+                @*<th>
+                    @Html.DisplayNameFor(model => model.SvEstacion
                     Estación
                 </th>
                 <th>
-                    @*@Html.DisplayNameFor(model => model.SvTurno)*@
+                    @Html.DisplayNameFor(model => model.SvTurno)
                     Turno
                 </th>
-                <th>
+                <th>*@
                     @*@Html.DisplayNameFor(model => model.SvFecha)*@
                     Fecha
                 </th>
@@ -65,22 +65,22 @@
                     @Html.DisplayNameFor(model => model.SvNoBombero)
                     Bombero
                 </th>*@
-                <th>
+                @*<th>
                     <center>
-                        @*@Html.DisplayNameFor(model => model.SvBomberoReportaNavigation)*@
+                        @Html.DisplayNameFor(model => model.SvBomberoReportaNavigation)
                         Bombero Reporta
                     </center>
                 </th>
                 <th>
                     <center>
-                        @*@Html.DisplayNameFor(model => model.SvFirmaBomberoNavigation)*@
+                        @Html.DisplayNameFor(model => model.SvFirmaBomberoNavigation)
                         Firma de Bombero
                     </center>
                 </th>
                 <th>
-                    @*@Html.DisplayNameFor(model => model.SvJefeServicioNavigation)*@
+                    @Html.DisplayNameFor(model => model.SvJefeServicioNavigation)
                     Jefe de Servicio
-                </th>
+                </th>*@
                 <th></th>
             </tr>
         </thead>
@@ -88,14 +88,14 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
+                    @*<td>
                         <center>
-                        @Html.DisplayFor(modelItem => item.SvEstacionNavigation.Nombre)
+                        @Html.DisplayFor(modelItem => item.SvEstacionNavigation.Descripcion)
                         </center>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.SvTurnoNavigation.Nombre)
-                    </td>
+                    </td>*@
                     <td>
                         @Html.DisplayFor(modelItem => item.SvFecha)
                     </td>
@@ -131,19 +131,19 @@
                    @*<td>
                         @Html.DisplayFor(modelItem => item.SvNoBombero)
                     </td>*@
-                    <td>
+                    @*<td>
                         <center>
                         @Html.DisplayFor(modelItem => item.SvBomberoReportaNavigation.Nombres)
                         @Html.DisplayFor(modelItem => item.SvBomberoReportaNavigation.Apellidos)
                         </center>
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.SvFirmaBomberoNavigation.IdFirma)
+                        @Html.DisplayFor(modelItem => item.SvFirmaBomberoNavigation.Nombre)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.SvJefeServicioNavigation.Nombres)
                         @Html.DisplayFor(modelItem => item.SvJefeServicioNavigation.Apellidos)
-                    </td>
+                    </td>*@
 @*                    <td>
                         @Html.DisplayFor(modelItem => item.SvPersonalAsistenteNavigation.Nombres)
                         @Html.DisplayFor(modelItem => item.SvPersonalAsistenteNavigation.Apellidos)
