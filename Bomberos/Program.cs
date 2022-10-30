@@ -59,4 +59,5 @@ app.MapControllerRoute(
     name: "default",
       pattern: "{controller=Home}/{action=Index}/{id?}");
 
+Rotativa.AspNetCore.RotativaConfiguration.Setup(builder.Environment.WebRootPath,"../Rotativa");
 app.Run();

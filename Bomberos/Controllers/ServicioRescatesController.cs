@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Bomberos.Models;
 using Microsoft.AspNetCore.Authorization;
+using Bomberos.Modelos;
+using Rotativa.AspNetCore;
 
 namespace Bomberos.Controllers
 {
@@ -48,8 +50,8 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
+            return new ViewAsPdf("Details", servicioRescate);
 
-            return View(servicioRescate);
         }
 
         // GET: ServicioRescates/Create

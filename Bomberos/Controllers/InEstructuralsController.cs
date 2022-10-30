@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Bomberos.Models;
 using Microsoft.AspNetCore.Authorization;
+using Rotativa.AspNetCore;
 
 namespace Bomberos.Controllers
 {
@@ -53,8 +54,9 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
+            return new ViewAsPdf("Details", inEstructural);
 
-            return View(inEstructural);
+           
         }
 
         // GET: InEstructurals/Create
