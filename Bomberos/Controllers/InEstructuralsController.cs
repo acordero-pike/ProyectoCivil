@@ -30,7 +30,7 @@ namespace Bomberos.Controllers
         }
 
         // GET: InEstructurals/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Detail(string id)
         {
             if (id == null || _context.InEstructurals == null)
             {
@@ -58,9 +58,11 @@ namespace Bomberos.Controllers
 
            
         }
+     
 
-        // GET: InEstructurals/Create
-        public IActionResult Create()
+
+            // GET: InEstructurals/Create
+            public IActionResult Create()
         {
             var empleado = _context.Personals.Select(a => new { Id_Personal = a.IdPersonal, Nombre = a.Nombres + " " + a.Apellidos });
             var users = _context.Usuarios.Select(a => new { IdUsuario = a.IdUsuario, Nombre = a.Nombres + " " + a.Apellidos });

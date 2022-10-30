@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Bomberos.Models;
 using Microsoft.Extensions.Configuration;
-
-
-
+using Rotativa.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,5 +57,7 @@ app.MapControllerRoute(
     name: "default",
       pattern: "{controller=Home}/{action=Index}/{id?}");
 
-Rotativa.AspNetCore.RotativaConfiguration.Setup(builder.Environment.WebRootPath,"../Rotativa");
+IWebHostEnvironment env = app.Environment;
+var env1 = env.WebRootPath;
 app.Run();
+Rotativa.AspNetCore.RotativaConfiguration.Setup(env1, "../Rotativa");
