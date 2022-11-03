@@ -55,7 +55,7 @@ namespace Bomberos.Controllers
                 return NotFound();
             }
 
-            return new ViewAsPdf("Details",inForestal);
+            return View(inForestal);
         }
 
         // GET: InForestals/Create

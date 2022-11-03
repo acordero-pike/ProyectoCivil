@@ -54,7 +54,7 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            return new ViewAsPdf("Details", servicioVario);    
+            return View(servicioVario);    
            // return View(servicioVario);
         }
 
