@@ -4,8 +4,14 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\Kleyber\Desktop\publicacion</_PublishTargetUrl>
-    <History>True|2022-11-03T05:15:09.6677670Z;True|2022-10-12T01:04:26.2177935-06:00;True|2022-10-12T00:58:09.0226859-06:00;</History>
+    <_PublishTargetUrl>C:\inetpub\publicacion</_PublishTargetUrl>
+    <History>True|2022-11-03T05:50:33.2627395Z;False|2022-11-02T23:46:58.8985336-06:00;True|2022-11-02T23:15:09.6677670-06:00;True|2022-10-12T01:04:26.2177935-06:00;True|2022-10-12T00:58:09.0226859-06:00;</History>
     <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="Conexion">
+      <Value>Server=localhost\SQLEXPRESS%3bDatabase=Bombero%3buser=sa%3bpassword=LDesarrollo#4%3bTrusted_Connection=false%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
 </Project>
