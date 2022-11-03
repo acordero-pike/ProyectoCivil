@@ -30,8 +30,14 @@ namespace Bomberos.Controllers
         {
             string pass = GetSHA256(password).ToUpper();
             var val = _context.Usuarios.Where(a => a.UsUsuario== usuario && a.UsContraseña==pass);
-            if (val.Any() && val.First().Activo)
+            if (val.Any())
             {
+                if (!val.First().Activo)
+                {
+                    return RedirectToAction("Index", "Error", new { data = "Error de Log in", data2 = "Usuario no activo" });
+                    // si el usuario no es valido envia un badrequest como respuesta
+
+                }
                 // creamos un listado de peticion
                 claims.Add(new Claim("username", val.First().Nombres)); // guardamos el nombre de quien se logea
                 claims.Add(new Claim(ClaimTypes.NameIdentifier, val.First().Nombres)); //guardamos el tipo de peticion 
@@ -45,18 +51,13 @@ namespace Bomberos.Controllers
             }
             else
             {
-                if (val.First().Activo)
-                {
-                    return RedirectToAction("Index", "Error", new { data = "Error de Log in", data2 = "Usuario o Contraseña invalidos" });
+                
+               
+              
+                    return RedirectToAction("Index", "Error", new { data = "Error de Log in", data2 = "Usuario o Contraseña Incorrecto!!" });
                     // si el usuario no es valido envia un badrequest como respuesta
 
-                }
-                else
-                {
-                    return RedirectToAction("Index", "Error", new { data = "Error de Log in", data2 = "Usuario Inactivo porfavor contacte a la institucion" });
-                    // si el usuario no es valido envia un badrequest como respuesta
-
-                }
+                
             }
 
 
