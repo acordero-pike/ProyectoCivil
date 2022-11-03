@@ -26,7 +26,7 @@ namespace Bomberos.Controllers
         // GET: ServicioRescates
         public async Task<IActionResult> Index()
         {
-            var bomberoContext = _context.ServicioRescates.Include(s => s.SrBomberoReportaNavigation).Include(s => s.SrEstacionNavigation).Include(s => s.SrOficialMandoNavigation).Include(s => s.SrTelefonistaTurnoEstacionNavigation).Include(s => s.SrVoBoJefeServicioNavigation);
+            var bomberoContext = _context.ServicioRescates.Include(s => s.SrBomberoReportaNavigation).Include(s => s.SrEstacionNavigation).Include(s => s.SrOficialMandoNavigation).Include(s => s.SrTelefonistaTurnoEstacionNavigation).Include(s => s.SrVoBoJefeServicioNavigation).Include(s => s.CodigoNavigation);
             return View(await bomberoContext.ToListAsync());
         }
 
@@ -49,7 +49,7 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            return new ViewAsPdf("Details", servicioRescate);
+            return View(servicioRescate);
 
         }
 
