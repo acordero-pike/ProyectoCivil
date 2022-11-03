@@ -30,7 +30,7 @@ namespace Bomberos.Controllers
         }
 
         // GET: InEstructurals/Details/5
-        public async Task<IActionResult> Detail(string id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null || _context.InEstructurals == null)
             {
@@ -54,7 +54,7 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            return new ViewAsPdf("Details", inEstructural);
+            return View(inEstructural);
 
            
         }

@@ -55,6 +55,7 @@ namespace Bomberos.Controllers
                 return NotFound();
             }
 
+<<<<<<< HEAD
             return new ViewAsPdf("Details",inVehiculo)
             {
                 FileName = "Servicio de Rescate" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".pdf",
@@ -62,6 +63,9 @@ namespace Bomberos.Controllers
                 PageWidth = 250,
                 PageHeight= 800
             }; 
+=======
+            return View(inVehiculo);
+>>>>>>> f3c5241f8ce43c9158b01868aadc1450f460958d
         }
 
         // GET: InVehiculoes/Create

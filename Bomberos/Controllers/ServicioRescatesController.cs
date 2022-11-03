@@ -26,7 +26,7 @@ namespace Bomberos.Controllers
         // GET: ServicioRescates
         public async Task<IActionResult> Index()
         {
-            var bomberoContext = _context.ServicioRescates.Include(s => s.SrBomberoReportaNavigation).Include(s => s.SrEstacionNavigation).Include(s => s.SrOficialMandoNavigation).Include(s => s.SrTelefonistaTurnoEstacionNavigation).Include(s => s.SrVoBoJefeServicioNavigation);
+            var bomberoContext = _context.ServicioRescates.Include(s => s.SrBomberoReportaNavigation).Include(s => s.SrEstacionNavigation).Include(s => s.SrOficialMandoNavigation).Include(s => s.SrTelefonistaTurnoEstacionNavigation).Include(s => s.SrVoBoJefeServicioNavigation).Include(s => s.CodigoNavigation);
             return View(await bomberoContext.ToListAsync());
         }
 
@@ -49,12 +49,16 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
+<<<<<<< HEAD
             return new ViewAsPdf("Details", servicioRescate)
             {
                 FileName="Servicio de Rescate +"+DateTime.Now.ToString("yyyyMMddHHmmss")+".pdf",
                 PageOrientation = Rotativa.AspNetCore.Options.Orientation.Landscape,
                 PageSize= Rotativa.AspNetCore.Options.Size.A4
             };
+=======
+            return View(servicioRescate);
+>>>>>>> f3c5241f8ce43c9158b01868aadc1450f460958d
 
         }
 
