@@ -9,6 +9,7 @@ using Bomberos.Models;
 using Microsoft.AspNetCore.Http;
 using System.Web.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using System.IO;
 
 namespace Bomberos.Controllers
 {
@@ -55,7 +56,7 @@ namespace Bomberos.Controllers
         public ActionResult convert(string id)
         {
             var imgs = _context.Firmas.Where(x => x.IdFirma == id).FirstOrDefault();
-            return File(imgs.Firma1, "image/jpeg");
+            return File(imgs.Firma1, "image/jpg");
         }
         // POST: Firmas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -111,6 +112,12 @@ namespace Bomberos.Controllers
             {
                 try
                 {
+                    
+                    var files = Request.Form.Files.First();
+
+
+                    WebImage im = new WebImage(files.OpenReadStream());
+                    firma.Firma1 = im.GetBytes();
                     _context.Update(firma);
                     await _context.SaveChangesAsync();
                 }

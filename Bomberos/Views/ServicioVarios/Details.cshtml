@@ -5,6 +5,7 @@
     Layout = null;
 
 }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -137,4 +138,19 @@
             </form>
         </div>
     </div>
-    <input type="button" value="Imprimir">
+</div>
+<input type="button" value="Imprimir" onclick="myFunction(this)">
+
+
+<script>
+    function myFunction(element) {
+
+
+
+
+        // Source HTMLElement or a string containing HTML.
+        var elementHTML = document.getElementById("imp");
+        html2pdf(elementHTML);
+
+    }
+</script>

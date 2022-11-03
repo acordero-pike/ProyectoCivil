@@ -1155,6 +1155,11 @@ namespace Bomberos.Models
                     .IsUnicode(false)
                     .HasColumnName("sr_VoBoJefeServicio");
 
+                entity.HasOne(d => d.CodigoNavigation)
+                    .WithMany(p => p.ServicioRescates)
+                    .HasForeignKey(d => d.Codigo)
+                    .HasConstraintName("FK_ServicioRescate");
+
                 entity.HasOne(d => d.SrBomberoReportaNavigation)
                     .WithMany(p => p.ServicioRescates)
                     .HasForeignKey(d => d.SrBomberoReporta)

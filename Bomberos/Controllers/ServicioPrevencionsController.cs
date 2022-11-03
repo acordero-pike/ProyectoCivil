@@ -65,7 +65,7 @@ namespace Bomberos.Controllers
             ViewData["SpCompañia"] = new SelectList(_context.Compañia, "IdCompañia", "Nombre");
             ViewData["SpEstacion"] = new SelectList(_context.Estacions, "IdEstacion", "Nombre");
             ViewData["SpOficialServicio"] = new SelectList(empleado, "Id_Personal", "Nombre");
-            ViewData["SpPiloto"] = new SelectList(empleado, "Id_Personal", "Nombre");
+            ViewData["SpPiloto"] = new SelectList(_context.Personals, "IdPersonal", "Nombres");
             ViewData["SpTelefonista"] = new SelectList(empleado, "Id_Personal", "Nombre");
             ViewData["SpTurno"] = new SelectList(_context.Turnos, "IdTurno", "Nombre");
             ViewData["SpVoBoJefeServicio"] = new SelectList(_context.Firmas, "IdFirma", "IdFirma");

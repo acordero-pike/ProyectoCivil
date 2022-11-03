@@ -5,6 +5,9 @@
     Layout = null;
 
 }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -208,19 +211,36 @@
                     <input asp-for="SrFecha" class="form-control" readonly/>
                     @*<span asp-validation-for="SrFecha" class="text-danger"></span>*@
                 </div>
+                
+                <div class="form-group col-md-12">
+                    <label asp-for="SrObservacion" class="control-label">Observación: </label>
+                    <textarea asp-for="SrObservacion" class="form-control" style="height:150px" readonly></textarea>
+                    @*<span asp-validation-for="SrObservacion" class="text-danger"></span>*@
+                </div>
+
                 <div class="form-group col-md-3">
                     <label asp-for="SrVoBoJefeServicio" class="control-label"> VoBo. Jefe de Servicio: </label>
                     <img height="100" width=" 100" src="@Url.Action("convert","Firmas",new { id = @Model.SrVoBoJefeServicioNavigation.IdFirma })"   />
                     @*<select asp-for="SrVoBoJefeServicio" class="form-control" asp-items="ViewBag.SrVoBoJefeServicio"></select>
                     <span asp-validation-for="SrVoBoJefeServicio" class="text-danger"></span>*@
                 </div>
-                <div class="form-group col-md-12">
-                    <label asp-for="SrObservacion" class="control-label">Observación: </label>
-                    <textarea asp-for="SrObservacion" class="form-control" style="height:150px" readonly></textarea>
-                    @*<span asp-validation-for="SrObservacion" class="text-danger"></span>*@
-                </div>
                 
             </form>
         </div>
     </div>
-    <input type="button" value="Imprimir">
+</div>
+<input type="button" value="Imprimir" onclick="myFunction(this)">
+
+
+ <script>
+    function myFunction(element) {
+
+       
+        
+
+        // Source HTMLElement or a string containing HTML.
+        var elementHTML = document.getElementById("imp");
+        html2pdf(elementHTML);
+    
+    }
+ </script>

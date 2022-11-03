@@ -5,6 +5,7 @@
         Layout = null;
 
 }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -184,4 +185,29 @@
             <img height="100" width=" 100" src="@Url.Action("convert","Firmas",new { id = @Model.IfFirmaBomberoNavigation.IdFirma })"   />
             @*<select asp-for="IfFirmaBombero" class="form-control" asp-items="ViewBag.IfFirmaBombero"></select>*@
         </div>
-        <input type="button" value="Imprimir">
+    </div>
+</div>
+<input type="button" value="Imprimir" onclick="myFunction(this)">
+
+
+<script>
+    function myFunction(element) {
+
+
+
+
+        // Source HTMLElement or a string containing HTML.
+        var elementHTML = document.getElementById("imp");
+
+        var opt = {
+            margin: 1,
+            filename: 'Reporte de Incendios Forestales',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(elementHTML).save();
+
+    }
+</script>
