@@ -59,5 +59,5 @@ app.MapControllerRoute(
 
 IWebHostEnvironment env = app.Environment;
 var env1 = env.WebRootPath;
+Rotativa.AspNetCore.RotativaConfiguration.Setup(env1, "Rotativa");
 app.Run();
-Rotativa.AspNetCore.RotativaConfiguration.Setup(env1, "../Rotativa");

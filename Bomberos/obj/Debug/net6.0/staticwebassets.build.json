@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cqO5jlxFDB3Y6ZUe8J3ieM9dOxXDXPlznomm7Ch8iyE=",
+  "Hash": "N2tPm4JIXsn7xdhjcI5Du9YNSuMgZIlBgnCYDqcLxAQ=",
   "Source": "Bomberos",
   "BasePath": "_content/Bomberos",
   "Mode": "Default",
@@ -1222,6 +1222,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\acordero\\Desktop\\copia de archivos del cliente\\s10\\Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\Rotativa\\wkhtmltoimage.exe",
+      "SourceId": "Bomberos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acordero\\Desktop\\copia de archivos del cliente\\s10\\Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\",
+      "BasePath": "_content/Bomberos",
+      "RelativePath": "Rotativa/wkhtmltoimage.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltoimage.exe"
+    },
+    {
+      "Identity": "C:\\Users\\acordero\\Desktop\\copia de archivos del cliente\\s10\\Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "Bomberos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acordero\\Desktop\\copia de archivos del cliente\\s10\\Seminario\\ProyectoCivil\\Bomberos\\wwwroot\\",
+      "BasePath": "_content/Bomberos",
+      "RelativePath": "Rotativa/wkhtmltopdf.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
     }
   ]
 }
