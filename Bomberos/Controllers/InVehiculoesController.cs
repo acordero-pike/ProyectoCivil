@@ -55,7 +55,7 @@ namespace Bomberos.Controllers
                 return NotFound();
             }
 
-            return new ViewAsPdf("Details",inVehiculo);
+            return View(inVehiculo);
         }
 
         // GET: InVehiculoes/Create
