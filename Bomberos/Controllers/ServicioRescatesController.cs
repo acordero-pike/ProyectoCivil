@@ -49,7 +49,12 @@ namespace Bomberos.Controllers
             {
                 return NotFound();
             }
-            return new ViewAsPdf("Details", servicioRescate);
+            return new ViewAsPdf("Details", servicioRescate)
+            {
+                FileName="Servicio de Rescate +"+DateTime.Now.ToString("yyyyMMddHHmmss")+".pdf",
+                PageOrientation = Rotativa.AspNetCore.Options.Orientation.Landscape,
+                PageSize= Rotativa.AspNetCore.Options.Size.A4
+            };
 
         }
 
